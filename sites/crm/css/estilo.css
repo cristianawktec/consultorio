@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+#prospecto {font-family: Arial, Helvetica, sans-serif; font-size: 14px;}
+#historico {font-family: Arial, Helvetica, sans-serif; font-size: 13px;}
+.texto {width: 200px; border: 1px solid #CCC; height: 15px; padding: 5px; min-height: 15px;}
+.texto1 {width: 100px; border: 1px solid #CCC; height: 15px; padding: 5px; min-height: 15px;}
+.texto2 {width: 35px; border: 1px solid #CCC; height: 15px; padding: 5px; min-height: 15px;}
+.texto3 {width: 145px; border: 1px solid #CCC; height: 15px; padding: 5px; min-height: 15px;}
+
+textarea {width: 200px; border: 1px solid #CCC; height: 100px; padding: 5px; min-width: 300px; max-width: 300px; min-height:100px; max-height:100px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; }
+body {background-color:#EEE;}
+#topo {width:auto; height: 40px; background-color:#CCC; margin-top: -10px; margin-left: -10px; margin-right: -10px; margin-bottom: 25px; overflow:hidden;}

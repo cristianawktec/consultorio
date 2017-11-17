@@ -1,0 +1,323 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SKT Lauch\n"
+"POT-Creation-Date: 2015-11-05 11:22+0530\n"
+"PO-Revision-Date: 2015-11-05 11:22+0530\n"
+"Last-Translator: \n"
+"Language-Team: SKT Themes <support@sktthemes.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\\\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;__;_e;esc_attr;esc_attr_e;gettext;gettext_noop\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: archive.php:85 category.php:32 index.php:35 index.php:84
+msgid "Back"
+msgstr ""
+
+#: archive.php:86 category.php:33 index.php:36 index.php:85
+msgid "Onward"
+msgstr ""
+
+#: category.php:19
+msgid "Category: "
+msgstr ""
+
+#: header.php:48
+msgid "Menu"
+msgstr ""
+
+#: header.php:95 header.php:234
+msgid "#slidecaption"
+msgstr ""
+
+#: header.php:105 header.php:244
+msgid "Welcome To Our Website"
+msgstr ""
+
+#: header.php:107 header.php:246 inc/customizer.php:218 inc/customizer.php:260
+msgid ""
+"Quisque blandit dolor risus, sed dapibus dui facilisis sed. Donec eu porta "
+"elit. Aliquam porta sollicitudin ante, acntum orci mattis et. Phasellus ac "
+"nibh eleifend, sagittis purus nec, elementum massa. Quisque tincidunt sapien "
+"a sem porttitor, id convallis dolor"
+msgstr ""
+
+#: header.php:110 header.php:175 header.php:183 header.php:249 header.php:314
+#: header.php:322
+msgid "Read More"
+msgstr ""
+
+#: header.php:136 header.php:275 inc/customizer.php:83
+msgid "About The Author"
+msgstr ""
+
+#: header.php:139 header.php:278
+msgid "Nilson Wooge"
+msgstr ""
+
+#: header.php:140 header.php:279
+msgid ""
+"Cras aliquet, tellus a dignissim aliquam, nibh erat vulputate justo, in "
+"posuere tortor mi a nisi. Quisque orci dolor, suscipit vel dapibus in, "
+"ultricies nec est. Donec eget velit non purus laoreet interdum in quis "
+"augue. Suspendisse laoreet odio nisl, non vulputate nisl sagittis sit amet. "
+"Vestibulum cursus interdum leo"
+msgstr ""
+
+#: header.php:141 header.php:280
+msgid ""
+"Vivamus pretium porttitor nibh eu viverra. Integer ac dui in libero "
+"vulputate interdum. Curabitur dictum ex non sapien lacinia rutrum. Fusce "
+"dignissim nisl sed eros condimentum, nec gravida mi suscipit."
+msgstr ""
+
+#: header.php:142 header.php:281
+msgid "Where to Buy"
+msgstr ""
+
+#: header.php:152 header.php:291
+msgid "BUY EBOOK"
+msgstr ""
+
+#: header.php:164 header.php:303
+msgid "Book Features"
+msgstr ""
+
+#: header.php:181 header.php:320
+msgid "Features Box"
+msgstr ""
+
+#: header.php:182 header.php:321
+msgid ""
+"Cras aliquet, tellus a dignissim aliquam, nibh erat vulputate justo, in "
+"posuere tortor mi a nisi. Quisque orci dolor, suscipit vel dapibus in, "
+"ultricies nec est."
+msgstr ""
+
+#: inc/customizer.php:47
+msgid "Logo (PRO Version)"
+msgstr ""
+
+#: inc/customizer.php:49
+#, php-format
+msgid "Logo Settings available in<br /> %s."
+msgstr ""
+
+#: inc/customizer.php:49 inc/customizer.php:73 inc/customizer.php:149
+#: inc/customizer.php:283 inc/customizer.php:375 inc/customizer.php:398
+msgid "PRO Version"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:73
+#, php-format
+msgid "More color options in <br /> %s."
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "Select Page from the dropdown"
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "Select page for about the author section"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "Book Features Boxes"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "Select Pages from the dropdown"
+msgstr ""
+
+#: inc/customizer.php:117
+msgid "Select page for box one:"
+msgstr ""
+
+#: inc/customizer.php:129
+msgid "Select page for box two:"
+msgstr ""
+
+#: inc/customizer.php:141
+msgid "Select page for box three:"
+msgstr ""
+
+#: inc/customizer.php:148
+msgid "Slider Settings"
+msgstr ""
+
+#: inc/customizer.php:149
+#, php-format
+msgid ""
+"Add slider images here. <br /> More slider settings available in <br /> %s."
+msgstr ""
+
+#: inc/customizer.php:160
+msgid "Slide Image 1 (1400x544)"
+msgstr ""
+
+#: inc/customizer.php:167
+msgid "Welcome To Launch"
+msgstr ""
+
+#: inc/customizer.php:171
+msgid "Slide title 1"
+msgstr ""
+
+#: inc/customizer.php:176
+msgid ""
+"Quisque blandit dolor risus, sed dapibus dui facilisis sed. Donec eu porta "
+"elit. Aliquam porta sollicitudin ante, acntum orci mattis et. Phasellus ac "
+"nibh eleifend, sagittis purus nec, elementum massa."
+msgstr ""
+
+#: inc/customizer.php:180
+msgid "Slider description  1"
+msgstr ""
+
+#: inc/customizer.php:192
+msgid "Slide link 1"
+msgstr ""
+
+#: inc/customizer.php:202
+msgid "Slide image 2"
+msgstr ""
+
+#: inc/customizer.php:209
+msgid "Build Your Imagination"
+msgstr ""
+
+#: inc/customizer.php:213
+msgid "Slide title 2"
+msgstr ""
+
+#: inc/customizer.php:222
+msgid "Slide description 2"
+msgstr ""
+
+#: inc/customizer.php:233
+msgid "Slide link 2"
+msgstr ""
+
+#: inc/customizer.php:244
+msgid "Slide Image 3"
+msgstr ""
+
+#: inc/customizer.php:251
+msgid "Striving To Excellence"
+msgstr ""
+
+#: inc/customizer.php:255
+msgid "Slide title 3"
+msgstr ""
+
+#: inc/customizer.php:264
+msgid "Slide Description 3"
+msgstr ""
+
+#: inc/customizer.php:276
+msgid "Slide link 3"
+msgstr ""
+
+#: inc/customizer.php:282
+msgid "Social Settings"
+msgstr ""
+
+#: inc/customizer.php:283
+#, php-format
+msgid "Add social icons link here.<br />More icon available in %s."
+msgstr ""
+
+#: inc/customizer.php:294
+msgid "Add facebook link here"
+msgstr ""
+
+#: inc/customizer.php:304
+msgid "Add twitter link here"
+msgstr ""
+
+#: inc/customizer.php:313
+msgid "Add google plus link here"
+msgstr ""
+
+#: inc/customizer.php:322
+msgid "Add linkedin link here"
+msgstr ""
+
+#: inc/customizer.php:327
+msgid "Footer Area"
+msgstr ""
+
+#: inc/customizer.php:329
+msgid "Add footer copyright text"
+msgstr ""
+
+#: inc/customizer.php:338
+msgid ""
+"To modify footer copyright notice without changing your themes code, please "
+"upgrade to pro."
+msgstr ""
+
+#: inc/customizer.php:345
+msgid "Contact Details"
+msgstr ""
+
+#: inc/customizer.php:346
+msgid "Add you contact details here"
+msgstr ""
+
+#: inc/customizer.php:351
+msgid "+11 123 456 7890"
+msgstr ""
+
+#: inc/customizer.php:355
+msgid "Add contact number here."
+msgstr ""
+
+#: inc/customizer.php:365
+msgid "Add you email here"
+msgstr ""
+
+#: inc/customizer.php:373
+msgid "Layout Settings (PRO Version)"
+msgstr ""
+
+#: inc/customizer.php:375
+#, php-format
+msgid "Layout Settings available in <br />%s."
+msgstr ""
+
+#: inc/customizer.php:396
+msgid "Fonts Settings (PRO Version)"
+msgstr ""
+
+#: inc/customizer.php:398
+#, php-format
+msgid "Font Settings available in <br />%s."
+msgstr ""
+
+#: inc/customizer.php:419
+msgid "Documentation &amp; Support"
+msgstr ""
+
+#: inc/customizer.php:421
+#, php-format
+msgid "For documentation and support check this link : <br />%s."
+msgstr ""
+
+#: inc/customizer.php:421
+msgid "Launch Documentation"
+msgstr ""
+
+#: index.php:55
+msgid "Latest Post"
+msgstr ""

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Recordset" value="name:prospecto_id;datatype:int,name:prospecto_nome;datatype:string,name:prospecto_email;datatype:string,name:prospecto_tel_fixo;datatype:string,name:prospecto_tel_cel;datatype:string,name:prospecto_obs;datatype:blob,name:prospecto_data;datatype:string" />
+</info>

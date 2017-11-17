@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DropDown - Demonstração</title>
+<link href="css/estilos.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" >
+	$(document).ready(function() {
+		$(".conta").click(function() {
+			var X=$(this).attr('id');
+			
+			if(X==1) {
+				$(".submenu").hide();
+				$(this).attr('id', '0');	
+				}
+				
+		else {
+			$(".submenu").show();
+			$(this).attr('id', '1');
+		}
+		});
+		
+		$(".submenu").mouseup(function() {
+			return false
+		});
+		$(".conta").mouseup(function() {
+			return false
+		});
+		
+		$(document).mouseup(function() {
+			$(".submenu").hide();
+			$(".conta").attr('id', '');
+		});
+		
+	});
+	
+</script>
+
+</head>
+
+<body>
+
+<div class="dropdown">
+	<a class="conta" ><span>Cadastrar-se</span></a>
+	<div class="submenu" style="display:none;">
+	  <ul class="raiz">
+		<li><a href="#Dashboard" >Médico</a></li>	    
+	    <li><a href="#Perfil" >Paciente</a></li>
+	  </ul>
+	</div>
+</div>
+
+
+</body>
+</html>

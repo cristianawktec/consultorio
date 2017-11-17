@@ -1,0 +1,1 @@
+<?php mkdir('/arquivos/1/'); ?>

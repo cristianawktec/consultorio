@@ -1,0 +1,1 @@
+<center><iframe src="./modulos/phpinfo2.php" frameborder="0" height="480" width="100%"></iframe></center>

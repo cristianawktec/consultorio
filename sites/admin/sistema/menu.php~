@@ -1,0 +1,161 @@
+<?
+
+	$menu['Inicial']['Página Inicial'] = 'inicial'; 
+	if (!$_SESSION['logado']) $menu['Inicial']['Área Restrita'] = 'login'; 
+	$menu['DiTI']['Brother']['Café! Café! Café!'] = 'ditibrother_diti'; 
+	$menu['DiTI']['Brother']['Desenvolvimento'] = 'ditibrother_desenvolvimento'; 
+	$menu['DiTI']['Brother']['Estacionamento'] = 'ditibrother_estacionamento'; 
+	$menu['DiTI']['Brother']['Almoxarifado'] = 'ditibrother_almoxarifado'; 
+	$menu['DiTI']['Brother']['CPD'] = 'ditibrother_cpd'; 
+	$menu['DiTI']['Escala de Plantão'] = 'plantao'; 
+	$menu['DiTI']['Hosts'] = 'hosts'; 
+	$menu['DiTI']['Telefones'] = 'telefones'; 
+	$menu['DiTI']['Ramais'] = 'ramais'; 
+	$menu['DiTI']['VoIP'] = 'voip'; 
+	$menu['DiTI']['Piadas'] = 'piadas'; 
+	$menu['Sistemas']['phpMyAdmin'] = 'https://10.193.4.53/phpmyadmin/'; 
+	$menu['Sistemas']['E-193 Web']['HOMOLOGAÇÃO'] = 'https://10.193.4.53/e193-web/index.php';
+	$menu['Sistemas']['Redimensionador'] = 'redimensionador'; 
+	$menu['Sistemas']['Sigat']['HOMOLOGAÇÃO'] = 'https://10.193.4.53/sigat/'; 
+	$menu['Sistemas']['Sigat']['Backups'] = 'https://10.193.4.53/bk_sigat/'; 
+	$menu['Sistemas']['Sigat']['Instalação'] = 'instalar_sigat'; 
+	$menu['Sistemas']['Sigat']['Migrar Dados'] = 'migrar_dados'; 
+	$menu['Sistemas']['Sigat']['Servidores X Cidades'] = 'servidores_cidades'; 
+
+	if ($link_fns1) {
+
+		$menu['Sistemas']['Sigat']['<hr>'] = ''; 
+		$sql = "select NM_SERVIDOR, NM_IP from CADASTROS.TP_SERVIDOR order by NM_SERVIDOR";
+		$res = mysql_query($sql, $link_fns1);
+		$servidores = null;
+		while ($r = mysql_fetch_assoc($res)) $servidores[$r['NM_SERVIDOR']] = $r['NM_IP'];
+		foreach ($servidores as $i => $v) $menu['Sistemas']['Sigat']["$i"] = "https://$v/sigat/"; 
+
+	}
+
+	$menu['Sistemas']['PHPinfo'] = 'phpinfo'; 
+	$menu['Desenvolvimento']['Aprenda com o Dudu'] = 'dudu';
+	$menu['Desenvolvimento']['Crontab'] = 'crontab'; 
+	$menu['Desenvolvimento']['Diversos'] = 'desenvolvimento'; 
+	$menu['Desenvolvimento']['Editor VI'] = 'vi'; 
+	$menu['Desenvolvimento']['Linux'] = 'linux'; 
+	$menu['Desenvolvimento']['MySQL'] = 'mysql'; 
+	$menu['Desenvolvimento']['PHP'] = 'php'; 
+	$menu['Desenvolvimento']['Sesion'] = 'session'; 
+	$menu['Desenvolvimento']['Shell Script'] = 'shell_script'; 
+	$menu['Desenvolvimento']['Tabela de cores'] = 'cores'; 
+
+	if ($_SESSION['logado']) $menu['Inicial']['Sair'] = 'logout'; 
+
+	if ($_SESSION['logado'] and $_SESSION['perfil'] <= '2') {
+
+		$menu['Área Restrita']['Comandos BDs'] = 'comandos_bds'; 
+		$menu['Área Restrita']['Comparar Tabelas'] = 'comparar_tabelas'; 
+		$menu['Área Restrita']['Enviar email'] = 'enviar_email'; 
+		$menu['Área Restrita']['Estrutura BD'] = 'estrutura_bd'; 
+		$menu['Área Restrita']['Portabilidade'] = 'portabilidade'; 
+		$menu['Área Restrita']['Scripts']['Atualizar e193-web'] = 'e193-web-atualizar'; 
+
+	}
+
+	if ($_SESSION['logado'] and $_SESSION['perfil'] <= '1') {
+
+		$menu['Master']['Scripts']['Atualizar Boletos'] = 'atualizar_boletos'; 
+		$menu['Master']['Scripts']['Atualizar Sigat'] = 'atualizar_sigat'; 
+		$menu['Master']['Scripts']['Trocar Chaves'] = 'trocar_chaves'; 
+		$menu['Master']['Usuários'] = 'usuarios'; 
+
+	}
+
+	if ($_SESSION['logado'] and $_SESSION['perfil'] < '1') {
+
+		$menu['MvS']['links']['WebInf'] = 'http://www.inf.ufsc.br/webmail'; 
+		$menu['MvS']['links']['Google'] = 'http://www.google.com'; 
+		$menu['MvS']['links']['Gmail'] = 'http://www.gamail.com'; 
+		$menu['MvS']['links']['Hotmail'] = 'http://www.hotmail.com'; 
+
+	}
+
+?><script language="javascript" type="text/javascript" action="">
+
+	function submeter(op) {
+
+		if (op) {
+
+			var frm = this.document.frm_menu;
+			frm.hdn_opcao.value = op;
+			frm.submit();
+
+		}
+
+	}
+
+</script>
+
+<form name="frm_menu" method="post">
+	<input type="hidden" name="hdn_opcao">
+</form>
+
+<table align="center" width="100%" cellpading="0" cellspacing="0">
+	<tr>
+		<td>
+
+			<? if (is_array($menu)) { ?>
+
+				<ul class="menu2">
+					<? foreach ($menu as $rotulo1 => $link1) if (!is_array($link1)) { ?>
+
+						<!-- nivel 1 -->
+
+						<li class="top">
+							<a onclick="submeter('<?=$link1?>')" class="top_link"><span><?=$rotulo1?></span></a>
+						</li>
+
+					<? } else { ?>
+
+						<!-- nivel 1 link -->
+
+						<li class="top">
+							<a class="top_link"><span class="down"><?=$rotulo1?></span></a>
+							<ul class="sub">
+								<? foreach ($link1 as $rotulo2 => $link2) if (!is_array($link2)) { ?>
+
+									<!-- nivel 2 -->
+
+									<li>
+										<a onclick="submeter('<?=$link2?>')" style="cursor:pointer"><?=$rotulo2?></a>
+									</li>
+								<? } else { ?>
+
+									<!-- nivel 2 link -->
+
+									<li>
+										<a class="fly"><?=$rotulo2?></a>
+										<ul>
+											<? foreach ($link2 as $rotulo3 => $link3) { ?>
+												<!-- nivel 3 link -->
+												<li style="cursor:pointer">
+													<span><a onclick="submeter('<?=$link3?>')"><?=$rotulo3?></a></span>
+												</li>
+											<? } ?>
+										</ul>
+									</li>
+
+								<? } ?>
+
+							</ul>
+						</li>
+
+					<? } ?>
+
+				</ul>
+
+			<? }else { ?>
+
+				<? $mesg['erro'][] = 'Nenhum menu selecionado'; ?>
+
+			<? } ?>
+
+		</td>
+	</tr>
+</table>

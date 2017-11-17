@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* Mídia fluida simples
+   Nota: a mídia fluida exige a remoção dos seus atributos de comprimento e largura do HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* O IE 6 não oferece suporte a largura máxima; por isso, o padrão de largura deve ser 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Propriedades de mídia fluida do Dreamweaver
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiração do "Design da Web responsivo", por Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	e Sistema de grade dourada, por Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Layout para celulares: menor ou igual a 480 px. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 87.36%;
+	padding-left: 1.82%;
+	padding-right: 1.82%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+/* Layout para tablets: 481 px a 768 px. Herda estilos de: Layout para celulares. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}
+
+/* Layout para desktops: 769 px até o máximo de 1232 px. Herda estilos de: Layout para celulares e Layout para tablets. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.2%;
+	max-width: 1232px;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}

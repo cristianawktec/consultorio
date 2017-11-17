@@ -1,0 +1,18 @@
+euportal14
+consultorio
+
+classe do banco
+
+<?php
+$link = mysql_connect('mysql.euportal.com.br', 'euportal14', 'consultorio');
+if (!$link) {
+   die('Não conseguiu conectar: ' . mysql_error());
+}
+
+// seleciona o banco euportal14
+$db_selected = mysql_select_db('euportal14', $link);
+if (!$db_selected) {
+   die ('Não pode selecionar o banco euportal14 : ' . mysql_error());
+}
+
+?>

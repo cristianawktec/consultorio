@@ -1,0 +1,25 @@
+127.0.0.1		localhost
+
+
+#Servidor de Backup
+191.252.51.68            backup.clickconsultorio.com   backup
+
+
+# Bruno
+79.156.33.64		localhost	brunoblazius
+
+
+# Cristian
+88.10.99.242		localhost	cristian
+
+
+# Awk
+177.185.192.148		awktec.com   	geral
+
+
+# ClickConsultório
+
+191.252.51.68       clickconsultorio.com    	    quente
+191.252.51.68       homologa.clickconsultorio.com	homologa
+
+

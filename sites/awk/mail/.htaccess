@@ -1,0 +1,2 @@
+RedirectMatch .* http://server2.novahost.com.br/suspended.page/
+Options -Includes -Indexes -ExecCGI

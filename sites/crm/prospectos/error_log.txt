@@ -1,0 +1,8 @@
+[30-Jan-2013 08:57:05] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in C:\apache2triad\htdocs\CRM\seguranca.php on line 73
+[30-Jan-2013 08:57:05] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\apache2triad\htdocs\CRM\seguranca.php:73) in C:\apache2triad\htdocs\CRM\seguranca.php on line 129
+[30-Jan-2013 08:58:04] PHP Notice:  A session had already been started - ignoring session_start() in C:\apache2triad\htdocs\CRM\index.php on line 6
+[30-Jan-2013 08:58:04] PHP Notice:  Undefined index:  login in C:\apache2triad\htdocs\CRM\index.php on line 8
+[30-Jan-2013 08:58:04] PHP Notice:  Undefined index:  senha in C:\apache2triad\htdocs\CRM\index.php on line 9
+[30-Jan-2013 08:58:04] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in C:\apache2triad\htdocs\CRM\index.php on line 20
+[30-Jan-2013 08:58:04] PHP Notice:  A session had already been started - ignoring session_start() in C:\apache2triad\htdocs\CRM\autoCompleteMain.php on line 3
+[30-Jan-2013 08:58:04] PHP Notice:  Undefined index:  q in C:\apache2triad\htdocs\CRM\autoCompleteMain.php on line 14

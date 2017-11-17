@@ -1,0 +1,661 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Google Apps</title>
+
+<link rel="stylesheet" type="text/css" href="setup_files/cpanel_002.css">
+<link rel="stylesheet" type="text/css" href="setup_files/cpanel.css">
+<script type="text/javascript" src="setup_files/cpanel.js"></script>
+<script src="setup_files/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct="UA-18073-1";
+_utcp="/a/";
+_uanchor=1;
+urchinTracker();
+    </script>
+<script type="text/javascript">
+if (typeof(urchinTracker) != 'function')
+  document.write('<script src="http' +
+                 document.location.protocol=='https:'?'s://ssl':'://www' +
+                 '.google-analytics.com/urchin.js" type="text/javascript"><\/script>')
+    </script>
+<script type="text/javascript">
+_uacct = 'UA-2786003-2';
+urchinTracker("/0571312641/goal");
+    </script></head><body><div id="header"><div id="logo"><a href="https://www.google.com/a/cpanel/awktec.com/Dashboard"><img src="setup_files/google.gif" alt="Google Apps" height="59" width="143"></a></div>
+<ul><li><b>edm@awktec.com</b></li>
+
+
+<li><a target="_blank" href="http://mail.awktec.com/">Caixa de entrada</a></li>
+<li><a target="_blank" href="http://www.google.com/calendar/a/awktec.com">Agenda</a></li>
+<li><a target="_blank" href="https://www.google.com/support/a">Ajuda</a></li>
+<li><a href="https://www.google.com/a/cpanel/awktec.com/cpanelLogout?continue=https://www.google.com/a/awktec.com">Sair</a></li></ul>
+<p><b>Aplicativos Google para awktec.com</b>
+<span id="premium">-
+Edição Completa</span></p>
+<form action="Search" method="get"><label for="user">Conta de usuário</label>
+<input maxlength="2048" name="q" id="user" value="" type="text">
+<input value="Pesquisar contas" type="submit"></form></div>
+<div id="navigation"><ul><li class="selected"><a href="https://www.google.com/a/cpanel/awktec.com/Dashboard" title="obter status de domínio, adicionar e gerenciar serviços">Painel</a></li>
+<li class=""><a href="https://www.google.com/a/cpanel/awktec.com/Users" title="adicionar usuário, alterar senha, gerenciar configurações de usuário">Contas de usuários</a></li>
+<li class=""><a href="https://www.google.com/a/cpanel/awktec.com/DomainSettings" title="informações da conta, nomes de domínio, controles de acesso">Configurações do domínio</a></li>
+<li class=""><a href="https://www.google.com/a/cpanel/awktec.com/Advanced" title="upload em massa, transferência de dados, relatórios, API">Ferramentas avançadas</a></li>
+<li id="services" class=""><a href="javascript:showItem('servicelist');" title="configurações globais de e-mail, agenda e mais">Configurações do serviço<img src="setup_files/arrow.gif" alt=""></a>
+<ul id="servicelist"><li class=""><a href="https://www.google.com/a/cpanel/awktec.com/Homepage" title="permitir que usuários acessem seus serviços em um único local">Página inicial</a></li>
+<li class=""><a href="https://www.google.com/a/cpanel/awktec.com/EmailSettings" title="configurações de e-mail, gerenciar listas de correspondência">E-mail</a></li>
+<li class=""><a href="https://www.google.com/a/cpanel/awktec.com/ChatSettings" title="baixar Google Talk, opções de compartilhamento">Bate-papo</a></li>
+<li class=""><a href="https://www.google.com/a/cpanel/awktec.com/CalendarSettings" title="configurações de agenda, opções de compartilhamento">Agenda</a></li>
+
+<li class=""><a href="https://www.google.com/a/cpanel/awktec.com/DocsSettings" title="gerenciar opções de compartilhamento de documentos">Docs</a></li>
+
+</ul></li></ul>
+<div class="clear"></div></div>
+
+<div id="nav2"><a href="https://www.google.com/a/cpanel/awktec.com/EmailSettings">«
+Voltar para Configurações de e-mail</a></div>
+<div id="content"><form name="inst" action="Setup" method="post"><div id="topsection"><h2>Configurar entrega de e-mails</h2></div>
+<p></p><h3>Alteração dos registros de troca de e-mail (MX)</h3>
+<p>Os registros de troca de e-mails (MX) controlam como os e-mails de
+entrada são roteados para o seu domínio. Para que o Google hospede seu
+e-mail, você precisa alterar esses registros MX para direcioná-los a
+nossos servidores.</p>
+<p class="warning"><b>Seus registros MX atuais contêm valor(es) incorreto(s):</b>
+<br>
+</p><table class="mx"><tbody><tr><th>Endereço do servidor MX</th>
+<th>Prioridade</th></tr>
+<tr><td><span style="color: rgb(204, 0, 0); font-weight: bold;">apmx.l.google.com.</span></td>
+<td><span style="">0</span></td></tr></tbody></table>
+Para corrigir esse problema<b>, digite os registros MX corretos, como mostrado nas instruções completas abaixo.</b>
+<p class="warning"><b>Se o seu domínio já possuir endereços de e-mail</b>,
+tenha cuidado ao alterar registros MX. Para evitar interrupção do
+serviço de e-mail, certifique-se de criar o mesmo conjunto de contas de
+usuário no painel de controle antes de alterar os registros MX.
+<a id="learnMore45679" href="http://www.google.com/support/a/bin/answer.py?answer=45679&amp;hl=pt_BR" target="_blank">Saiba mais</a>
+<br>
+<br>
+<b>Se você ainda não estiver pronto para alterar seus registros MX,</b>
+use o endereço de e-mail temporário
+(&lt;nomedousuário&gt;@awktec.com.test-google-a.com) atribuído às suas
+contas de usuário quando as criou. O endereço de e-mail temporário será
+desativado quando você alterar os registros MX. Não deixe de <a href="https://www.google.com/a/cpanel/awktec.com/VerifyOwnership">confirmar a propriedade de domínio</a> antes de usar quaisquer aplicativos do Google Apps.</p>
+<script type="text/javascript">
+
+/* un-hide, hide */
+function uh(id) {
+  document.getElementById(id).style.display = "";
+};
+
+function h(id) { 
+  document.getElementById(id).style.display = "none";
+};
+
+function updateInst()
+{
+    var v = document.inst.choice.value;
+    h('anydomain');
+    h('dyndns');
+    h('dreamhost');
+    h('enom');
+    h('godaddy');
+    h('lxlabs');
+    h('networksolutions');
+    h('oneandone');
+    h('yahoo');
+    h('dynadot');
+    h('xname');
+    h('dnsexit');
+    h('netfirms');
+    h('btbroadbandoffice');
+    h('gandi');
+    h('vserver');
+    h('namedotcom');
+    h('namedotnet');
+    h('domainsite');
+    h('namesecure');
+    h('zoneedit');
+    h('icodia');
+    h('nearlyfreespeech');
+    h('whm');
+    h('onetwothree');
+    h('fourdweb');
+    h('cpanel');
+    h('dnspark');
+    h('domainexplorer');
+    h('everydns');
+    h('ipowerweb');
+    h('ixwebhosting');
+    h('noip');
+    h('registerfly');
+    h('webhost4life');
+    
+    if (v == 'godaddy') uh('godaddy');
+    else if (v == 'dyndns') uh('dyndns');
+    else if (v == 'dreamhost') uh('dreamhost');
+    else if (v == 'enom') uh('enom');
+    else if (v == 'lxlabs') uh('lxlabs');
+    else if (v == 'networksolutions') uh('networksolutions');
+    else if (v == 'oneandone') uh('oneandone');
+    else if (v == 'yahoo') uh('yahoo');
+    else if (v == 'dynadot') uh('dynadot');
+    else if (v == 'xname') uh('xname');
+    else if (v == 'dnsexit') uh('dnsexit');
+    else if (v == 'netfirms') uh('netfirms');
+    else if (v == 'btbroadbandoffice') uh('btbroadbandoffice');
+    else if (v == 'gandi') uh('gandi');
+    else if (v == 'vserver') uh('vserver');
+    else if (v == 'namedotcom') uh('namedotcom');
+    else if (v == 'namedotnet') uh('namedotnet');
+    else if (v == 'domainsite') uh('domainsite');
+    else if (v == 'namesecure') uh('namesecure');
+    else if (v == 'zoneedit') uh('zoneedit');
+    else if (v == 'icodia') uh('icodia');
+    else if (v == 'nearlyfreespeech') uh('nearlyfreespeech');
+    else if (v == 'whm') uh('whm');
+    else if (v == 'onetwothree') uh('onetwothree');
+    else if (v == 'fourdweb') uh('fourdweb');
+    else if (v == 'cpanel') uh('cpanel');
+    else if (v == 'dnspark') uh('dnspark');
+    else if (v == 'domainexplorer') uh('domainexplorer');
+    else if (v == 'everydns') uh('everydns');
+    else if (v == 'ipowerweb') uh('ipowerweb');
+    else if (v == 'ixwebhosting') uh('ixwebhosting');
+    else if (v == 'noip') uh('noip');
+    else if (v == 'registerfly') uh('registerfly');
+    else if (v == 'webhost4life') uh('webhost4life');
+    else uh('anydomain');
+}
+</script>
+<div id="content"><p>Exibição de instruções para <select name="choice" onchange="updateInst();"><option value="anydomain" selected="selected">Qualquer empresa de hospedagem</option>
+<option disabled="disabled" value="separator">————</option>
+<option value="onetwothree">123-reg.co.uk</option>
+<option value="oneandone">1and1</option>
+<option value="fourdweb">4d Web Hosting</option>
+<option value="btbroadbandoffice">BT broadband office</option>
+<option value="cpanel">cPanel</option>
+<option value="dnsexit">dnsExit</option>
+<option value="dnspark">DNS Park</option>
+<option value="domainexplorer">Domain Explorer</option>
+<option value="domainsite">DomainSite</option>
+<option value="dreamhost">DreamHost</option>
+<option value="dynadot">Dynadot</option>
+<option value="dyndns">DynDNS</option>
+<option value="enom">Enom</option>
+<option value="everydns">EveryDNS.net</option>
+<option value="gandi">Gandi.net</option>
+<option value="godaddy">GoDaddy</option>
+<option value="icodia">iCodia</option>
+<option value="ipowerweb">iPowerWeb</option>
+<option value="ixwebhosting">ix Web Hosting</option>
+<option value="lxlabs">Lxlabs</option>
+<option value="namedotcom">Name.com</option>
+<option value="namedotnet">Name.net</option>
+<option value="namesecure">Namesecure</option>
+<option value="nearlyfreespeech">NearlyFreeSpeech</option>
+<option value="netfirms">Netfirms</option>
+<option value="networksolutions">Network Solutions</option>
+<option value="noip">No-IP</option>
+<option value="registerfly">Registerfly.com</option>
+<option value="vserver">vserver.de</option>
+<option value="webhost4life">Webhost4Life</option>
+<option value="whm">WHM</option>
+<option value="xname">XName</option>
+<option value="yahoo">Yahoo!</option>
+<option value="zoneedit">ZoneEdit</option></select></p>
+<div id="anydomain" class="dash" style=""><ol id="numbered"><li><p><strong>Acesse o site da empresa de hospedagem de domínio</strong> utilizando o nome de usuário e a senha associados ao seu domínio.</p></li>
+<li><p><strong>Navegue para a página de manutenção de um registro MX.</strong>
+Os registros MX são registros DNS (Domain Name Service) especiais, e
+freqüentemente estão localizados em seções intituladas "DNS
+Management", "Mail Server Configuration" ou "Name Server Management".
+Talvez seja necessário ativar as configurações avançadas para permitir
+a edição desses registros MX.</p></li>
+<li><p><strong>Exclua quaisquer registros MX existentes</strong> antes de inserir novos registros MX.</p></li>
+<li><p><strong>Para cada registro MX, digite as informações de acordo com as entradas na tabela a seguir.</strong></p>
+<p>Talvez não seja possível informar os valores prioritários exatamente
+como aparecem na tabela a seguir; nesse caso, simplesmente
+certifique-se de que os endereços do servidor tenham prioridade na
+mesma ordem que aparecem na tabela (ou seja, a classificação de
+prioridade [1, 3, 3, 5, 5, 5, 5] deverá funcionar da mesma forma que
+[1, 5, 5, 10, 10, 10, 10] contanto que mantenha os endereços na ordem
+correta).</p>
+<p>Se for solicitado que você especifique o tipo de cada registro que está adicionando, digite "MX".</p>
+<p>Os registros MX com freqüência exigem o formato específico de
+registros DNS, incluindo um ponto final (".") ao fim de quaisquer nomes
+de domínio totalmente qualificados (por exemplo, "server.example.com").</p>
+<p>Defina os valores para o valor máximo permitido.</p>
+<table class="mx"><tbody><tr><th>Endereço do servidor MX</th>
+<th>Prioridade</th></tr>
+<tr><td>ASPMX.L.GOOGLE.COM.</td> <td>1</td></tr> <tr><td>ALT1.ASPMX.L.GOOGLE.COM.</td> <td>5</td></tr> <tr><td>ALT2.ASPMX.L.GOOGLE.COM.</td> <td>5</td></tr> <tr><td>ASPMX2.GOOGLEMAIL.COM.</td> <td>10</td></tr> <tr><td>ASPMX3.GOOGLEMAIL.COM.</td> <td>10</td></tr> <tr><td>ASPMX4.GOOGLEMAIL.COM.</td> <td>10</td></tr> <tr><td>ASPMX5.GOOGLEMAIL.COM.</td> <td>10</td></tr></tbody></table></li>
+<li><p><b>Alterar o registro SPF para combater SPAM</b><span class="u">(opcional)</span></p><p>É
+possível definir que o registro SPF autorize somente alguns endereços
+IP a enviar e-mails para o seu domínio. Isso impedirá que spammers
+enviem e-mails não autorizados com endereços forjados para o seu
+domínio.</p></li></ol></div>
+<div id="enom" class="dash" style="display: none;"><ol id="numbered"><li><p>Acesse sua conta em <a href="http://www.enom.com/" target="_none">http://www.enom.com</a>.</p></li>
+<li><p><b>Clique no nome do domínio que deseja usar</b> com Google Apps. O nome do domínio principal será exibido.</p></li>
+<li><p>No painel <b>DNS Settings</b> (Zone File), clique em <b>Configure</b>. A página <b>Domain Name Host Records</b> será exibida.</p></li>
+<li><p>No painel <b>Mail Host Records Setup</b>, substitua qualquer entrada existente por entradas de acordo com a tabela a seguir:
+<br><br>
+Observação: Certifique-se de que cada entrada seja digitada exatamente como aparece na tabela a seguir. Não se esqueça de <b>incluir o ponto final ao fim de cada registro.</b>
+</p><table class="mx"><tbody><tr><th>Address</th><th>Pref</th></tr> <tr><td>ASPMX.L.GOOGLE.COM.</td> <td>10</td></tr> <tr class="h"><td>ALT1.ASPMX.L.GOOGLE.COM.</td> <td>20</td></tr> <tr><td>ALT2.ASPMX.L.GOOGLE.COM.</td> <td>30</td></tr> <tr class="h"><td>ASPMX2.GOOGLEMAIL.COM.</td> <td>40</td></tr> <tr><td>ASPMX3.GOOGLEMAIL.COM.</td> <td>50</td></tr> <tr class="h"><td>ASPMX4.GOOGLEMAIL.COM.</td> <td>60</td></tr> <tr><td>ASPMX5.GOOGLEMAIL.COM.</td> <td>70</td></tr></tbody></table>
+<br></li>
+<li><p><b>Clique em Save Changes</b> na parte inferior da página.</p></li></ol></div>
+<div id="namedotcom" class="dash" style="display: none;"><ol id="numbered"><li><p><strong>Acesse sua conta <a href="http://name.com/">name.com</a>.</strong></p></li>
+<li><p><strong>Navegue até o Gerenciamento de domínio do seu domínio.</strong></p></li>
+<li><p><strong>Exclua quaisquer registros MX existentes</strong> antes de inserir novos registros MX.</p></li>
+<li><p><strong>Para cada registro MX, digite as informações de acordo com as entradas na tabela a seguir.</strong></p>
+<p>Se for solicitado que você especifique o tipo de cada registro que está adicionando, digite "MX".</p>
+<p>Deixe o campo Host do registro em branco para cada registro. Você não tem que definir um host para os registros MX.</p>
+<p>Deixe o valor TTL como a configuração padrão.</p>
+<table class="mx"><tbody><tr><th>Endereço do servidor MX</th>
+<th>Prioridade</th></tr>
+<tr><td>ASPMX.L.GOOGLE.COM.</td> <td>10</td></tr> <tr><td>ALT1.ASPMX.L.GOOGLE.COM.</td> <td>20</td></tr> <tr><td>ALT2.ASPMX.L.GOOGLE.COM.</td> <td>30</td></tr> <tr><td>ASPMX2.GOOGLEMAIL.COM.</td> <td>40</td></tr> <tr><td>ASPMX3.GOOGLEMAIL.COM.</td> <td>50</td></tr> <tr><td>ASPMX4.GOOGLEMAIL.COM.</td> <td>60</td></tr> <tr><td>ASPMX5.GOOGLEMAIL.COM.</td> <td>70</td></tr></tbody></table></li></ol></div>
+<div id="namedotnet" class="dash" style="display: none;"><ol id="numbered"><li><p><strong>Acesse sua conta <a href="http://name.net/">name.net</a>.</strong></p></li>
+<li><p><strong>Navegue até o Gerenciamento de domínio do seu domínio.</strong></p></li>
+<li><p><strong>Exclua quaisquer registros MX existentes</strong> antes de inserir novos registros MX.</p></li>
+<li><p><strong>Para cada registro MX, digite as informações de acordo com as entradas na tabela a seguir.</strong></p>
+<p>Se for solicitado que você especifique o tipo de cada registro que está adicionando, digite "MX".</p>
+<p>Deixe o campo Host do registro em branco para cada registro. Você não tem que definir um host para os registros MX.</p>
+<p>Deixe o valor TTL como a configuração padrão.</p>
+<table class="mx"><tbody><tr><th>Endereço do servidor MX</th>
+<th>Prioridade</th></tr>
+<tr><td>ASPMX.L.GOOGLE.COM.</td> <td>10</td></tr> <tr><td>ALT1.ASPMX.L.GOOGLE.COM.</td> <td>20</td></tr> <tr><td>ALT2.ASPMX.L.GOOGLE.COM.</td> <td>30</td></tr> <tr><td>ASPMX2.GOOGLEMAIL.COM.</td> <td>40</td></tr> <tr><td>ASPMX3.GOOGLEMAIL.COM.</td> <td>50</td></tr> <tr><td>ASPMX4.GOOGLEMAIL.COM.</td> <td>60</td></tr> <tr><td>ASPMX5.GOOGLEMAIL.COM.</td> <td>70</td></tr></tbody></table></li></ol></div>
+<div id="domainsite" class="dash" style="display: none;"><ol id="numbered"><li><p><strong>Acesse sua conta <a href="http://domainsite.com/">domainsite.com</a>.</strong></p></li>
+<li><p><strong>Navegue até o Gerenciamento de domínio do seu domínio.</strong></p></li>
+<li><p><strong>Exclua quaisquer registros MX existentes</strong> antes de inserir novos registros MX.</p></li>
+<li><p><strong>Para cada registro MX, digite as informações de acordo com as entradas na tabela a seguir.</strong></p>
+<p>Se for solicitado que você especifique o tipo de cada registro que está adicionando, digite "MX".</p>
+<p>Deixe o campo Host do registro em branco para cada registro. Você não tem que definir um host para os registros MX.</p>
+<p>Deixe o valor TTL como a configuração padrão.</p>
+<table class="mx"><tbody><tr><th>Endereço do servidor MX</th>
+<th>Prioridade</th></tr>
+<tr><td>ASPMX.L.GOOGLE.COM.</td> <td>10</td></tr> <tr><td>ALT1.ASPMX.L.GOOGLE.COM.</td> <td>20</td></tr> <tr><td>ALT2.ASPMX.L.GOOGLE.COM.</td> <td>30</td></tr> <tr><td>ASPMX2.GOOGLEMAIL.COM.</td> <td>40</td></tr> <tr><td>ASPMX3.GOOGLEMAIL.COM.</td> <td>50</td></tr> <tr><td>ASPMX4.GOOGLEMAIL.COM.</td> <td>60</td></tr> <tr><td>ASPMX5.GOOGLEMAIL.COM.</td> <td>70</td></tr></tbody></table></li></ol></div>
+<div id="networksolutions" class="dash" style="display: none;"><ol id="numbered"><li><p>Acesse sua conta em <a href="http://www.networksolutions.com/" target="_none">http://www.networksolutions.com</a>.</p></li>
+<li><p>Clique em <b>Edit DNS</b> em <b>DNS Settings</b>. A página Edit
+DNS será exibida. (Se você ainda não tiver editado as entradas DNS para
+seu nome de domínio, talvez seja preciso selecionar <b>Custom DNS Setting</b>.)</p></li>
+<li><p>No painel <b>DNS Manager-Advanced Tools</b>, clique em <b>Continue</b>. A página DNS Manager - Advanced Tools será exibida.</p></li>
+<li><p>No painel <b>Mail Servers</b>, clique em <b>Add / Edit</b>. A tabela Mail Servers será exibida.</p></li>
+<li><p><b>Remova quaisquer registros MX existentes</b> assinalando a caixa ao lado de delete.</p></li>
+<li><p>Dentro da <b>tabela  Mail Servers </b>, digite as informações de acordo com a tabela a seguir:
+<br>
+<br>
+Observação: Certifique-se de que cada entrada seja digitada exatamente como aparece na tabela a seguir. Não se esqueça de <b>incluir o ponto final ao fim de cada registro.</b>
+</p><table class="mx"><tbody><tr><th>Priority</th> <th>Mail Server</th></tr> <tr><td>10</td> <td>ASPMX.L.GOOGLE.COM.</td></tr> <tr class="h"><td>20</td> <td>ALT1.ASPMX.L.GOOGLE.COM.</td></tr> <tr><td>30</td> <td>ALT2.ASPMX.L.GOOGLE.COM.</td></tr> <tr class="h"><td>40</td> <td>ASPMX2.GOOGLEMAIL.COM.</td></tr> <tr><td>50</td> <td>ASPMX3.GOOGLEMAIL.COM.</td></tr></tbody></table>
+<br></li>
+<li><p>Clique em <b>Save</b>.</p></li></ol></div>
+<div id="godaddy" class="dash" style="display: none;"><ol id="numbered"><li><p>Acesse sua conta em <a href="http://www.godaddy.com/" target="_none">http://www.godaddy.com</a>.</p></li>
+<li><p>Abra a guia <b>Domains</b> e selecione <b>My Domain Names</b>. Você será redirecionado para a página <b>Manage Domains</b>.</p></li>
+<li><p><b>Clique no domínio que deseja usar</b> com Google Apps.</p></li>
+<li><p>No painel <b>Domain Details</b> à direita, selecione o ícone <b>+</b> no item da lista Total DNS Control. Uma sub-lista será exibida.</p></li>
+<li><p>Clique na entrada intitulada <b>Total DNS Control And MX Records</b>. O painel <b>Manage MX Records, and DNS Zone File</b> será exibido.</p></li>
+<li><p>Clique em <b>Launch Total DNS Control Manager</b>. A janela DNS Manager será exibida.</p></li>
+<li><p>Limpe todos os registros MX existentes clicando em <b>Delete</b>.</p></li>
+<li><p>Clique em <b>OK</b> na caixa de diálogo de confirmação.</p></li>
+<li><p>Quando tiver excluído todos os registros existentes, clique em <b>Add New MX Record</b>. A página <b>MX (Mail Exchangers) Record Wizard</b> será exibida.</p></li>
+<li><p>Para cada registro MX, digite as informações de acordo com os dados na tabela a seguir:
+</p><ul><li>Para o menu suspenso <b>Select the Priority Value</b>, digite um valor prioritário.</li>
+<li>Para <b>Enter a Host Name</b>, deixe a configuração padrão em <b>@</b>.</li>
+<li>Para <b>Enter Goes To Address</b>, digite o nome do servidor do Google na tabela abaixo. Não se esqueça de incluir um ponto no fim de cada registro.</li>
+<li>Para o menu suspenso <b>Select TTL Value</b>, digite <b>1 Week</b>. Isso será exibido como <b>604800 seconds</b> dentro do sistema DNS.</li></ul>
+<table class="mx"><tbody><tr><th>PriorityValue</th> <th>HostName</th> <th>Goes To Address (Mail Server)</th> <th>TTL Value</th></tr> <tr><td>10</td> <td>@</td> <td>ASPMX.L.GOOGLE.COM.</td> <td>1 week</td></tr> <tr class="h"><td>20</td> <td>@</td> <td>ALT1.ASPMX.L.GOOGLE.COM.</td> <td>1 week</td></tr> <tr><td>30</td> <td>@</td> <td>ALT2.ASPMX.L.GOOGLE.COM.</td> <td>1 week</td></tr> <tr class="h"><td>40</td> <td>@</td> <td>ASPMX2.GOOGLEMAIL.COM.</td> <td>1 week</td></tr> <tr><td>50</td> <td>@</td> <td>ASPMX3.GOOGLEMAIL.COM.</td> <td>1 week</td></tr></tbody></table>
+<br></li>
+<li><p>Clique em <b>Continue</b>.</p></li>
+<li><p>Clique em <b>Add</b> para confirmar cada entrada. A página principal <b>DNS Manager</b> será exibida novamente quando tiver concluído.</p></li></ol></div>
+<div id="dyndns" class="dash" style="display: none;"><ol id="numbered"><li><p>Acesse a sua conta em <a href="http://www.dyndns.com/" target="_none">DynDNS.com</a>.</p></li>
+<li><p>Clique em <b>My Services</b> abaixo do nome de usuário.</p></li>
+<li><p>Em <b>Zone Level Services</b>, clique em <b>Custom DNS</b> ao lado do domínio que usará com <b>Google Apps</b>.</p></li>
+<li><p>Em <b>Mail eXchanger (MX) Records</b>, selecione todos os domínios existentes e clique em <b>Delete MX</b>.</p></li>
+<li><p>Em <b>Mail eXchanger (MX) Records</b>, clique no nome de domínio escolhido.</p></li>
+<li><p>Para <b>Preference</b>, selecione <b>5 -- Highest</b>.</p></li>
+<li><p>Para <b>Mail Exchanger</b>, digite <b>ASPMX.L.GOOGLE.COM.</b></p></li>
+<li><p>Agora, clique em <b>Modify MX</b>.</p></li>
+<li><p>Na parte superior direita, clique em <b>Return to...</b></p></li>
+<li><p>Repita as etapas de 5 a 8 com as seguintes informações:
+</p><table class="mx"><tbody><tr><th>Preference</th> <th>Mail Exchanger</th></tr> <tr><td>10</td> <td>ALT1.ASPMX.L.GOOGLE.COM.</td></tr> <tr class="h"><td>15</td> <td>ALT2.ASPMX.L.GOOGLE.COM.</td></tr></tbody></table>
+<br></li></ol></div>
+<div id="yahoo" class="dash" style="display: none;"><ol id="numbered"><li><p>Acesse sua conta em <a href="http://smallbusiness.yahoo.com/services" target="_none">smallbusiness.yahoo.com</a>.</p></li>
+<li><p>Clique em <b>Domain Control Panel</b> abaixo do nome do domínio que deseja usar com <b> Google Apps</b>.</p></li>
+<li><p>Clique em <b>Manage Advanced DNS Settings</b>.</p></li>
+<li><p>Clique em <b>Change MX Records</b>.</p></li>
+<li><p>Limpe todos os registros MX existentes.</p></li>
+<li><p>Digite as informações de acordo com a tabela a seguir:
+<br>
+<br>
+Observação: Certifique-se de que cada entrada seja digitada exatamente como aparece na tabela a seguir. Não se esqueça de <b>incluir o ponto final ao fim de cada registro.</b>
+</p><table class="mx"><tbody><tr><th>MailServer Hostname:</th> <th>Priority</th></tr> <tr><td>ASPMX.L.GOOGLE.COM.</td> <td>10</td></tr> <tr class="h"><td>ALT1.ASPMX.L.GOOGLE.COM.</td> <td>20</td></tr> <tr><td>ALT2.ASPMX.L.GOOGLE.COM.</td> <td>30</td></tr> <tr class="h"><td>ASPMX2.GOOGLEMAIL.COM.</td> <td>40</td></tr> <tr><td>ASPMX3.GOOGLEMAIL.COM.</td> <td>50</td></tr> <tr class="h"><td>ASPMX4.GOOGLEMAIL.COM.</td> <td>60</td></tr> <tr><td>ASPMX5.GOOGLEMAIL.COM.</td> <td>70</td></tr></tbody></table>
+<br></li>
+<li><p>Clique em <b>Submit</b>.</p></li></ol></div>
+<div id="oneandone" class="dash" style="display: none;"><ol id="numbered"><li><p>Acesse a sua conta em <a href="https://admin.1and1.com/" target="_none">https://admin.1and1.com</a>.</p></li>
+<li><p>Se não estiver selecionada, clique na guia <b>Administration</b>.</p></li>
+<li><p>Clique em <b>Domains</b>. A página <b>Domain Overview</b> será exibida.</p></li>
+<li><p>Marque a caixa de seleção ao lado do domínio que usará com Google Apps.</p></li>
+<li><p>No menu <b>DNS</b>, selecione <b>Edit DNS Settings</b>.</p></li>
+<li><p>Em <b>Advanced DNS Settings</b>, selecione o botão <b>Other mail server</b>.</p></li>
+<li><p>Digite as informações de acordo com a tabela a seguir:
+</p><table class="mx" border="1"><tbody><tr><td>MX 1 / Prio</td> <td>aspmx.l.google.com</td> <td>1</td></tr> <tr><td>MX 2 / Prio</td> <td>alt1.aspmx.l.google.com</td> <td>5</td></tr> <tr><td>Further backups</td> <td>My mail exchanger</td> <td>&nbsp;</td></tr> <tr><td>MX 3 / Prio</td> <td>alt2.aspmx.l.google.com</td> <td>5</td></tr> <tr><td>MX 4 / Prio</td> <td>aspmx2.googlemail.com</td> <td>10</td></tr></tbody></table>
+<br></li>
+<li><p>Clique em <b>OK</b>.</p></li></ol></div>
+<div id="xname" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login em sua conta do <a href="http://xname.org/">xname.org</a>.</li>
+<li>Vá para a página de configuração e remova todos os registros MX existentes.</li>
+<li>Insira as seguintes informações:<br>O primeiro número abaixo é prioritário e deve ficar no primeiro campo da página de configuração dos <b>MX-records</b> (registros MX).</li>
+<blockquote><table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>1</td> <td>ASPMX.L.GOOGLE.COM.</td></tr> <tr><td>5</td> <td>ALT1.ASPMX.L.GOOGLE.COM.</td></tr> <tr><td>5</td> <td>ALT2.ASPMX.L.GOOGLE.COM.</td></tr> <tr><td>10</td> <td>ASPMX2.GOOGLEMAIL.COM.</td></tr> <tr><td>10</td> <td>ASPMX3.GOOGLEMAIL.COM.</td></tr> <tr><td>10</td> <td>ASPMX4.GOOGLEMAIL.COM.</td></tr> <tr><td>10</td> <td>ASPMX5.GOOGLEMAIL.COM.</td></tr></tbody></table></blockquote></ol></div>
+<div id="dnsexit" class="dash" style="display: none;"><ol id="numbered"><li>Acesse a sua conta em <a href="http://dnsexit.com/">dnsExit.com</a>.</li>
+<li>No lado esquerdo, clique em <b>Gerenciar domínio</b>.</li>
+<li>No menu suspenso próximo à parte central da tela, selecione o domínio que deseja usar com o Google Apps.</li>
+<li>Clique em <b>Editar DNS</b>.</li>
+<li>Adicione os seguintes registros MX à seção <b>Configurações de MX</b>:</li>
+<blockquote><b>aspmx.l.google.com.br</b> com uma preferência de <b>10</b><br>
+<b>alt1.aspmx.l.google.com.br</b> com uma preferência de <b>15</b><br></blockquote>
+<li>Clique em <b>Enviar</b>, na parte inferior da tela. (Você pode adicionar apenas dois registros MX de cada vez, usando a interface web.)</li>
+<li>Na tela seguinte, clique no botão <b>Editar DNS</b>.</li>
+<li>Adicione os seguintes registros MX à seção <b>Configurações de MX</b>:</li>
+<blockquote><b>alt2.aspmx.l.google.com.br</b> com uma preferência de <b>20</b><br>
+<b>aspmx2.googlemail.com.br</b> com uma preferência de <b>25</b></blockquote>
+<li>Clique em <b>Enviar</b>.</li></ol></div>
+<div id="btbroadbandoffice" class="dash" style="display: none;"><ol id="numbered"><li>Acesse a sua conta no <a href="http://www2.btbroadbandoffice.com/"> BT broadband office</a> . Você deve fazer login como o usuário principal da conta, clicando em <b>Manage your domain name</b> (Gerenciar seu nome de domínio).</li>
+<li>Acesse o <b>Console de gerenciamento de domínio</b> na área da <b>BT para sua conta de empresa</b>.</li>
+<li>Selecione a guia <b>Manutenção de domínio</b>.</li>
+<li>Selecione o nome de domínio que está usando com o Google Apps.</li>
+<li>Exclua qualquer registro MX existente.</li>
+<li>Selecione <b>MX</b> no primeiro menu suspenso.</li>
+<li>Adicionar <b>@</b> como <b>valor de chave</b> .</li>
+<li>Adicione <b>aspmx.l.google.com</b> como o <b>Valor</b> e defina a <b>Prioridade</b> como <b>10</b>.</li>
+<li>Clique em <b>Ir</b>.</li>
+<p>Observação: Se não puder inserir o nome de servidor do Google, <u>entre em contato diretamente com a BT</u> para solicitar que um membro do suporte atualize seus registros MX manualmente.</p>
+<p></p><li>Assim que tiver confirmado o primeiro nome de servidor do Google, insira estas entradas:</li>
+<table border="1" cellpadding="1" cellspacing="3"><tbody><tr><td><p><strong>Prioridade</strong></p></td>
+<td><p><strong>Servidor de e-mail</strong></p></td></tr>
+<tr><td>20</td> <td>ALT1.ASPMX.L.GOOGLE.COM.</td></tr> <tr><td><p>20</p></td> <td><p>ALT2.ASPMX.L.GOOGLE.COM.</p></td></tr> <tr><td><p>30</p></td> <td><p>ASPMX2.GOOGLEMAIL.COM.</p></td></tr> <tr><td><p>30</p></td> <td><p>ASPMX3.GOOGLEMAIL.COM.</p></td></tr> <tr><td><p>30</p></td> <td><p>ASPMX4.GOOGLEMAIL.COM.</p></td></tr></tbody></table>
+<li>Clique em <b>Ir</b>.</li></ol></div>
+<div id="gandi" class="dash" style="display: none;"><ol id="numbered"><li>Acesse a sua conta em <a href="http://www.gandi.net/">gandi.net</a>.</li>
+<li>Mude para versão de DNS personalizado.</li>
+<li>Selecione um <b>especialista</b>.</li>
+<li>No campo <b>Criar zona</b> digite as seguintes informações:</li>
+<blockquote>@ 28800 IN MX 1 ASPMX.L.GOOGLE.COM. <br> @ 28800 IN MX 3 ALT1.ASPMX.L.GOOGLE.COM. <br> @ 28800 IN MX 3 ALT2.ASPMX.L.GOOGLE.COM. <br> @ 28800 IN MX 5 ASPMX2.GOOGLEMAIL.COM. <br> @ 28800 IN MX 5 ASPMX3.GOOGLEMAIL.COM. <br> @ 28800 IN MX 5 ASPMX4.GOOGLEMAIL.COM. <br> @ 28800 IN MX 5 ASPMX5.GOOGLEMAIL.COM. <br></blockquote>
+<li>Clique em <b>Enviar</b>.</li>
+<li>Clique em <b>Enviar</b> novamente para aceitar a alteração.</li></ol></div>
+<div id="vserver" class="dash" style="display: none;"><ol id="numbered"><li>Log in to your account at <a href="https://www.server4you.de/de/start.php?a">server.de</a>.</li>
+<li>Click <b>PowerDNS</b>.</li>
+<li>Click <b>Nameserver</b>.</li>
+<li>Choose the domain you want to edit and click <b>Info</b>.</li>
+<li>Delete all existing MX records.</li>
+<li>Insert the new ones:</li>
+<blockquote>MX 1 aspmx.l.google.com Ändern Löschen<br> MX 5 alt1.aspmx.l.google.com Ändern Löschen<br> MX 5 ALT2.ASPMX.L.GOOGLE.COM Ändern Löschen<br> MX 10 ASPMX2.GOOGLEMAIL.COM Ändern Löschen<br> MX 10 ASPMX3.GOOGLEMAIL.COM Ändern Löschen<br> MX 15 ASPMX4.GOOGLEMAIL.COM Ändern Löschen<br> MX 15 ASPMX5.GOOGLEMAIL.COM Ändern Löschen<br></blockquote>
+<li>Done - it could take some time until these records are public.</li></ol></div>
+<div id="namesecure" class="dash" style="display: none;"><ol id="numbered"><li>Acesse a sua conta em <a href="https://www.namesecure.com/pages/home.jhtml">Namesecure.com</a>.</li>
+<li>Em <b>Central de gerenciamento de serviços de domínio</b>, selecione <b>Modificar/atualizar</b>.</li>
+<li>Veja as seleções de menu em <b>Outras opções</b>.</li>
+<li>Se a Namesecure for o seu provedor de DNS, selecione <b>Zone File Control</b> (Controle de arquivo de zona).</li>
+<li>Insira os seguintes registros MX:</li>
+<table border="1" cellpadding="1" cellspacing="3"><tbody><tr><td><p><strong>Prioridade</strong></p></td>
+<td><p><strong>Servidor de e-mail</strong></p></td></tr>
+<tr><td>1 <br></td> <td>ASPMX.L.GOOGLE.COM.</td></tr> <tr><td>5</td> <td>ALT1.ASPMX.L.GOOGLE.COM.</td></tr> <tr><td><p>5</p></td> <td><p>ALT2.ASPMX.L.GOOGLE.COM.</p></td></tr> <tr><td><p>10</p></td> <td><p>ASPMX2.GOOGLEMAIL.COM.</p></td></tr> <tr><td><p>10</p></td> <td><p>ASPMX3.GOOGLEMAIL.COM.</p></td></tr> <tr><td><p>10</p></td> <td><p>ASPMX4.GOOGLEMAIL.COM.</p></td></tr> <tr><td><p>10</p></td> <td><p>ASPMX5.GOOGLEMAIL.COM.</p></td></tr></tbody></table></ol></div>
+<div id="zoneedit" class="dash" style="display: none;"><ol id="numbered"><li>Acesse a sua conta em <a href="http://www.zoneedit.com/">ZoneEdit.com</a>.</li>
+<li>Selecione a área com as entradas MX que você deseja alterar.</li>
+<li>Clique em <b>Servidores de e-mail</b>.</li>
+<li>Excluir entradas atuais:</li>
+<blockquote>Marque todas as caixas de seleção na coluna <b>excluir</b>.<br>
+Pressione o botão <b>Excluir</b>.<br>
+Clique em <b>Sim</b> para confirmar.</blockquote>
+<li>Os registros MX devem ser adicionados um de cada vez:</li>
+<blockquote>Em <b>MailServer</b> (Servidor de e-mail), adicione <b>ASPMX.L.GOOGLE.COM</b>.<br>
+Selecione a <b>1a</b> prioridade da classificação.<br>
+Adicione o nome do seu domínio.</blockquote>
+<li>Clique em <b>Adicionar novo servidor de e-mail</b>.</li>
+<li>É necessário confirmar a operação. Pressione <b>Sim</b>.</li>
+<li>Repita para as seguintes entradas:</li>
+<blockquote><b>ALT1.ASPMX.L.GOOGLE.COM</b> controla e-mails com prioridade <b>3ª</b> no seu domínio<br>
+<b>ALT2.ASPMX.L.GOOGLE.COM</b> controla e-mails com prioridade <b>3ª</b> no seu domínio<br>
+<b>ASPMX2.GOOGLEMAIL.COM</b> controla e-mails com prioridade <b>5ª</b> no seu domínio<br>
+<b>ASPMX3.GOOGLEMAIL.COM</b> controla e-mails com prioridade <b>5ª</b> no seu domínio<br>
+<b>ASPMX4.GOOGLEMAIL.COM</b> controla e-mails com prioridade <b>5ª</b> no seu domínio<br>
+<b>ASPMX5.GOOGLEMAIL.COM</b> controla e-mails com prioridade <b>5ª</b> no seu domínio<br></blockquote></ol></div>
+<div id="icodia" class="dash" style="display: none;"><ol id="numbered"><li>Vá para  <a href="http://www.icodia.com/">www.icodia.com</a> .</li>
+<li>Clique em <b>Cliente Espace</b>.</li>
+<li>Insira seu nome de domínio, ID da conta e senha para efetuar login na conta.</li>
+<li>Clique na guia <b>Gerenciar domínio</b>.</li>
+<li>Clique em <b>Registros DNS</b>.</li>
+<li>Remova todos os registros MX existentes.</li>
+<li>Para <b>adicionar configuração</b>, insira as seguintes informações:</li>
+<blockquote>Select <b>MX1</b> and enter <b>aspmx.l.google.com</b> <br> Select <b>MX5</b> and enter <b>alt1.aspmx.l.google.com</b> <br> Select <b>MX6</b> and enter <b>alt2.aspmx.l.google.com</b> <br> Select <b>MX10</b> and enter <b>aspmx2.googlemail.com</b></blockquote>
+<li>Clique em <b>Validar</b>.</li></ol></div>
+<div id="nearlyfreespeech" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login no <a href="http://members.nearlyfreespeech.net/login/">painel de controle de membro NFSN</a>.</li>
+<li>Clique na guia <b>Domínios</b>.</li>
+<li>Clique em <b>Gerenciar</b> na coluna <b>DNS</b> do domínio que deseja editar.</li>
+<li>No lado direito, clique em <b>Adicionar registro de recursos</b>.</li>
+<li>Deixe o primeiro campo em branco e mude o tipo para <b>MX</b>.</li>
+<li>No campo <b>Dados</b>, insira <b>1 ASPMX.L.GOOGLE.COM.BR</b></li>
+<li>Repita para o restante dos servidores com os seguintes dados:</li>
+<blockquote><b>5 ALT1.ASPMX.L.GOOGLE.COM.</b><br> <b>5 ALT2.ASPMX.L.GOOGLE.COM.</b><br> <b>10 ASPMX2.GOOGLEMAIL.COM.</b><br> <b>10 ASPMX3.GOOGLEMAIL.COM.</b><br> <b>10 ASPMX4.GOOGLEMAIL.COM.</b><br> <b>10 ASPMX5.GOOGLEMAIL.COM.</b></blockquote></ol></div>
+<div id="whm" class="dash" style="display: none;"><ol id="numbered"><li>Acesse a sua conta do WHM.</li>
+<li>Clique em <strong>Funções DNS</strong>.</li>
+<li>Clique em <strong>Editar Zona DNS</strong>.</li>
+<li>Na caixa à direita, selecione o domínio que deseja editar e clique em <strong>Editar</strong>.</li>
+<li>Exclua todas as entradas de registro MX existentes.</li>
+<li>Na primeira caixa, insira seu nome de domínio (ex.: exemplo.com).</li>
+<li>Não altere a segunda caixa.</li>
+<li>Selecione <b>MX</b> no menu suspenso.
+<br></li>
+<li>Na caixa à direita do menu suspenso, insira <b>10</b> como o valor de <b>prioridade</b>.</li>
+<li>Na caixa seguinte, insira <b>ASPMX.L.GOOGLE.COM</b></li>
+<li>Repita as etapas de seis a oito para o restante das entradas de registro MX a seguir. Adicione novas entradas na seção <b>Adicionar novas entradas abaixo desta linha</b>.</li>
+<p><strong>OBSERVAÇÃO:</strong> Certifique-se de que cada entrada seja
+digitada exatamente como aparece na tabela a seguir. Cada registro deve
+ter o ponto final.
+</p><table border="1" cellpadding="1" cellspacing="3"><tbody><tr><td><p><strong>Prioridade</strong></p></td>
+<td><p><strong>Servidor de e-mail</strong></p></td></tr>
+<tr><td><p>10</p></td> <td><p>ASPMX.L.GOOGLE.COM.</p></td></tr> <tr><td><p>20</p></td> <td><p>ALT1.ASPMX.L.GOOGLE.COM.</p></td></tr> <tr><td><p>30</p></td> <td><p>ALT2.ASPMX.L.GOOGLE.COM.</p></td></tr> <tr><td><p>40</p></td> <td><p>ASPMX2.GOOGLEMAIL.COM.</p></td></tr> <tr><td><p>50</p></td> <td><p>ASPMX3.GOOGLEMAIL.COM.</p></td></tr></tbody></table>
+<li>Clique em <strong>Salvar</strong>.</li></ol></div>
+<div id="netfirms" class="dash" style="display: none;"><ol id="numbered"><li>Log in to the Members Control Panel at <a href="https://controlpanel.netfirms.com/en-us/cp_login_form">controlpanel.netfirms.com</a>.</li>
+<li>Click <b>Domains</b>.</li>
+<li>For the desired domain, click <b>Admin</b>.</li>
+<li>Click <b>MX Record</b>.</li>
+<li>Add the following entries:</li>
+<blockquote><table border="1" cellpadding="1" cellspacing="3"><tbody><tr><td><p>ASPMX.L.GOOGLE.COM.</p></td> <td><p>1</p></td></tr> <tr><td><p>ALT1.ASPMX.L.GOOGLE.COM.</p></td> <td><p>5</p></td></tr> <tr><td><p>ALT2.ASPMX.L.GOOGLE.COM.</p></td> <td><p>10</p></td></tr> <tr><td><p>ASPMX2.GOOGLEMAIL.COM.</p></td> <td><p>15</p></td></tr> <tr><td><p>ASPMX3.GOOGLEMAIL.COM.</p></td> <td><p>20</p></td></tr> <tr><td><p>ASPMX4.GOOGLEMAIL.COM.</p></td> <td><p>25</p></td></tr> <tr><td><p>ASPMX5.GOOGLEMAIL.COM.</p></td> <td><p>30</p></td></tr></tbody></table></blockquote></ol></div>
+<div id="dynadot" class="dash" style="display: none;"><ol id="numbered"><li>Acesse a sua conta em <a href="http://www.dynadot.com/">dynadot.com</a>.</li>
+<li>Clique no domínio cujos registros MX você deseja alterar e, em seguida, em <b>Selecionar nomes de servidores</b>.</li>
+<li>Percorra a lista até <b>Dynadot DNS</b> e, em Registros MX, digite os seguintes registros MX:</li>
+<blockquote>Mail Host: aspmx.l.google.com <br> Distance: 0 <p>Mail Host: alt1.aspmx.l.google.com <br> Distance: 1</p> <p>Mail Host: alt2.aspmx.l.google.com <br> Distance: 1</p></blockquote>
+<li>Clique em <b>Usar Dynadot DNS</b> e pronto.</li></ol></div>
+<div id="lxlabs" class="dash" style="display: none;"><ol id="numbered"><li>Acesse o seu domínio em <a href="http://lxlabs.com/">LXadmin</a>.</li>
+<li>Exclua todos os registros MX do seu domínio.</li>
+<li>Clique em Gerenciar DNS --&gt; Registros MX</li>
+<li>Insira ASPMX.L.GOOGLE.COM como prioridade 10.</li>
+<li>Insira ALT1.ASPMX.L.GOOGLE.COM como prioridade 20</li>
+<li>Insira ASPMX2.GOOGLEMAIL.COM como prioridade 30</li></ol></div>
+<div id="dreamhost" class="dash" style="display: none;"><ol id="numbered"><li><p>Acesse a sua conta em <a href="http://www.dreamhost.com/" target="_none">www.dreamhost.com</a>.</p></li>
+<li><p>Clique em <b>Mail</b> à esquerda e selecione <b>MX</b> no menu suspenso.</p></li>
+<li><p>Clique em <b>edit</b> ao lado do domínio que usará com <b>Google Apps</b>.</p></li>
+<li><p>Em <b>Custom MX Records</b>, exclua todos os registros MX existentes.</p></li>
+<li><p>Digite <b>ASPMX.L.GOOGLE.COM.</b> na primeira caixa de texto.</p></li>
+<li><p>Clique em <b>Update your custom MX records now!</b></p></li></ol></div>
+<div id="onetwothree" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login na sua conta em <a href="http://www.123-reg.co.uk/">123-reg.co.uk</a>.</li>
+<li>Escolha o domínio que deseja usar com o Google Apps na caixa suspensa <b>Manage Domains</b> (Gerenciar domínios) e clique em <b>Modify Domain</b> (Modificar domínio).</li>
+<li>Escolha a quinta opção - <b>Manage DNS</b> (Gerenciar DNS). Dois registros MX padrão estarão visíveis:</li>
+<blockquote>mx0.123-reg.co.uk. 10<br>
+mx1.123-reg.co.uk. 20</blockquote>
+<li>Substitua a primeira entrada por:</li>
+<blockquote><b>ASPMX.L.GOOGLE.COM. 1</b></blockquote>
+<li>Clique em <b>Update DNS</b> (Atualizar DNS)</li>
+<li>Substitua a segunda entrada por:</li>
+<blockquote><b>ALT1.ASPMX.L.GOOGLE.COM. 5</b></blockquote>
+<li>Clique em <b>Update DNS</b> (Atualizar DNS)</li>
+<li>Insira os próximos cinco registros MX na caixa <b>Add new MX</b> (Adicionar novo MX) e clique em <b>Update DNS</b> (Atualizar DNS) entre cada entrada.</li>
+<blockquote><b>ALT2.ASPMX.L.GOOGLE.COM. 5</b><br>
+<b>ASPMX2.GOOGLEMAIL.COM. 10</b><br>
+<b>ASPMX3.GOOGLEMAIL.COM. 10</b><br>
+<b>ASPMX4.GOOGLEMAIL.COM. 10</b><br>
+<b>ASPMX5.GOOGLEMAIL.COM. 10</b></blockquote></ol></div>
+<div id="fourdweb" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login na sua conta em <a href="https://members.4dwebhosting.com/">4d Wed Hosting</a>.</li>
+<li>Clique em <b>Configure</b> (Configurar), à esquerda. Uma lista de opções será exibida.</li>
+<li>Em <b>Configure</b> (Configurar), clique em <b>MX Records</b> (Registros MX).</li>
+<li>Abaixo de <b>Update Record</b> (Atualizar registro), insira as seguintes informações:</li>
+<blockquote><table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>Primary:</td>
+<td>ASPMX.L.GOOGLE.COM</td></tr>
+<tr><td>Secondary:</td>
+<td>ALT1.ASPMX.L.GOOGLE.COM</td></tr></tbody></table></blockquote>
+<li>Clique em <b>Update MX Records</b> (Atualizar registros MX).</li></ol></div>
+<div id="cpanel" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login na sua conta do cPanel.</li>
+<li>Clique em <b>Mail</b> (E-mail).</li>
+<li>Clique em <b>Modify Mail Exchanger (MX Entry)</b> (Modificar Mail Exchanger (entrada MX)). Uma lista de seus registros MX atuais será exibida.</li>
+<li>Clique em <b>Change an MX Entry</b> (Alterar registros MX).</li>
+<li>No campo <b>Change MX for...</b> (Alterar MX para...), insira <b>ASPMX.L.GOOGLE.COM</b>.</li>
+<li>Clique em <b>Change</b> (Alterar).</li></ol></div>
+<div id="dnspark" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login na sua conta em <a href="https://www.dnspark.net/">DNS Park</a>.</li>
+<li>À esquerda, clique em <b>DNS Hosting</b> (Hospedagem DNS).</li>
+<li>Clique no domínio que deseja usar com o Google Apps para Seu Domínio.</li>
+<li>Como a DNS Park é sua provedora de hospedagem, e não de registro de
+domínio, certifique-se de que seu domínio esteja apontando para os
+servidores de nomes da DNS Park. Isso permitirá que a configuração do
+registro MX seja implementada.</li>
+<li>Clique em <b>Mail Records (MX)</b> (Registros de e-mail (MX)).</li>
+<li>Em <b>MX Resource records</b> (Registros de recursos MX), insira:</li>
+<blockquote><table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>Mail Domain</td>
+<td>Priority</td>
+<td>Hostname</td></tr>
+<tr><td>(preenchido automaticamente)</td>
+<td>1st</td>
+<td>ASPMX.L.GOOGLE.COM.</td></tr></tbody></table></blockquote>
+<li>Clique em <b>Update</b> (Atualizar).</li>
+<li>Repita as etapas seis e sete para as seguintes entradas de registro MX:</li>
+<blockquote><table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>Mail Domain</td>
+<td>Priority</td>
+<td>Hostname</td></tr>
+<tr><td>(preenchido automaticamente)</td>
+<td>2nd</td>
+<td>ALT1.ASPMX.L.GOOGLE.COM.</td></tr>
+<tr><td>(preenchido automaticamente)</td>
+<td>3rd</td>
+<td>ALT2.ASPMX.L.GOOGLE.COM.</td></tr>
+<tr><td>(preenchido automaticamente)</td>
+<td>4th</td>
+<td>ASPMX2.GOOGLEMAIL.COM.</td></tr>
+<tr><td>(preenchido automaticamente)</td>
+<td>5th</td>
+<td>ASPMX3.GOOGLEMAIL.COM.</td></tr>
+<tr><td>(preenchido automaticamente)</td>
+<td>6th</td>
+<td>ASPMX4.GOOGLEMAIL.COM.</td></tr>
+<tr><td>(preenchido automaticamente)</td>
+<td>last</td>
+<td>ASPMX5.GOOGLEMAIL.COM.</td></tr></tbody></table></blockquote></ol></div>
+<div id="domainexplorer" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login na sua conta em <a href="http://www.domainexplorer.net/" target="_blank">Domain explorer</a>.</li>
+<li>Abra a página <b>My Domain</b> (Meu domínio) e selecione o domínio que deseja usar no Google Apps para Seu Domínio.</li>
+<li>Na seção <b>Email Settings</b> (Configurações de e-mail), clique em <b>Change service</b> (Alterar serviço) e selecione a entrada intitulada<b>User (mail server name required)</b> (Usuário (nome do servidor de e-mail necessário)).</li>
+<li>Na seção <b>Mail Host Records Setup</b> (Configuração de registros do host de e-mail), insira as informações, de acordo com os dados da tabela a seguir:</li>
+<table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>Host Name</td> <td>Address</td> <td>Pref.</td></tr> <tr><td>@</td> <td>aspmx.l.google.com.</td> <td>1</td></tr> <tr><td>@</td> <td>alt1.aspmx.l.google.com.</td> <td>5</td></tr> <tr><td>@</td> <td>alt2.aspmx.l.google.com.</td> <td>5</td></tr> <tr><td>@</td> <td>aspmx2.googlemail.com.</td> <td>10</td></tr> <tr><td>@</td> <td>aspmx3.googlemail.com.</td> <td>10</td></tr> <tr><td>@</td> <td>aspmx4.googlemail.com.</td> <td>10</td></tr> <tr><td>@</td> <td>aspmx5.googlemail.com.</td> <td>10</td></tr></tbody></table>
+<li>Clique em <b>Save changes</b> (Salvar alterações).</li></ol>
+<p><b>OBSERVAÇÃO</b>: Se não houver linhas suficientes para inserir
+todos os parâmetros, preencha as linhas disponíveis (não preencha a
+última linha <b>* (other)</b> (outros), clique em <b>Save changes</b> (Salvar alterações) e clique em <b>Configure</b> (Configurar) na seção <b>Email settings</b> (Configurações de e-mail). Isso fornecerá linhas adicionais para informações dos servidores do Google.</p></div>
+<div id="everydns" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login na sua conta em <a href="http://www.everydns.net/">EveryDNS.net</a>.</li>
+<li>À esquerda, clique no domínio que deseja usar com o Google Apps para Seu Domínio.</li>
+<li>Como o EveryDNS.net é seu serviço de hospedagem, e não o
+registrador do seu domínio, verifique se seu domínio aponta para os
+servidores de nome EveryDNS.net. Isso permitirá que a configuração do
+registro MX seja implementada.</li>
+<li>Abaixo de <b>Add a Record:</b> (Adicionar registro:), insira:</li>
+<blockquote><table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>Fully Qualified Domain Name</td>
+<td>(insira seu domínio)</td></tr>
+<tr><td>Record Type</td>
+<td>MX</td></tr>
+<tr><td>Record Value:</td>
+<td>ASPMX.L.GOOGLE.COM.</td></tr>
+<tr><td>If MX Record, MX Value:</td>
+<td>1</td></tr></tbody></table></blockquote>
+<li>Clique em <b>Enviar</b>.</li>
+<li>Repita as etapas de sete a nove para estas entradas de registro MX:</li>
+<blockquote><table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>Record Value:</td> <td>If MX Record, MX Value:</td></tr> <tr><td>ALT1.ASPMX.L.GOOGLE.COM.</td> <td>5</td></tr> <tr><td>ALT2.ASPMX.L.GOOGLE.COM.</td> <td>5</td></tr> <tr><td>ASPMX2.GOOGLEMAIL.COM.</td> <td>10</td></tr> <tr><td>ASPMX3.GOOGLEMAIL.COM.</td> <td>10</td></tr> <tr><td>ASPMX4.GOOGLEMAIL.COM.</td> <td>10</td></tr> <tr><td>ASPMX5.GOOGLEMAIL.COM.</td> <td>10</td></tr></tbody></table></blockquote></ol></div>
+<div id="ipowerweb" class="dash" style="display: none;"><p>Para
+modificar os registros MX com iPower, será necessário enviar uma
+solicitação para a equipe de suporte do iPower. Realize as seguintes
+etapas:</p>
+<ol id="numbered"><li>Visite <a href="https://secure.ipower.com/cgi-bin/addserv/order.cgi">https://secure.ipower.com/cgi-bin/addserv/order.cgi</a>.</li>
+<li>Clique em <b>MX Record Additions/Changes</b> (Adições/alterações de registro MX).</li>
+<li>Preencha a parte superior do formulário com as informações da sua conta do iPower.</li>
+<li>Em <b>Replace existing MX Record</b> (Substituir registro MX existente), insira o seguinte:</li>
+<blockquote><table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>New MX Hostname or IP:</td>
+<td>ASPMX.L.GOOGLE.COM.</td></tr>
+<tr><td>Substitua o MX que tenha Prioridade:<br>(um número de 0 a 100)</td>
+<td>0</td></tr></tbody></table></blockquote>
+<li>Em <b>Add an MX Record</b> (Adicionar um registro MX), insira o seguinte:</li>
+<blockquote><table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>MX Hostname or IP:</td>
+<td>ALT1.ASPMX.L.GOOGLE.COM.</td></tr>
+<tr><td>MX Priority:<br>(um número de 0 a 100)</td>
+<td>10</td></tr></tbody></table></blockquote>
+<li>Clique em <b>Enviar</b>.</li></ol>
+<p>Parabéns! Sua solicitação está pendente e você poderá usar e-mails
+no seu domínio em breve. As solicitações de alteração/adição de
+registros MX com iPower podem levar de dois a quatro dias úteis para
+serem concluídas.</p></div>
+<div id="ixwebhosting" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login na sua conta em <a href="https://manage.ixwebhosting.com/">ix web hosting</a>.</li>
+<li>Clique em <b>Manage</b> (Gerenciar) abaixo da seção <b>Hosting Account</b> (Conta de hospedagem).</li>
+<li>À esquerda, clique no domínio que deseja usar com o Google Apps para Seu Domínio.</li>
+<li>Ao lado de <b>Mail Service</b> (Serviço de e-mail) clique em <b>On</b> (Ativar) para desativar os registros MX padrão.</li>
+<li>Ao lado de <b>DNS Configuration</b> (Configuração de DNS), clique em <b>EDIT</b> (EDITAR).</li>
+<li>Se já tiver criado seus registros MX personalizados, não se esqueça
+de apagar todos os registros existentes antes de adicionar as
+informações de servidor do Google.</li>
+<li>Clique em <b>Add DNS MX Record</b> (Adicionar registro DNS MX).</li>
+<li>Digite o seguinte:</li>
+<blockquote><table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>Name</td>
+<td>Data</td>
+<td>Data(segunda caixa)</td></tr>
+<tr><td>deixe em branco</td>
+<td>1</td>
+<td>ASPMX.L.GOOGLE.COM</td></tr></tbody></table></blockquote>
+<li>Clique em <b>Enviar</b>.</li>
+<li>Repita as etapas de sete a nove para estas entradas de registro MX:</li>
+<blockquote><table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>Name</td>
+<td>Data</td>
+<td>Data(segunda caixa)</td></tr>
+<tr><td>deixe em branco</td>
+<td>5</td>
+<td>ALT1.ASPMX.L.GOOGLE.COM</td></tr>
+<tr><td>deixe em branco</td>
+<td>5</td>
+<td>ALT2.ASPMX.L.GOOGLE.COM</td></tr>
+<tr><td>deixe em branco</td>
+<td>10</td>
+<td>ASPMX2.GOOGLEMAIL.COM</td></tr>
+<tr><td>deixe em branco</td>
+<td>10</td>
+<td>ASPMX3.GOOGLEMAIL.COM</td></tr>
+<tr><td>deixe em branco</td>
+<td>10</td>
+<td>ASPMX4.GOOGLEMAIL.COM</td></tr>
+<tr><td>deixe em branco</td>
+<td>10</td>
+<td>ASPMX5.GOOGLEMAIL.COM</td></tr></tbody></table></blockquote></ol></div>
+<div id="noip" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login na sua conta em <a href="http://www.no-ip.com/">No-IP.com</a>.</li>
+<li>À esquerda, clique em <b>Host/Redirects</b> (Host/Redirecionamentos).</li>
+<li>Encontre a entrada principal do domínio que deseja usar no Google Apps para Seu Site e clique em <b>Modify</b> (Modificar).</li>
+<li>Vá até o final da página para visualizar <b>Mail Options</b> (Opções de e-mail).</li>
+<li>Insira <b>ASPMX.L.GOOGLE.COM</b> no primeiro campo de registro MX. A prioridade de MX é definida por padrão e deve corresponder aos valores listados abaixo.</li>
+<li>Repita a etapa cinco para que corresponda às informações fornecidas
+abaixo. A No-IP permite no máximo cinco entradas de registro MX.</li>
+<blockquote><table border="1" cellpadding="5" cellspacing="0"><tbody><tr><td>ASPMX.L.GOOGLE.COM</td> <td>10</td></tr> <tr><td>ALT1.ASPMX.L.GOOGLE.COM.</td> <td>15</td></tr> <tr><td>ALT2.ASPMX.L.GOOGLE.COM.</td> <td>20</td></tr> <tr><td>ASPMX2.GOOGLEMAIL.COM.</td> <td>25</td></tr> <tr><td>ASPMX3.GOOGLEMAIL.COM.</td> <td>30</td></tr></tbody></table></blockquote></ol></div>
+<div id="registerfly" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login na sua conta em <a href="http://registerfly.com/">Registerfly.com</a>.</li>
+<li>Clique em <b>Manage Domains</b> (Gerenciar domínios).</li>
+<li>Clique no domínio que deseja usar com o Google Apps para Seu Domínio.</li>
+<li>Expanda <b>DNS Settings (Zone file)</b> (Configurações de DNS (Zone file)).</li>
+<li>Clique em <b>Configure</b> (Configurar).</li>
+<li>Se você for solicitado a alterar os servidores de nome para
+Registerfly nameservers, faça-o. Se seu tipo de hospedagem exigir que
+você use outros servidores de nome, essas instruções poderão não
+funcionar.</li>
+<li>Limpe todos os registros MX existentes marcando a caixa ao lado de cada registro e clicando em <b>Remove selection</b> (Remover seleção).</li>
+<li>Para cada registro MX, insira o seguinte:</li>
+<blockquote><table border="1" cellpadding="1" cellspacing="3"><tbody><tr><td>Host Name</td> <td>Record Type</td> <td>IP Address/URL</td> <td>Pref</td></tr> <tr><td align="center">@</td> <td>MX Record</td> <td>ASPMX.L.GOOGLE.COM</td> <td>1</td></tr> <tr><td align="center">@</td> <td>MX Record</td> <td>ALT1.ASPMX.L.GOOGLE.COM</td> <td>5</td></tr> <tr><td align="center">@</td> <td>MX Record</td> <td>ALT2.ASPMX.L.GOOGLE.COM</td> <td>5</td></tr> <tr><td align="center">@</td> <td>MX Record</td> <td>ASPMX2.GOOGLEMAIL.COM</td> <td>10</td></tr> <tr><td align="center">@</td> <td>MX Record</td> <td>ASPMX3.GOOGLEMAIL.COM</td> <td>10</td></tr> <tr><td align="center">@</td> <td>MX Record</td> <td>ASPMX4.GOOGLEMAIL.COM</td> <td>10</td></tr> <tr><td align="center">@</td> <td>MX Record</td> <td>ASPMX5.GOOGLEMAIL.COM</td> <td>10</td></tr></tbody></table></blockquote></ol></div>
+<div id="webhost4life" class="dash" style="display: none;"><ol id="numbered"><li>Efetue login na sua conta em <a href="http://www.webhost4life.com/">Webhost4Life</a>.</li>
+<li>Vá para <b>DNS</b>.</li>
+<li>Selecione o nome de domínio que deseja usar com o Google Apps.</li>
+<li>Clique em <b>Edit Zone</b> (Editar zona).</li>
+<li>Insira os seguintes registros MX com os valores de prioridade associados:</li>
+<blockquote><table border="1" cellpadding="1" cellspacing="3"><tbody><tr><td><strong>Mail Server</strong></td> <td><strong>Priority</strong></td></tr> <tr><td>ASPMX.L.GOOGLE.COM.</td> <td>1</td></tr> <tr><td>ALT1.ASPMX.L.GOOGLE.COM.</td> <td>5</td></tr> <tr><td>ALT2.ASPMX.L.GOOGLE.COM.</td> <td>10</td></tr> <tr><td>ASPMX2.GOOGLEMAIL.COM.</td> <td>15</td></tr> <tr><td>ASPMX3.GOOGLEMAIL.COM.</td> <td>20</td></tr> <tr><td>ASPMX4.GOOGLEMAIL.COM.</td> <td>25</td></tr> <tr><td>ASPMX5.GOOGLEMAIL.COM.</td> <td>30</td></tr></tbody></table></blockquote></ol></div></div>
+<div class="buttons2"><input name="at" value="ae32ab21e29e5f36-11911f2b4da" type="hidden">
+
+<p class="u">Quando concluir, clique em "Concluí essas etapas" para que o Google verifique seus registros MX.</p>
+<input class="mainbutton" name="emailsetup" value="Concluí essas etapas" type="submit">
+<input name="Button" value="Farei isso mais tarde" onclick="return go('EmailSettings');" class="cancel" type="button"></div></form></div>
+<div id="footer"><p><a href="http://www.google.com/a/help/intl/pt-BR/admins/standard_terms.html">Termos de Serviço</a> - <a href="http://www.google.com/a/help/intl/pt-BR/admins/privacy.html">Política de Privacidade</a> - <a href="http://www.google.com/support/a/bin/request.py?contact_type=suggest&amp;ctx=panel&amp;hl=pt_BR">Sugira um recurso</a> - <a href="http://www.google.com/">Página inicial do Google</a></p>
+<span dir="ltr">©2007 Google Inc.</span></div>
+</body></html>

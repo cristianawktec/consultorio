@@ -1,0 +1,475 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SqueezeWP v0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-06-15 19:37:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: class-tgm-plugin-activation.php:1326
+#: class-tgm-plugin-activation.php:1413
+#@ tgmpa
+msgid "Activate"
+msgstr "Ativar"
+
+#: class-tgm-plugin-activation.php:215
+#@ tgmpa
+msgid "Dismiss this notice"
+msgstr "Ocultar mensagem (Não recomendado)"
+
+#: class-tgm-plugin-activation.php:1304
+#: class-tgm-plugin-activation.php:1412
+#@ tgmpa
+msgid "Install"
+msgstr "Instalar"
+
+#: class-squeeze-page.php:96
+#@ tgmpa
+msgid "Squeeze Page Vídeo I"
+msgstr ""
+
+#: class-squeeze-page.php:97
+#@ tgmpa
+msgid "Squeeze Padrão I"
+msgstr ""
+
+#: class-squeeze-page.php:98
+#@ tgmpa
+msgid "Página de Confirmação I"
+msgstr ""
+
+#: class-squeeze-page.php:162
+#@ tgmpa
+msgid "Instalar plugins obrigatórios"
+msgstr ""
+
+#: class-squeeze-page.php:163
+#@ tgmpa
+msgid "Instalar Plugins"
+msgstr ""
+
+#: class-squeeze-page.php:164
+#, php-format
+#@ tgmpa
+msgid "Instalando plugins: %s"
+msgstr ""
+
+#: class-squeeze-page.php:165
+#@ tgmpa
+msgid "Opa, algo deu errado com a API."
+msgstr ""
+
+#: class-squeeze-page.php:166
+#, php-format
+#@ tgmpa
+msgid "O plugin SqueezeWP necessita do plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "O plugin SqueezeWP necessita do plugin: %1$s."
+msgstr[1] "O plugin SqueezeWP necessita dos plugins: %1$s."
+
+#: class-squeeze-page.php:167
+#, php-format
+#@ tgmpa
+msgid "Desculpe, você não possui as permissões para instalar o plugin %s. Contate o administrador do site/hospedagem para instalar o plugin."
+msgid_plural "Desculpe, você não possui as permissões para instalar o plugin %s. Contate o administrador do site/hospedagem para instalar o plugin."
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-squeeze-page.php:168
+#, php-format
+#@ tgmpa
+msgid "O seguinte plugin obrigatório está inativo: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-squeeze-page.php:169
+#: class-tgm-plugin-activation.php:205
+#, php-format
+#@ tgmpa
+msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
+msgid_plural "Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-squeeze-page.php:170
+#: class-tgm-plugin-activation.php:206
+#, php-format
+#@ tgmpa
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-squeeze-page.php:171
+#: class-tgm-plugin-activation.php:207
+#, php-format
+#@ tgmpa
+msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
+msgid_plural "Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-squeeze-page.php:172
+#@ tgmpa
+msgid "Começar a instalar o plugin"
+msgid_plural "Começar a instalar o plugin"
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-squeeze-page.php:173
+#@ tgmpa
+msgid "Ativar o plugin"
+msgid_plural "Ativar o plugin"
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-squeeze-page.php:174
+#@ tgmpa
+msgid "Retonar para o instalador de plugins"
+msgstr ""
+
+#: class-squeeze-page.php:175
+#: class-tgm-plugin-activation.php:212
+#: class-tgm-plugin-activation.php:1965
+#@ tgmpa
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: class-squeeze-page.php:176
+#, php-format
+#@ tgmpa
+msgid "Todos os plugins instalados e ativados com sucesso. %s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:196
+#@ tgmpa
+msgid "Install Required Plugins"
+msgstr "Instalar Plugins Obrigatórios"
+
+#: class-tgm-plugin-activation.php:197
+#@ tgmpa
+msgid "Install Plugins"
+msgstr "Instalar Plugins"
+
+#: class-tgm-plugin-activation.php:198
+#, php-format
+#@ tgmpa
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:199
+#@ tgmpa
+msgid "Something went wrong."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:200
+#, php-format
+#@ tgmpa
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:201
+#, php-format
+#@ tgmpa
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:202
+#, php-format
+#@ tgmpa
+msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
+msgid_plural "Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:203
+#, php-format
+#@ tgmpa
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:204
+#, php-format
+#@ tgmpa
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:208
+#@ tgmpa
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:209
+#@ tgmpa
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: class-tgm-plugin-activation.php:210
+#@ tgmpa
+msgid "Return to Required Plugins Installer"
+msgstr "Retornar para Instalador de plugins obrigatórios"
+
+#: class-tgm-plugin-activation.php:211
+#@ tgmpa
+msgid "Return to the dashboard"
+msgstr "Retornar para o painel de controle"
+
+#: class-tgm-plugin-activation.php:214
+#, php-format
+#@ tgmpa
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
+
+#: class-tgm-plugin-activation.php:556
+#: class-tgm-plugin-activation.php:2182
+#@ tgmpa
+msgid "Return to the Dashboard"
+msgstr "Retornar para o painel de controle"
+
+#: class-tgm-plugin-activation.php:1186
+#@ tgmpa
+msgid "Private Repository"
+msgstr "Repositório privado"
+
+#: class-tgm-plugin-activation.php:1189
+#@ tgmpa
+msgid "Pre-Packaged"
+msgstr "Empacotado junto ao Plugin SqueezeWP"
+
+#: class-tgm-plugin-activation.php:1194
+#@ tgmpa
+msgid "WordPress Repository"
+msgstr "Repositório do Wordpress"
+
+#: class-tgm-plugin-activation.php:1197
+#@ tgmpa
+msgid "Required"
+msgstr "Obrigatório"
+
+#: class-tgm-plugin-activation.php:1197
+#@ tgmpa
+msgid "Recommended"
+msgstr "Recomendado"
+
+#: class-tgm-plugin-activation.php:1200
+#@ tgmpa
+msgid "Not Installed"
+msgstr "Não Instalado"
+
+#: class-tgm-plugin-activation.php:1202
+#@ tgmpa
+msgid "Installed But Not Activated"
+msgstr "Instalado mas não ativado"
+
+#: class-tgm-plugin-activation.php:1375
+#, php-format
+#@ tgmpa
+msgid "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the Dashboard\">Return to the Dashboard</a>"
+msgstr "Nenhum Plugin para instalar ou ativar. <a href=\"%1$s\" title=\"Retornar para o Painel de Controle\">Retornar para o Painel de Controle</a>"
+
+#: class-tgm-plugin-activation.php:1391
+#@ tgmpa
+msgid "Plugin"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:1activation.php:1392
+#@ tgmpa
+msgid "Source"
+msgstr "Origem"
+
+#: class-tgm-plugin-activation.php:1393
+#@ tgmpa
+msgid "Type"
+msgstr "Tipo"
+
+#: class-tgm-plugin-activation.php:1394
+#@ tgmpa
+msgid "Status"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:1522
+#@ tgmpa
+msgid "No plugins are available to be installed at this time."
+msgstr "Não há plugins para se instalar agora."
+
+#: class-tgm-plugin-activation.php:1630
+#@ tgmpa
+msgid "No plugins are available to be activated at this time."
+msgstr "Não há plugins para ativar agora."
+
+#. gettext fix: identical singular and plural forms found, that may be ambiguous! Please check the code!
+#: class-tgm-plugin-activation.php:1652
+#: class-tgm-plugin-activation.php:213
+#@ tgmpa
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "O seguinte plugin foi ativado com sucesso:"
+msgstr[1] "Os seguintes plugins foram ativados com sucesso:"
+
+#: class-tgm-plugin-activation.php:1948
+#@ tgmpa
+msgid "Install package not available."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:1949
+#, php-format
+#@ tgmpa
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:1950
+#@ tgmpa
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:1951
+#@ tgmpa
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:1952
+#@ tgmpa
+msgid "Plugin install failed."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:1953
+#@ tgmpa
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:1964
+#@ tgmpa
+msgid "Plugin activation failed."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2078
+#@ tgmpa
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2079
+#, php-format
+#@ tgmpa
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2079
+#: class-tgm-plugin-activation.php:2088
+#@ tgmpa
+msgid "Show Details"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2079
+#: class-tgm-plugin-activation.php:2088
+#@ tgmpa
+msgid "Hide Details"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2080
+#@ tgmpa
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2081
+#, php-format
+#@ tgmpa
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2085
+#@ tgmpa
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2086
+#, php-format
+#@ tgmpa
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2087
+#, php-format
+#@ tgmpa
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2088
+#, php-format
+#@ tgmpa
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2089
+#@ tgmpa
+msgid "All installations have been completed."
+msgstr ""
+
+#: class-tgm-plugin-activation.php:2090
+#, php-format
+#@ tgmpa
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: plugin header field 'Name'
+#: squeeze-wp.php:0
+#@ tgmpa
+msgid "SqueezeWP"
+msgstr ""
+
+#. translators: plugin header field 'PluginURI'
+#: squeeze-wp.php:0
+#@ tgmpa
+msgid "https://squeezewp.com"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: squeeze-wp.php:0
+#@ tgmpa
+msgid "Plugin Wordpress para a criação de Páginas de captura"
+msgstr ""
+
+#. translators: plugin header field 'Author'
+#: squeeze-wp.php:0
+#@ tgmpa
+msgid "Jair Rebello"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: squeeze-wp.php:0
+#@ tgmpa
+msgid "http://7desenvolvimento.com"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: squeeze-wp.php:0
+#@ tgmpa
+msgid "0.1"
+msgstr ""
+

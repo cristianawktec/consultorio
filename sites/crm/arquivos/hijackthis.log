@@ -1,0 +1,98 @@
+Logfile of HijackThis v1.99.1
+Scan saved at 21:39:58, on 29/04/2013
+Platform: Unknown Windows (WinNT 6.01.3504)
+MSIE: Internet Explorer v8.00 (8.00.7600.16385)
+
+Running processes:
+C:\Program Files (x86)\Skype\Phone\Skype.exe
+C:\Users\MACIEL\AppData\Local\Smartbar\Application\SnapDo.exe
+C:\Program Files (x86)\Common Files\Java\Java Update\jusched.exe
+C:\Users\MACIEL\Desktop\HijackThis.exe
+
+R1 - HKCU\Software\Microsoft\Internet Explorer\Main,Search Bar = http://feed.snap.do/?publisher=SnapdoOCYB&dpid=SnapdoOCYB&co=BR&userid=2ddeccda-d859-4eec-96cf-772f71ac861f&searchtype=ds&q={searchTerms}&installDate=12/04/2013
+R1 - HKCU\Software\Microsoft\Internet Explorer\Main,Search Page = http://feed.snap.do/?publisher=SnapdoOCYB&dpid=SnapdoOCYB&co=BR&userid=2ddeccda-d859-4eec-96cf-772f71ac861f&searchtype=ds&q={searchTerms}&installDate=12/04/2013
+R0 - HKCU\Software\Microsoft\Internet Explorer\Main,Start Page = http://feed.snap.do/?publisher=SnapdoOCYB&dpid=SnapdoOCYB&co=BR&userid=2ddeccda-d859-4eec-96cf-772f71ac861f&searchtype=hp&installDate=12/04/2013
+R1 - HKLM\Software\Microsoft\Internet Explorer\Main,Default_Page_URL = http://go.microsoft.com/fwlink/?LinkId=69157
+R1 - HKLM\Software\Microsoft\Internet Explorer\Main,Default_Search_URL = http://go.microsoft.com/fwlink/?LinkId=54896
+R1 - HKLM\Software\Microsoft\Internet Explorer\Main,Search Page = http://go.microsoft.com/fwlink/?LinkId=54896
+R0 - HKLM\Software\Microsoft\Internet Explorer\Main,Start Page = http://go.microsoft.com/fwlink/?LinkId=69157
+R1 - HKCU\Software\Microsoft\Internet Explorer\Search,Default_Search_URL = http://feed.snap.do/?publisher=SnapdoOCYB&dpid=SnapdoOCYB&co=BR&userid=2ddeccda-d859-4eec-96cf-772f71ac861f&searchtype=ds&q={searchTerms}&installDate=12/04/2013
+R1 - HKCU\Software\Microsoft\Internet Explorer\Search,SearchAssistant = http://feed.snap.do/?publisher=SnapdoOCYB&dpid=SnapdoOCYB&co=BR&userid=2ddeccda-d859-4eec-96cf-772f71ac861f&searchtype=ds&q={searchTerms}&installDate=12/04/2013
+R0 - HKLM\Software\Microsoft\Internet Explorer\Search,SearchAssistant = 
+R0 - HKLM\Software\Microsoft\Internet Explorer\Search,CustomizeSearch = 
+R0 - HKLM\Software\Microsoft\Internet Explorer\Main,Local Page = C:\Windows\SysWOW64\blank.htm
+R0 - HKCU\Software\Microsoft\Internet Explorer\Toolbar,LinksFolderName = 
+F2 - REG:system.ini: UserInit=userinit.exe
+O2 - BHO: AcroIEHelperStub - {18DF081C-E8AD-4283-A596-FA578C2EBDC3} - C:\Program Files (x86)\Common Files\Adobe\Acrobat\ActiveX\AcroIEHelperShim.dll
+O2 - BHO: Snap.DoEngine - {31ad400d-1b06-4e33-a59a-90c2c140cba0} - mscoree.dll (file missing)
+O2 - BHO: Groove GFS Browser Helper - {72853161-30C5-4D22-B7F9-0BBC1D38A37E} - C:\PROGRA~2\MICROS~1\Office14\GROOVEEX.DLL
+O2 - BHO: Java(tm) Plug-In SSV Helper - {761497BB-D6F0-462C-B6EB-D4DAF1D92D43} - C:\Program Files (x86)\Java\jre7\bin\ssv.dll
+O2 - BHO: URLRedirectionBHO - {B4F3A835-0E21-4959-BA22-42B3008E02FF} - C:\PROGRA~2\MICROS~1\Office14\URLREDIR.DLL
+O2 - BHO: G-Buster Browser Defense - {C41A1C0E-EA6C-11D4-B1B8-444553540000} - C:\Program Files (x86)\GbPlugin\gbieh.dll
+O2 - BHO: G-Buster Browser Defense CEF - {C41A1C0E-EA6C-11D4-B1B8-444553540003} - C:\Program Files (x86)\GbPlugin\gbiehcef.dll
+O2 - BHO: Java(tm) Plug-In 2 SSV Helper - {DBC80044-A445-435b-BC74-9C25C1C588A9} - C:\Program Files (x86)\Java\jre7\bin\jp2ssv.dll
+O3 - Toolbar: Snap.Do - {ae07101b-46d4-4a98-af68-0333ea26e113} - mscoree.dll (file missing)
+O4 - HKLM\..\Run: [BCSSync] "C:\Program Files (x86)\Microsoft Office\Office14\BCSSync.exe" /DelayServices
+O4 - HKLM\..\Run: [AdobeCS6ServiceManager] "C:\Program Files (x86)\Common Files\Adobe\CS6ServiceManager\CS6ServiceManager.exe" -launchedbylogin
+O4 - HKLM\..\Run: [SwitchBoard] C:\Program Files (x86)\Common Files\Adobe\SwitchBoard\SwitchBoard.exe
+O4 - HKLM\..\Run: [AdobeCS5ServiceManager] "C:\Program Files (x86)\Common Files\Adobe\CS5ServiceManager\CS5ServiceManager.exe" -launchedbylogin
+O4 - HKLM\..\Run: [Adobe ARM] "C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARM.exe"
+O4 - HKLM\..\Run: [SunJavaUpdateSched] "C:\Program Files (x86)\Common Files\Java\Java Update\jusched.exe"
+O4 - HKCU\..\Run: [Skype] "C:\Program Files (x86)\Skype\Phone\Skype.exe" /minimized /regrun
+O4 - HKCU\..\Run: [DAEMON Tools Lite] "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+O4 - HKCU\..\Run: [Browser Infrastructure Helper] C:\Users\MACIEL\AppData\Local\Smartbar\Application\SnapDo.exe startup
+O8 - Extra context menu item: E&xportar para o Microsoft Excel - res://C:\PROGRA~2\MICROS~1\Office14\EXCEL.EXE/3000
+O10 - Unknown file in Winsock LSP: c:\windows\system32\nlaapi.dll
+O10 - Unknown file in Winsock LSP: c:\windows\system32\napinsp.dll
+O11 - Options group: [INTERNATIONAL] International
+O13 - Gopher Prefix: 
+O15 - Trusted Zone: imagem.caixa.gov.br
+O15 - Trusted Zone: internetbanking.caixa.gov.br
+O15 - Trusted Zone: www.caixa.gov.br
+O17 - HKLM\System\CCS\Services\Tcpip\..\{3DEF17CA-B66D-4DBB-86CE-C5EBD475E4D6}: NameServer = 8.8.8.8,8.8.4.4
+O17 - HKLM\System\CS1\Services\Tcpip\..\{3DEF17CA-B66D-4DBB-86CE-C5EBD475E4D6}: NameServer = 8.8.8.8,8.8.4.4
+O17 - HKLM\System\CS2\Services\Tcpip\..\{3DEF17CA-B66D-4DBB-86CE-C5EBD475E4D6}: NameServer = 8.8.8.8,8.8.4.4
+O18 - Protocol: ms-help - {314111C7-A502-11D2-BBCA-00C04F8EC294} - c:\Program Files (x86)\Common Files\Microsoft Shared\Help\hxds.dll
+O18 - Protocol: skype4com - {FFC8B962-9B40-4DFF-9458-1830C7DD7F5D} - C:\PROGRA~2\COMMON~1\Skype\SKYPE4~1.DLL
+O18 - Filter hijack: text/xml - {807573E5-5146-11D5-A672-00B0D022E945} - C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE14\MSOXMLMF.DLL
+O20 - Winlogon Notify:  GbPluginBb - C:\Program Files (x86)\GbPlugin\gbieh.dll
+O20 - Winlogon Notify:  GbPluginCef - C:\Program Files (x86)\GbPlugin\gbiehCef.dll
+O23 - Service: Adobe Acrobat Update Service (AdobeARMservice) - Adobe Systems Incorporated - C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\armsvc.exe
+O23 - Service: Adobe Flash Player Update Service (AdobeFlashPlayerUpdateSvc) - Adobe Systems Incorporated - C:\Windows\SysWOW64\Macromed\Flash\FlashPlayerUpdateService.exe
+O23 - Service: @%SystemRoot%\system32\Alg.exe,-112 (ALG) - Unknown owner - C:\Windows\System32\alg.exe (file missing)
+O23 - Service: Apache2Triad Apache2 Service (Apache2) - Unknown owner - C:\apache2triad\bin\httpd.exe" -n Apache2 -k runservice (file missing)
+O23 - Service: Apache2Triad Apache2 Service with SSL (Apache2SSL) - Unknown owner - C:\apache2triad\bin\httpd.exe" -D SSL -n Apache2SSL -k runservice (file missing)
+O23 - Service: @%SystemRoot%\system32\efssvc.dll,-100 (EFS) - Unknown owner - C:\Windows\System32\lsass.exe (file missing)
+O23 - Service: @%systemroot%\system32\fxsresm.dll,-118 (Fax) - Unknown owner - C:\Windows\system32\fxssvc.exe (file missing)
+O23 - Service: Gbp Service (GbpSv) - GAS Tecnologia - C:\PROGRA~2\GbPlugin\GbpSv.exe
+O23 - Service: Serviço do Google Update (gupdate) (gupdate) - Unknown owner - C:\Program Files (x86)\Google\Update\GoogleUpdate.exe" /svc (file missing)
+O23 - Service: Serviço do Google Update (gupdatem) (gupdatem) - Unknown owner - C:\Program Files (x86)\Google\Update\GoogleUpdate.exe" /medsvc (file missing)
+O23 - Service: @keyiso.dll,-100 (KeyIso) - Unknown owner - C:\Windows\system32\lsass.exe (file missing)
+O23 - Service: Microsoft SharePoint Workspace Audit Service - Unknown owner - C:\Program Files (x86)\Microsoft Office\Office14\GROOVE.EXE" /auditservice (file missing)
+O23 - Service: Mozilla Maintenance Service (MozillaMaintenance) - Mozilla Foundation - C:\Program Files (x86)\Mozilla Maintenance Service\maintenanceservice.exe
+O23 - Service: @comres.dll,-2797 (MSDTC) - Unknown owner - C:\Windows\System32\msdtc.exe (file missing)
+O23 - Service: Apache2Triad MySql Service (MySql) - Unknown owner - C:\apache2triad\mysql\bin\mysqld.exe
+O23 - Service: @%SystemRoot%\System32\netlogon.dll,-102 (Netlogon) - Unknown owner - C:\Windows\system32\lsass.exe (file missing)
+O23 - Service: Apache2Triad PostgreSQL Service (PgSql) - Unknown owner - C:\apache2triad\pgsql\bin\pg_ctl.exe" runservice -N PgSql -D C:\apache2triad\pgsql\data\ (file missing)
+O23 - Service: @%systemroot%\system32\psbase.dll,-300 (ProtectedStorage) - Unknown owner - C:\Windows\system32\lsass.exe (file missing)
+O23 - Service: Protexis Licensing V2 (PSI_SVC_2) - Protexis Inc. - c:\Program Files (x86)\Common Files\Protexis\License Service\PsiService_2.exe
+O23 - Service: @%SystemRoot%\system32\qwave.dll,-1 (QWAVE) - Unknown owner - %windir%\system32\svchost.exe (file missing)
+O23 - Service: @%systemroot%\system32\Locator.exe,-2 (RpcLocator) - Unknown owner - C:\Windows\system32\locator.exe (file missing)
+O23 - Service: @%SystemRoot%\system32\samsrv.dll,-1 (SamSs) - Unknown owner - C:\Windows\system32\lsass.exe (file missing)
+O23 - Service: @%SystemRoot%\system32\seclogon.dll,-7001 (seclogon) - Unknown owner - %windir%\system32\svchost.exe (file missing)
+O23 - Service: Skype Updater (SkypeUpdate) - Skype Technologies - C:\Program Files (x86)\Skype\Updater\Updater.exe
+O23 - Service: Apache2Triad SlimFTPd Server (SlimFTPd) - Unknown owner - C:\apache2triad\ftp\SlimFTPd.exe" -service (file missing)
+O23 - Service: @%SystemRoot%\system32\snmptrap.exe,-3 (SNMPTRAP) - Unknown owner - C:\Windows\System32\snmptrap.exe (file missing)
+O23 - Service: @%systemroot%\system32\spoolsv.exe,-1 (Spooler) - Unknown owner - C:\Windows\System32\spoolsv.exe (file missing)
+O23 - Service: @%SystemRoot%\system32\sppsvc.exe,-101 (sppsvc) - Unknown owner - C:\Windows\system32\sppsvc.exe (file missing)
+O23 - Service: SwitchBoard - Adobe Systems Incorporated - C:\Program Files (x86)\Common Files\Adobe\SwitchBoard\SwitchBoard.exe
+O23 - Service: @%SystemRoot%\system32\ui0detect.exe,-101 (UI0Detect) - Unknown owner - C:\Windows\system32\UI0Detect.exe (file missing)
+O23 - Service: @%SystemRoot%\system32\vaultsvc.dll,-1003 (VaultSvc) - Unknown owner - C:\Windows\system32\lsass.exe (file missing)
+O23 - Service: @%SystemRoot%\system32\vds.exe,-100 (vds) - Unknown owner - C:\Windows\System32\vds.exe (file missing)
+O23 - Service: @%systemroot%\system32\vssvc.exe,-102 (VSS) - Unknown owner - C:\Windows\system32\vssvc.exe (file missing)
+O23 - Service: @%SystemRoot%\system32\Wat\WatUX.exe,-601 (WatAdminSvc) - Unknown owner - C:\Windows\system32\Wat\WatAdminSvc.exe (file missing)
+O23 - Service: @%systemroot%\system32\wbengine.exe,-104 (wbengine) - Unknown owner - C:\Windows\system32\wbengine.exe (file missing)
+O23 - Service: @%Systemroot%\system32\wbem\wmiapsrv.exe,-110 (wmiApSrv) - Unknown owner - C:\Windows\system32\wbem\WmiApSrv.exe (file missing)
+O23 - Service: @%PROGRAMFILES%\Windows Media Player\wmpnetwk.exe,-101 (WMPNetworkSvc) - Unknown owner - %PROGRAMFILES%\Windows Media Player\wmpnetwk.exe (file missing)
+O23 - Service: Apache2Triad Xmail Service (XMail) - Unknown owner - C:\apache2triad\mail\bin\XMail.exe
+
