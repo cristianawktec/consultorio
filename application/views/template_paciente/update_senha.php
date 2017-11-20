@@ -20,7 +20,7 @@
                             <input class="text" type="password" name="ps_login" placeholder="Nova Senha">
                             <input class="text" type="password" placeholder="Confirmar Nova Senha">
 
-                            <input class="submit-btn" type="submit" value="ENVIAR">
+                            <input class="submit-btn" type="button" value="Voltar" onClick="history.go(-1)"> &nbsp; <input class="submit-btn" type="submit" value="ENVIAR">
                         </form>
                     </div>
 

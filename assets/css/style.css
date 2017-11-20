@@ -532,7 +532,7 @@ li a.active{
 .contact-form input.submit-btn{
 	width: 180px;
 	height: 50px;
-	float: right;
+	/*float: right;*/
 	font-size: 24px;
 	color: #fff;
 	background: url(../img/btn-bg.jpg);

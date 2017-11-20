@@ -14,8 +14,8 @@
                             <div class="tab-container">
                                 <ul class="nav nav-tabs">
                                     <li class="active"><a href="#home5" data-toggle="tab"><span class="icon mdi mdi-home"></span>Home</a></li>
-                                    <li><a href="#profile5" data-toggle="tab"><span class="icon mdi mdi-face"></span>Meus Dados</a></li>
-                                    <li><a href="#messages5" data-toggle="tab"><span class="icon mdi mdi-city"></span>Meu Endereço</a></li>
+                                    <li><a href="#meusdados" data-toggle="tab"><span class="icon mdi mdi-face"></span>Meus Dados</a></li>
+                                    <li><a href="#endereco" data-toggle="tab"><span class="icon mdi mdi-city"></span>Meu Endereço</a></li>
                                 </ul>
                                 <div class="tab-content" style="padding-left: 0px; padding-top: 0px;">
                                     <div id="home5" class="tab-pane active cont">
@@ -30,6 +30,7 @@
                                             <div class="tools"><span class="icon mdi mdi-download"></span>
                                                 <span class="icon mdi mdi-more-vert"></span></div>
                                         </div>
+                                        <!-- tab home-->
                                         <div class="panel-body">
                                             <table id="table1" class="table table-striped table-hover table-fw-widget">
                                                 <thead>
@@ -160,7 +161,7 @@
                                         </div>
                                         <!-- end tab home-->
                                     </div>
-                                    <div id="profile5" class="tab-pane cont">
+                                    <div id="meusdados" class="tab-pane cont">
                                         <!-- meus dados -->
                                         <div class="be-content" style="margin-left: 24px;">
                                             <div class="page-head" style="padding-left: 0px;">
@@ -189,7 +190,7 @@
                                                                     <tr>
                                                                         <td>E-mail: </td>
                                                                         <td><?=$paciente[0]->email; ?>
-                                                                            <a id="firstname" data-title="Enter your firstname" data-placement="right" data-pk="1" data-type="text" href="#" class="editable editable-click editable-empty"></a>Editar</td>
+                                                                            <a id="firstname" data-title="Enter your firstname" data-placement="right" data-pk="1" data-type="text" href="#" class="editable editable-click editable-empty"></a></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>Data de Nascimento: </td>
@@ -209,7 +210,7 @@
                                                                     <tr>
                                                                         <td>Estado Civil: </td>
                                                                         <td><?=$paciente[0]->ds_estado_civil; ?>
-                                                                            <a id="firstname" data-title="Enter your firstname" data-placement="right" data-pk="1" data-type="text" href="#" class="editable editable-click editable-empty"></a>Editar</td>
+                                                                            <a id="firstname" data-title="Enter your firstname" data-placement="right" data-pk="1" data-type="text" href="#" class="editable editable-click editable-empty"></a></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>Nome do Pai:</td>
@@ -244,10 +245,50 @@
                                         </div>
                                         <!-- fim meus dados -->
                                     </div>
-                                    <div id="messages5" class="tab-pane">
-                                        <p>Consectetur adipisicing elit. Ipsam ut praesentium, voluptate quidem necessitatibus quam nam officia soluta aperiam, recusandae.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facilis laboriosam, vitae ipsum tenetur atque vel repellendus culpa reiciendis velit quas, unde soluta quidem voluptas ipsam, rerum fuga placeat rem error voluptate eligendi modi. Delectus, iure sit impedit? Facere provident expedita itaque, magni, quas assumenda numquam eum! Sequi deserunt, rerum.</p><a href="#">Read more</a>
+
+                                    <div id="endereco" class="tab-pane cont">
+                                    <!-- meus endereco -->
+                                    <div class="be-content" style="margin-left: 24px;">
+                                        <div class="page-head" style="padding-left: 0px;">
+                                            <h2 style="margin-bottom: 0px; font-size: 32px;">Meu Endereço</h2>
+                                        </div>
+                                        <div class="main-content container-fluid" style="padding-left: 10px;padding-top: 0px;padding-right: 70px;">
+                                            <div class="row">
+                                                <div class="col-md-12" style="padding-left: 0px;">
+                                                    <div class="panel panel-default panel-border-color panel-border-color-primary">
+                                                        <table class="tableConsulta">
+                                                            <tr>
+                                                                <th>#CEP</th>
+                                                                <th>Rua</th>
+                                                                <th>Bairro</th>
+                                                                <th>Cidade</th>
+                                                                <th>Estado</th>
+                                                                <th>Complemento</th>
+                                                                <th>Ações</th>
+                                                            </tr>
+                                                            <?php foreach($endereços as $endereco) { ?>
+                                                                <tr>
+                                                                    <td><?php echo $endereco->nr_cep; ?></td>
+                                                                    <td><?php echo $endereco->nm_endereco; ?></td>
+                                                                    <td><?php echo $endereco->nm_bairro; ?></td>
+                                                                    <td><?php echo $endereco->nm_cidade; ?></td>
+                                                                    <td><?php echo $endereco->nm_estado; ?></td>
+                                                                    <td><?php echo $endereco->ds_observacao; ?></td>
+                                                                    <td align="left" style="width: 15% !important;">
+                                                                        <a title="Editar endereço" href="/paciente/endereco-editar/<?= $endereco->id_endereco; ?>">
+                                                                            <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/editar.png" style="float: center !important;width: 20%;"></a>
+                                                                    </td>
+                                                                </tr>
+                                                            <?php } ?>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <!-- fim meu endereco -->
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

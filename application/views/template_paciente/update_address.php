@@ -26,8 +26,8 @@
                             <input class="text" type="text" name="nm_estado" id="nm_estado" placeholder="Estado" value="<?php echo $endereco->nm_estado;?>">
                             <input class="text" type="text" name="ds_observacao" id="ds_observacao" placeholder="Complemento" value="<?php echo $endereco->ds_observacao;?>">
 
+                            <input class="submit-btn" type="button" value="Voltar" onClick="history.go(-1)"> &nbsp; <input class="submit-btn" type="submit" value="ENVIAR">
 
-                            <input class="submit-btn" type="submit" value="ENVIAR">
                         </form>
                     </div>
 
