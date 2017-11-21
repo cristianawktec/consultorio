@@ -33,7 +33,7 @@
                                         <li style="font-size: 20px;color: #060606;">Este é o seu Plano</li>
                                         <li style="font-size: 20px;color: #060606;">Livre de mensalidades!</li>
                                         <li>&nbsp;</li>
-                                    </ul><a href="#" class="btn btn-primary" style="font-size: 20px; color: #fffefd;">GRÁTIS</a>
+                                    </ul><a href="<?php echo base_url(); ?>medico/registro/plano/1" class="btn btn-primary" style="font-size: 20px; color: #fffefd;">GRÁTIS</a>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -49,7 +49,7 @@
                                         <li style="font-size: 20px;color: #060606;">para gerenciar?</li>
                                         <li style="font-size: 20px;color: #060606;">Este é o seu Plano</li>
                                         <li>&nbsp;</li>
-                                    </ul><a href="#" class="btn btn-warning" style="font-size: 20px; color: #fffefd; background-color: #fbbc05;">ASSINAR</a>
+                                    </ul><a href="<?php echo base_url(); ?>medico/registro/plano/2" class="btn btn-warning" style="font-size: 20px; color: #fffefd; background-color: #fbbc05;">ASSINAR</a>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -65,7 +65,7 @@
                                         <li style="font-size: 20px;color: #060606;">e um relacionamento</li>
                                         <li style="font-size: 20px;color: #060606;">maior com o seu Paciente?</li>
                                         <li style="font-size: 20px;color: #060606;">Este é o seu Plano</li>
-                                    </ul><a href="#" class="btn btn-success" style="font-size: 20px; color: #fffefd;">ASSINAR</a>
+                                    </ul><a href="<?php echo base_url(); ?>medico/registro/plano/3" class="btn btn-success" style="font-size: 20px; color: #fffefd;">ASSINAR</a>
                                 </div>
                             </div>
 

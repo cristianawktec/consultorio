@@ -22,6 +22,7 @@ class ConsultaController extends CI_Controller
         $this->load->model('Paciente_Model', 'paciente');
         $this->load->model('AgendaConsulta_Model','agendaConsulta');
         $this->load->model('ConsultaHistorico_Model','historico');
+        $this->load->model('Planos_Model','planos');
     }
 
     public function index()

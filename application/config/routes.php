@@ -69,6 +69,8 @@ $route['paciente/avalia_medico'] = "PacienteController/note_doctor";
 
 /* router medicos */
 $route['medico/registro'] = "usuario/registroMedico";
+//$route['medico/registro/plano1'] = "usuario/registroMedicoPlanos";
+$route['medico/registro/plano/(\d+)'] = "usuario/registroMedico/$1";
 $route['medico/adicionar'] = "usuario/registroMedicoAdd";
 $route['medico/perfil'] = "MedicoController/perfil";
 $route['medico/atualiza_foto'] = "MedicoController/update_image";

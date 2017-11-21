@@ -248,6 +248,14 @@ class Usuario extends CI_Controller
         $this->load->view('layout_principal/footer');
     }
 
+    public function registroMedicoPlanos()
+    {
+        $data['planos'] = $this->db->get('planos')->result();
+        $this->load->view('layout_principal/top');
+        $this->load->view("template_medico/medico_registro.php", $data);
+        $this->load->view('layout_principal/footer');
+    }
+
     /**
      * @return string|void
      */

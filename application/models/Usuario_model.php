@@ -48,6 +48,7 @@ class Usuario_Model extends CI_Model{
         $this->db->where('ps_login', $ps_login);
         $data = $this->db->get('usuarios')->result();
         $dt_atual = date('d');
+        //echo"<pre>";print_r($data);echo"</pre>";exit;
 
         if (count($data)===1){
             if ($data[0]->id_perfil == 2) {
@@ -58,14 +59,20 @@ class Usuario_Model extends CI_Model{
                         $res = $this->session->usuario;
                         return $data[0]->id_usuario;
                     } else {
-                        if($dt_atual < 20) {
+                        if($data[0]->id_plano == 1){
                             $dados = array('usuario' => $data[0], 'logado' => TRUE);
                             $this->session->set_userdata($dados);
-                            $this->session->usuario;
-                            $res = $this->session->usuario;
-                            return $data[0]->id_usuario;
-                        } else {
-                            return $result = array('id_usuario' => $data[0]->id_usuario, 'id_perfil' => $data[0]->id_perfil, 'saldoDevedor' => true);
+                            return $result =  array('id_perfil' => $data[0]->id_perfil, 'saldoDevedor' => false);
+                        }else{
+                            if($dt_atual < 20) {
+                                $dados = array('usuario' => $data[0], 'logado' => TRUE);
+                                $this->session->set_userdata($dados);
+                                $this->session->usuario;
+                                $res = $this->session->usuario;
+                                return $data[0]->id_usuario;
+                            } else {
+                                return $result = array('id_usuario' => $data[0]->id_usuario, 'id_perfil' => $data[0]->id_perfil, 'saldoDevedor' => true);
+                            }
                         }
                 }
             } else {

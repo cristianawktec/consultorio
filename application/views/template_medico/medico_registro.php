@@ -1,4 +1,8 @@
-<? //echo"<br> Cadastra1: <pre>";print_r($_POST);echo"</pre><br>";?>
+<? //echo"<br> Cadastra1: <pre>";print_r($GLOBALS);echo"</pre><br>";
+
+$plano_id= $this->uri->segment(4, 0);
+
+?>
 
 <!-- Google Code for Conversao de lancamento Conversion Page -->
 <script type="text/javascript">
@@ -114,6 +118,7 @@
                             <br />
                             <br />
                             <br />
+
                             <hr/>
                             <h3 style="float: left;">Dados de acesso</h3>
                             <input class="text" type="text" name="nm_login" placeholder="Login de acesso" autocomplete="off" required>
@@ -123,7 +128,42 @@
 
                             <input class="email" type="email" name="email" placeholder="Seu e-mail" autocomplete="off" value="<?php if(@$_POST['email']!=""){echo @$_POST['email'];}?>" required>
 
-                            <hr/>
+
+                                <hr/>
+                                <h3 style="float: left;border-bottom: 0;">Tipo de Assinatura</h3>
+                                <input class="text" type="hidden" name="" id="" placeholder="" >
+                                <br/><br/>
+                                <select name="id_plano" class="email" style="align-items: left;float: left;border-left-width: 0px;border-top-width: 0px;border-bottom-width: 0px;margin-left: -185px;margin-top: 30px;margin-right: 0px;padding-left: 0px;padding-right: 60px;">
+                                    <?php
+                                    //echo"plano: ".$plano_id;
+                                    $planos = $this->db->get('planos')->result();
+                                        if($plano_id=='0'){ ?>
+                                            <option value="0">Escolha o seu Plano!</option>
+                                            <option value="1">Free</option>
+                                            <option value="2">Básico</option>
+                                            <option value="3">Premium</option>
+                                        <?php }
+                                        if($plano_id=='1'){ ?>
+                                            <option value="1">Free</option>
+                                            <option value="2">Básico</option>
+                                            <option value="3">Premium</option>
+                                        <?php }
+                                        if($plano_id=='2'){ ?>
+                                            <option value="2">Básico</option>
+                                            <option value="1">Free</option>
+                                            <option value="3">Premium</option>
+                                        <?php }
+                                        if($plano_id=='3'){ ?>
+                                            <option value="3">Premium</option>
+                                            <option value="1">Free</option>
+                                            <option value="2">Básico</option>
+                                        <?php } ?>
+                                </select>
+                                <br/><br/>
+                                <input class="text" type="hidden" name="" id="" placeholder="" >
+                                <br/>
+
+                                <hr/>
                             <h3 style="float: left;">Endereço</h3>
                             <input class="text" type="text" name="nr_cep" id="cep" placeholder="Informe seu Cep" required>
                             <input class="text" type="text" name="nm_endereco" id="nm_endereco" placeholder="Rua">
