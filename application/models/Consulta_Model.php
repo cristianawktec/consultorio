@@ -24,6 +24,7 @@ class Consulta_Model extends  CI_Model
     {
         $this->db->from('consultas as c');
         $this->db->join('medicos as m', 'c.id_medico = m.id_usuario');
+        $this->db->join('pacientes as p', 'c.id_paciente = p.id_usuario');
         $this->db->where('id_paciente', $id);
         $this->db->order_by("dt_consulta", "desc");
         return $this->db->get()->result();

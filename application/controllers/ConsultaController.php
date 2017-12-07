@@ -312,6 +312,14 @@ class ConsultaController extends CI_Controller
 
     }
 
+    public function historico_consulta_paciente($id_paciente)
+    {
+        $data['consultas'] = $this->consulta->getConsultaPacienteId($id_paciente);
+        $this->load->view('layout_principal/top');
+        $this->load->view('template_medico/meus_dados', $data);
+        $this->load->view('layout_principal/footer');
+    }
+
     public function consulta_paciente($id_paciente)
     {
         $data['consultas'] = $this->consulta->getConsultaPacienteId($id_paciente);
@@ -371,7 +379,7 @@ class ConsultaController extends CI_Controller
 					<div class="content">
 					<table>
 						<tr>
-							<td><img src="http://clickconsultorio.com/assets/img/logo_trans.png" /></td>
+							<td><img src="http://clickconsultorio.com/assets/img/logo_trans.png" style="width: 110px; height: 60px;"/></td>
 						</tr>
 					</table>
 					</div>

@@ -443,4 +443,12 @@ class Usuario extends CI_Controller
         $this->load->view('layout_principal/footer');
     }
 
+    public function update_foto($id)
+    {
+        $data['id'] = $id;
+        $this->load->view('layout_principal/top');
+        $this->load->view("template_medico/update_foto.php", $data);
+        $this->load->view('layout_principal/footer');
+    }
+
 }

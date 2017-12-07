@@ -91,11 +91,19 @@ class MedicoController extends CI_Controller
     }
 
     public function new_specialty()
-    {
+    {   //echo"<pre>";print_r($_POST);echo"</pre>";exit;
         $dadosMedicoEspecializacao['id_medico'] = $this->input->post('id_usuario');
         $dadosMedicoEspecializacao['id_especializacao'] = $this->input->post('id_especializacao');
         $this->db->insert('medicos_especializacao', $dadosMedicoEspecializacao);
         return redirect('/medico/perfil');
+    }
+
+    public function updated_specialty()
+    {
+        $data['especializacoes'] = $this->db->get('especializacao')->result();
+        $this->load->view('layout_principal/top');
+        $this->load->view("template_medico/update_especialidade.php", $data);
+        $this->load->view('layout_principal/footer');
     }
 
     public function removeSpecialty()

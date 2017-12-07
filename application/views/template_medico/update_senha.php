@@ -20,6 +20,7 @@
                             <input class="text" type="password" name="ps_login" placeholder="Nova Senha">
                             <input class="text" type="password" placeholder="Confirmar Nova Senha">
 
+                            <input style="float: none !important;" type="button" name="cancel" value="CANCELAR" onClick="history.back()" class="submit-btn" />&nbsp;&nbsp;
                             <input class="submit-btn" type="submit" value="ENVIAR">
                         </form>
                     </div>

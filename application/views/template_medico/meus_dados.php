@@ -58,25 +58,23 @@
     <div class="container">
         <div class="row" style="padding-bottom: 140px;padding-top: 116px;">
 
-            <h4><?php echo $medico[0]->nm_medico; ?> <!--<a href="/login/logout"><span class="btn btn-primary btnSession">Fechar Sessão</span></a>--> </h4>
+            <h4 style="margin-top: 20px;"><?php echo $medico[0]->nm_medico; ?> <!--<a href="/login/logout"><span class="btn btn-primary btnSession">Fechar Sessão</span></a>--> </h4>
 
             <div class="col-md-12 col-sm-6 dados">
-                <div class="row" STYLE="    MARGIN-BOTTOM: 17PX;">
-                    <span class="menuProfile">
-                        <a href="<?php echo base_url('medico/perfil'); ?>?profile=i">INICIO</a>
-                    </span>
-                    <span class="menuProfile">
-                        <a href="<?php echo base_url('medico/perfil'); ?>?profile=h">MEU PERFIL MÉDICO</a>
-                    </span>
-                    <span class="menuProfile"><a href="<?php echo base_url('medico/perfil'); ?>?profile=p">DADOS DO CONSULTÓRIO</a></span>
-                    <span class="menuProfile"><a href="<?php echo base_url('medico/perfil'); ?>?profile=m" >CALENDÁRIO</a></span>
-                    <span class="menuProfile"><a href="<?php echo base_url('medico/perfil'); ?>?profile=s" >RESERVA DE CONSULTA</a></span>
-                    <span class="menuProfile"><a href="<?php echo base_url('medico/perfil'); ?>?profile=r">RELATÓRIOS</a></span>
-                    <span class="menuProfile"><a href="<?php echo base_url('medico/perfil'); ?>?profile=a">AVALIAÇÕES</a></span>
-                    <span class="menuProfile"><a href="<?php echo base_url('medico/perfil'); ?>?profile=c" >MINHA AGENDA</a></span>
-                    <span class="menuProfile"><a href="<?php echo base_url('medico/perfil'); ?>?profile=f" >MINHAS MENSALIDADES</a></span>
+                <div class="tab-container" STYLE="    MARGIN-BOTTOM: 17PX;">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#home"" data-toggle="tab"><span class="icon mdi mdi-home"></span>INICIO</a></li>
+                        <li><a href="#meuperfil" data-toggle="tab"><span class="icon mdi mdi-face"></span>MEU PERFIL</a></li>
+                        <li><a href="#dadosconsultorio" data-toggle="tab"><span class="icon mdi mdi-city"></span>DADOS DO CONSULTÓRIO</a></li>
+                        <li><a href="#calendario" data-toggle="tab"><span class="icon mdi mdi-calendar"></span>CALENDÁRIO</a></li>
+                        <li><a href="#reserva" data-toggle="tab"><span class="icon mdi mdi-calendar-check"></span>RESERVA DE CONSULTA</a></li>
+                        <li><a href="#relatorio" data-toggle="tab"><span class="icon mdi mdi-collection-text"></span>RELATÓRIOS</a></li>
+                        <li><a href="#avaliacoes" data-toggle="tab"><span class="icon mdi mdi-book"></span>AVALIAÇÕES</a></li>
+                        <li><a href="#agenda" data-toggle="tab"><span class="icon mdi mdi-assignment"></span>AGENDA</a></li>
+                        <li><a href="#mensalidade" data-toggle="tab"><span class="icon mdi mdi-card"></span>MENSALIDADES</a></li>
+                    </ul>
                 </div>
-                <div>
+            <div>
                     <?php if($this->session->flashdata('mesage')) { ?>
                         <div class="alert alert-success" role="alert"><?php echo $this->session->flashdata('mesage'); ?></div>
                     <?php } ?>
@@ -84,130 +82,302 @@
 
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div id="begin">
-                            <div class="col-md-12 col-sm-6">
+                        <div id="home" class="tab-pane active cont">
+                            <!-- tab home -->
+                            <div class="be-wrapper be-fixed-sidebar" style="padding-top: 0px;">
+                                <div class="be-content" style="margin-left: 0px;">
+                                    <div class="main-content container-fluid">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-6 col-lg-3">
+                                                <div class="widget widget-tile">
+                                                    <div id="spark1" class="chart sparkline"></div>
+                                                    <div class="data-info">
+                                                        <div class="desc">New Users</div>
+                                                        <div class="value"><span class="indicator indicator-equal mdi mdi-chevron-right"></span><span data-toggle="counter" data-end="113" class="number">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6 col-lg-3">
+                                                <div class="widget widget-tile">
+                                                    <div id="spark2" class="chart sparkline"></div>
+                                                    <div class="data-info">
+                                                        <div class="desc">Monthly Sales</div>
+                                                        <div class="value"><span class="indicator indicator-positive mdi mdi-chevron-up"></span><span data-toggle="counter" data-end="80" data-suffix="%" class="number">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6 col-lg-3">
+                                                <div class="widget widget-tile">
+                                                    <div id="spark3" class="chart sparkline"></div>
+                                                    <div class="data-info">
+                                                        <div class="desc">Impressions</div>
+                                                        <div class="value"><span class="indicator indicator-positive mdi mdi-chevron-up"></span><span data-toggle="counter" data-end="532" class="number">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6 col-lg-3">
+                                                <div class="widget widget-tile">
+                                                    <div id="spark4" class="chart sparkline"></div>
+                                                    <div class="data-info">
+                                                        <div class="desc">Downloads</div>
+                                                        <div class="value"><span class="indicator indicator-negative mdi mdi-chevron-down"></span><span data-toggle="counter" data-end="113" class="number">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="panel panel-default panel-table">
+                                                    <div class="panel-heading">
+                                                        <div class="tools"><span class="icon mdi mdi-download"></span><span class="icon mdi mdi-more-vert"></span></div>
+                                                        <div class="title">Agenda do Dia</div>
+                                                    </div>
+                                                    <div class="panel-body table-responsive">
+                                                        <table class="table table-striped table-borderless">
+                                                            <thead>
+                                                            <tr>
+                                                                <th style="width:40%;">Paciente</th>
+                                                                <th style="width:20%;">Data</th>
+                                                                <th style="width:20%;">Estado</th>
+                                                                <th style="width:5%;" class="actions"></th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody class="no-border-x">
+                                                            <tr>
+                                                                <?php
+                                                                if(count($agendaDia) > 0){
+                                                                    foreach($agendaDia as $agenda){
+                                                                        echo date('d/m/Y H:i:s', strtotime($agenda->data_inicio)) . " : " . $agenda->descricao . "<br />";
+                                                                    }
+                                                                } else {
+                                                                    echo "Não há atendimentos agendados para hoje.";
+                                                                }
+                                                                ?>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="panel panel-default panel-table">
+                                                    <div class="panel-heading">
+                                                        <div class="tools"><span class="icon mdi mdi-download"></span><span class="icon mdi mdi-more-vert"></span></div>
+                                                        <div class="title">Financeiro</div>
+                                                    </div>
+                                                    <div class="panel-body table-responsive">
+                                                        <table class="table table-striped table-hover">
+                                                            <tr>
+                                                                <?php
+                                                                //echo"pgto: <pre>";print_r($pagamentos2);echo"</pre>";
+                                                                if(count($pagamentos) == 0) { ?>
+                                                                    Mensalidade em aberto <a href='/pagamento/medico/<?=$this->session->usuario->id_usuario;?>'>clique aqui</a>
+                                                                    <?php
+                                                                } else {
+                                                                    echo "Nenhuma pendencia! <br />";
+                                                                    $atual = date('Y-m');
+                                                                    $data = $pagamentos[0]->dt_pagamento;
+                                                                    $data = date('Y-m', strtotime("+1 month", strtotime($data)));
+                                                                    echo "Proxima Mensalidade: 10/" . date('m/Y', strtotime($data));
+                                                                    if(count($pagamentos) == 1) {
+                                                                        if ($atual == $data) {
+                                                                            foreach ($pagamentos as $pagamento) { ?>
+                                                                                <a href='/pagamento/medico/<?= $this->session->usuario->id_usuario; ?>'>
+                                                                                    [ Pagar ] </a>
+                                                                            <? }
+                                                                        }
+                                                                    } else {
+                                                                        echo "  [ Esta Mensalidade já esta Paga! ]";
+                                                                    }
+                                                                } ?>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="widget widget-fullwidth be-loading">
+                                                    <div class="widget-head">
+                                                        <div class="tools">
+                                                            <div class="dropdown"><span data-toggle="dropdown" class="icon mdi mdi-more-vert visible-xs-inline-block dropdown-toggle"></span>
+                                                                <ul role="menu" class="dropdown-menu">
+                                                                    <li><a href="#">Week</a></li>
+                                                                    <li><a href="#">Month</a></li>
+                                                                    <li><a href="#">Year</a></li>
+                                                                    <li class="divider"></li>
+                                                                    <li><a href="#">Today</a></li>
+                                                                </ul>
+                                                            </div><span class="icon mdi mdi-chevron-down"></span><span class="icon toggle-loading mdi mdi-refresh-sync"></span><span class="icon mdi mdi-close"></span>
+                                                        </div>
+                                                        <div class="button-toolbar hidden-xs">
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn btn-default">Semana</button>
+                                                                <button type="button" class="btn btn-default active">Mês</button>
+                                                                <button type="button" class="btn btn-default">Ano</button>
+                                                            </div>
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn btn-default">Hoje</button>
+                                                            </div>
+                                                        </div><span class="title">Movimentações Recentes</span>
+                                                    </div>
+                                                    <div class="widget-chart-container">
+                                                        <div class="widget-chart-info">
+                                                            <ul class="chart-legend-horizontal">
+                                                                <li><span data-color="main-chart-color1"></span> Consultas Confirmadas</li>
+                                                                <li><span data-color="main-chart-color2"></span> Canceladas</li>
+                                                                <li><span data-color="main-chart-color3"></span> Reagendadas</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="widget-counter-group widget-counter-group-right">
+                                                            <div class="counter counter-big">
+                                                                <div class="value">25%</div>
+                                                                <div class="desc">Consultas Confirmadas</div>
+                                                            </div>
+                                                            <div class="counter counter-big">
+                                                                <div class="value">5%</div>
+                                                                <div class="desc">Canceladas</div>
+                                                            </div>
+                                                            <div class="counter counter-big">
+                                                                <div class="value">5%</div>
+                                                                <div class="desc">Reagendadas</div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="main-chart" style="height: 260px;"></div>
+                                                    </div>
+                                                    <div class="be-spinner">
+                                                        <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                            <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="panel panel-default panel-table">
+                                                    <div class="panel-heading">
+                                                        <div class="tools"><span class="icon mdi mdi-download"></span><span class="icon mdi mdi-more-vert"></span></div>
+                                                        <div class="title">Últimas Consultas</div>
+                                                    </div>
+                                                    <div class="panel-body table-responsive">
+                                                        <table class="table table-striped table-borderless">
+                                                            <thead>
+                                                            <tr>
+                                                                <th style="width:40%;">Paciente</th>
+                                                                <th style="width:20%;">Data</th>
+                                                                <th style="width:20%;">Estado</th>
+                                                                <th style="width:5%;" class="actions"></th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody class="no-border-x">
+                                                            <tr>
+                                                                <td>Sony Xperia M4</td>
+                                                                <td>Aug 23, 2016</td>
+                                                                <td class="text-success">Completed</td>
+                                                                <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Apple iPhone 6</td>
+                                                                <td>Aug 20, 2016</td>
+                                                                <td class="text-success">Completed</td>
+                                                                <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="panel panel-default panel-table">
+                                                    <div class="panel-heading">
+                                                        <div class="tools"><span class="icon mdi mdi-download"></span><span class="icon mdi mdi-more-vert"></span></div>
+                                                        <div class="title">Pacientes</div>
+                                                    </div>
+                                                    <div class="panel-body table-responsive">
+                                                        <table class="table table-striped table-hover">
+                                                            <thead>
+                                                            <tr>
+                                                                <th style="width:37%;">Paciente</th>
+                                                                <th>Cadastrado</th>
+                                                                <th class="actions"></th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td class="user-avatar"> <img src="assets/img/avatar6.png" alt="Avatar">Penelope Thornton</td>
+                                                                <td>Aug 16, 2016</td>
+                                                                <td class="actions"><a href="#" class="icon"><i class="mdi mdi-github-alt"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="user-avatar"> <img src="assets/img/avatar4.png" alt="Avatar">Benji Harper</td>
+                                                                <td>Jul 15, 2016</td>
+                                                                <td class="actions"><a href="#" class="icon"><i class="mdi mdi-github-alt"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="user-avatar"> <img src="assets/img/avatar5.png" alt="Avatar">Justine Myranda</td>
+                                                                <td>Jul 28, 2016</td>
+                                                                <td class="actions"><a href="#" class="icon"><i class="mdi mdi-github-alt"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="user-avatar"> <img src="assets/img/avatar3.png" alt="Avatar">Sherwood Clifford</td>
+                                                                <td>Jun 30, 2016</td>
+                                                                <td class="actions"><a href="#" class="icon"><i class="mdi mdi-github-alt"></i></a></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-4">
+
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">
+
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">
+                                                <div class="widget widget-calendar">
+                                                    <div id="calendar-widget"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
                             </div>
 
-                            <div class="col-md-4" style="margin-bottom: 5px;">
-                            <div class="boxTitle"><img style="width: 8%;" src="<?php echo base_url('assets')?>/img/icon/financeiro.png" />Pendencias</div>
-                                <div class="boxContent">
+                            <script src="../../../sites/beagle/dist/html/assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+                            <script src="../../../sites/beagle/dist/html/assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+                            <script src="../../../sites/beagle/dist/html/assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
 
-                                    <?php
-                                    //echo"pgto: <pre>";print_r($pagamentos2);echo"</pre>";
-                                    if(count($pagamentos) == 0) { ?>
-                                            Mensalidade em aberto <a href='/pagamento/medico/<?=$this->session->usuario->id_usuario;?>'>clique aqui</a>
-                                    <?php
-                                    } else {
-                                        echo "Nenhuma pendencia! <br />";
-                                        $atual = date('Y-m');
-                                        $data = $pagamentos[0]->dt_pagamento;
-                                        $data = date('Y-m', strtotime("+1 month", strtotime($data)));
-                                        echo "Proxima Mensalidade: 10/" . date('m/Y', strtotime($data));
-                                        if(count($pagamentos) == 1) {
-                                            if ($atual == $data) {
-                                                foreach ($pagamentos as $pagamento) { ?>
-                                                    <a href='/pagamento/medico/<?= $this->session->usuario->id_usuario; ?>'>
-                                                        [ Pagar ] </a>
-                                                <? }
-                                            }
-                                        } else {
-                                            echo "  [ Esta Mensalidade já esta Paga! ]";
-                                        }
-                                    } ?>
-                                </div>
-                            </div>
-                            <div class="col-md-4" style="margin-bottom: 5px;">
-                                <div class="boxTitle"><img style="width: 6%;" src="<?php echo base_url('assets')?>/img/icon/agenda.png" />Agenda do Dia</div>
-                                <div class="boxContent">
-                                    <?php
-                                    if(count($agendaDia) > 0){
-                                        foreach($agendaDia as $agenda){
-                                            echo date('d/m/Y H:i:s', strtotime($agenda->data_inicio)) . " : " . $agenda->descricao . "<br />";
-                                        }
-                                    } else {
-                                        echo "Não há atendimentos agendados para hoje.";
-                                    }
-                                    ?>
 
-                                </div>
-                            </div>
-                            <div class="col-md-4" style="margin-bottom: 5px;">
-                                <div class="boxTitle"><img style="width: 8%;" src="<?php echo base_url('assets')?>/img/icon/busca.png" />Buscar Paciente</div>
-                                <div class="boxContent">
-                                    <form method="post" action="/pesquisar">
-                                        <label>Nome do Paciente</label><br>
-                                        <input type="text" name="nm_paciente" placeholder="Nome do Paciente"><br>
-                                        <label>CPF do Paciente</label><br>
-                                        <input type="text" name="nr_cpf" placeholder="Cpf do Paciente"><br>
-                                        <button type="submit">Buscar</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-md-4" style="margin-bottom: 5px;">
-                                <div class="boxTitle"><img style="width: 8%;" src="<?php echo base_url('assets')?>/img/icon/ajuda.png" />Ajuda</div>
-                                <div class="boxContent">
-                                    <ul style="margin-left: -42px !important;">
-                                        <li>>> Como começar</li>
-                                        <li>>> Agendamento pela clínica</li>
-                                        <li>>> Comparação de imagens</li>
-                                        <li>>> Configuração de Horários</li>
-                                        <li>>> Planos de contas</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-4" style="margin-bottom: 5px;">
-                                <div class="boxTitle"><img style="width: 10%;" src="<?php echo base_url('assets')?>/img/icon/news.png" />Noticias</div>
-                                <div class="">
-                                    <ul class="list-group">
-                                        <?php foreach($noticias as $noticia){ ?>
-                                            <li class="list-group-item"><span class="label label-info">NOVO</span> <?= date('d/m/Y H:i:s', strtotime($noticia->data)); ?> <?= $noticia->titulo; ?></li>
-                                        <?php } ?>
-                                    </ul>
-                                </div>
-                            </div>
+                            <!-- fim tab home -->
                         </div>
-                        <div  id="mensalidade">
-                            <div class="col-md-12" style="margin-bottom: 5px;">
-                                <div class="boxTitle"><img style="width: 5%;" src="<?php echo base_url('assets')?>/img/icon/financeiro.png" />
-                                    <span style="font-size: 24px;">Mensalidades</span>
-                                </div>
-                                <div class="">
-                                    <ul class="list-group">
-                                        <?php
-                                        $atual = date('Y-m');
-                                        $data = date('Y-m', strtotime("+0 month", strtotime($atual)));
-                                        if(count($pagamentos) == 0) { ?>
-                                            <li class="list-group-item">
-                                                <span class="label label-info-red">PAGAR</span>
-                                                <a href='/pagamento/medico/<?= $this->session->usuario->id_usuario; ?>'>
-                                                    Proxima Mensalidade: 10/<?= date('m/Y', strtotime($data)); ?> [
-                                                    Pagar ] </a>
-                                            </li>
-                                            <?
-                                        }
-                                        foreach($pagamentos2 as $pag){
-                                            ?>
-                                            <li class="list-group-item">
-                                                <span class="label label-info">PAGO</span>
-                                                <?= date('d/m/Y', strtotime($pag->dt_pagamento)); ?> - Valor de: R$ <?= $pag->vl_pagamento; ?>
-                                            </li>
-                                        <?php } ?>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div  id="home">
+
+                        <!-- meu perfil-->
+                        <div  id="meuperfil" class="tab-pane cont">
                             <div class="col-md-12 ">
                                 <div class="" style="float: left !important; text-align: center;/* position: absolute; */left: 76%;">
                                     <?php if(!$medico[0]->imagem) { ?>
-                                    <img data-src="holder.js/140x140" class="img-rounded col-md-2"
-                                         alt="140x140"
-                                         <?php if ($medico[0]->ch_sexo == "M"){ ?>
-                                            src="<?php echo base_url('assets'); ?>/img/medico_default.jpg" data-holder-rendered="true"
-                                         <? } else { ?>
-                                             src="<?php echo base_url('assets'); ?>/img/medica_default.jpg" data-holder-rendered="true"
-                                         <? } ?>
-                                         style="width: 279px;">
+                                        <img data-src="holder.js/140x140" class="img-rounded col-md-2"
+                                             alt="140x140"
+                                            <?php if ($medico[0]->ch_sexo == "M"){ ?>
+                                                src="<?php echo base_url('assets'); ?>/img/medico_default.jpg" data-holder-rendered="true"
+                                            <? } else { ?>
+                                                src="<?php echo base_url('assets'); ?>/img/medica_default.jpg" data-holder-rendered="true"
+                                            <? } ?>
+                                             style="width: 279px;">
                                     <? } else { ?>
                                         <img data-src="holder.js/140x140" class="img-rounded col-md-2"
                                              alt="140x140"
@@ -215,7 +385,8 @@
                                              style="width: 279px;">
                                     <? } ?>
                                     <br />
-                                    <a href="" data-toggle="modal" data-target="#exampleModal">Editar Foto</a>
+                                    <!--<a href="" data-toggle="modal" data-target="#exampleModal">Editar Foto</a>-->
+                                    <a href="/medico/atualiza_foto/<?=$medico[0]->id_usuario; ?>">Editar Foto</a>
                                 </div>
                                 <div class="form-group col-md-8 perfilMedico">
                                     <ul>
@@ -273,12 +444,11 @@
 
                                 <div class="form-group col-md-12 perfilMedico">
                                     <label for="exampleInputName2">Especialidades</label>
+
                                     <ul class="list-inline especializacao">
                                         <li style="background-color: #fff !important;">
-                                            <button  data-toggle="modal" data-target="#exampleModal2" type="button" class="btn btn-primary">
-                                                Nova Especialidade
-                                            </button>
-                                        </li>
+                                            <a class="btn btn-primary" href="/medico/atualiza_especialidade/<?=$medico[0]->id_usuario;?>" >Nova Especialidade</a>
+                                       </li>
                                         <?php foreach($especialidades as $especialidade){ ?>
                                             <li><?php echo $especialidade->nm_especializacao; ?>
                                                 <button style="padding: 1px 7px !important; "
@@ -290,7 +460,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12 col-sm-6 dados">
-                                <h4>Meu Endereço</h4>
+                                <h2 style="margin-bottom: 0px; font-size: 32px; padding-top: 10px;">Meu endereço</h2>
                                 <table class="tableConsulta">
                                     <tr>
                                         <th>#CEP</th>
@@ -311,46 +481,51 @@
                                             <td align="left" style="    width: 97px;">
                                                 <a title="Editar endereço" href="/medico/endereco-editar/<?= $endereco->id_endereco; ?>">
                                                     <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/editar.png"
-                                                          style="float: left !important;width: 37%;"></a>
+                                                         style="float: left !important;width: 37%;"></a>
                                             </td>
                                         </tr>
                                     <?php } ?>
                                 </table>
                             </div>
                         </div>
-                        <div id="profile">
-                            <div class="col-md-12 col-sm-6">
-                                <h4>Dados do Consultório</h4>
-                                <div class="form-group col-md-4">
-                                  <label><strong>Endereço: </strong></label>
-                                   <?php echo " ".$endereços[0]->nm_endereco ?>, <?php echo $endereços[0]->nm_bairro ?>
-                                     - <?php echo $endereços[0]->nm_cidade ?>
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-sm-6">
-                                <div class="form-group col-md-4" >
-                                    <label><strong>CEP: </strong></label>
-                                    <?php echo " ".$endereços[0]->nr_cep ?>
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-sm-6">
-                                <div class="form-group col-md-4">
-                                    <label><strong>Localização: </strong></label>
-                                    <?php echo $endereços[0]->nm_estado ?>
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-sm-6" >
-                                <div class="form-group col-md-4">
-                                    <label><strong>Telefone: </strong></label>
-                                    <?php echo $medico[0]->telefone; ?>
-                                </div>
-                            </div>
-                            <? //echo"<pre>";print_r($medico);echo"</pre>";?>
+                        <!-- fim meu perfil-->
 
-                            <a class="btn btn-primary" href="/medico/endereco-editar/<?= $endereco->id_endereco; ?>" >Atualizar dados</a>
+                        <!-- dados consultorio-->
+                        <div id="dadosconsultorio" class="tab-pane cont">
+                            <div class="col-md-12 col-sm-6 dados">
+                                <h2 style="margin-bottom: 0px; font-size: 32px; padding-top: 10px;">Dados do Consultório</h2>
+                                <table class="tableConsulta">
+                                    <tr>
+                                        <th>Endereço</th>
+                                        <th>CEP</th>
+                                        <th>Localização</th>
+                                        <th>Telefone</th>
+                                        <th>Ações</th>
 
+                                    </tr>
+                                    <?php foreach($endereços as $endereco) { ?>
+                                        <tr>
+                                            <td>
+                                                <?php echo " ".$endereços[0]->nm_endereco ?>, <?php echo $endereços[0]->nm_bairro ?>
+                                                - <?php echo $endereços[0]->nm_cidade ?>
+                                            </td>
+                                            <td><?php echo " ".$endereços[0]->nr_cep ?></td>
+                                            <td><?php echo $endereços[0]->nm_estado ?></td>
+                                            <td><?php echo $medico[0]->telefone; ?></td>
+                                            <td align="left" style="    width: 97px;">
+                                                <a title="Editar endereço" href="/medico/endereco-editar/<?= $endereco->id_endereco; ?>">
+                                                    <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/editar.png"
+                                                         style="float: left !important;width: 37%;"></a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </table>
+                            </div>
                         </div>
-                        <div  id="messages">
+                        <!-- fim dados consultorio-->
+
+                        <!-- calendario-->
+                        <div id="calendario" class="tab-pane cont">
                             <div class="form-group col-md-12 filter">
                                 <strong>Clinica ou Consulta</strong><br>
                                 <select>
@@ -365,104 +540,58 @@
                             </div>
                             <div id='calendar'></div>
                         </div>
-                        <div  id="acaliation">
-                            <div class="form-group col-md-12 filter">
-                                <h4>Avaliações realizadas pelos Pacientes</h4><br>
-                                <table class="table table-hover">
-                                    <tr>
-                                        <th>Data</th>
-                                        <th>Paciente</th>
-                                        <th>Nota</th>
-                                    </tr>
-                                    <?php foreach($notas as $nota){ ?>
-                                        <tr>
-                                            <td><?php echo date('d/m/Y H:i:s', strtotime($nota->data_cadastro));?></td>
-                                            <td><?php echo $nota->nm_paciente;?></td>
-                                            <td>
-                                                <?php
-                                                if ($nota->nota == 5){
-                                                    echo '<div class="fivestar"></div>';
-                                                } elseif ($nota->nota == 1){
-                                                    echo '<div class="ondestar"></div>';
-                                                } elseif ($nota->nota == 2){
-                                                    echo '<div class="twostar"></div>';
-                                                } elseif ($nota->nota == 3){
-                                                    echo '<div class="threestar"></div>';
-                                                } elseif ($nota->nota == 4){
-                                                    echo '<div class="fourstar"></div>';
-                                                }
-                                                ?>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-                                </table>
-                            </div>
-                        </div>
-                        <div id="reports">
-                            <div class="row">
-                                <a href="/relatorio/pacientes">
-                                    <div class="col-md-1 iconReport">
-                                        <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/paciente.png" style="float: left !important;width: 95%;">Pacientes</a>
-                                    </div>
-                                </a>
-                                <a href="/relatorio/consultas_confirmadas">
-                                    <div class="col-md-1 iconReport">
-                                        <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/confirmar.png" style="float: left !important;width: 75%;">Consultas Confirmadas</a>
-                                    </div>
-                                </a>
-                                <a href="/relatorio/consultas_canceladas">
-                                    <div class="col-md-1 iconReport">
-                                        <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/cancelar.png" style="float: left !important;width: 75%;">Consultas Canceladas</a>
-                                    </div>
-                                </a>
-                                <a href="/relatorio/financeiro">
-                                    <div class="col-md-1 iconReport">
-                                        <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/financeiro.png" style="float: left !important;width: 95%;">Financeiro</a>
-                                    </div>
-                                </a>
-                            </div>
+                        <!-- fim calendario-->
 
-                        </div>
-                        <div id="settings">
-                            <table class="table table-hover">
-                                <tr>
-                                    <th>Registrador por</th>
-                                    <th>Data da Consulta</th>
-                                    <th>Confirmada</th>
-                                    <th>Paciente</th>
-                                    <th>Estado</th>
-                                    <th>Ações</th>
-                                </tr>
-                                <?php foreach($consultas as $consulta) { ?>
-                                <tr>
-                                    <td><?php echo $consulta->nm_paciente ?></td>
-                                    <td><?php echo date("d/m/Y", strtotime($consulta->dt_consulta)) . " " . $consulta->hr_inicio ?></td>
-                                    <td>
-                                        <?php
-                                        if($consulta->ch_confirmacao == 1){
-                                            echo date('d/m/Y H:i:s', strtotime($consulta->dt_confirmacao));
-                                        } elseif($consulta->ch_confirmacao == 2){
-                                            echo "Cancelado";
-                                        } elseif($consulta->ch_confirmacao == 4){
-                                            echo date('d/m/Y H:i:s', strtotime($consulta->dt_confirmacao));
-                                        }
-                                        ?>
-                                    </td>
-                                    <td><?php echo $consulta->nm_paciente ?></td>
-                                    <td>
-                                        <?php
-                                        if($consulta->ch_confirmacao == 1){
-                                            echo "Confirmado";
-                                        } elseif($consulta->ch_confirmacao == 2){
-                                            echo "Cancelado";
-                                        } elseif($consulta->ch_confirmacao == 3){
-                                            echo "Nova Consulta";
-                                        } elseif($consulta->ch_confirmacao == 4){
-                                            echo "Consulta Remarcada";
-                                        }
-                                        ?>
-                                    </td>
-                                    <td style="width: 14% !important;">
+                        <!-- reserva de consulta-->
+                        <div id="reserva" class="tab-pane cont">
+                            <div class="col-sm-12">
+                                <div class="panel panel-default panel-table">
+                                    <div class="panel-heading"><h2 style="margin-bottom: 0px; font-size: 32px; padding-top: 10px;">Reserva de Consulta</h2>
+                                        <div class="tools"><span class="icon mdi mdi-download"></span><span class="icon mdi mdi-more-vert"></span></div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table id="table1" class="table table-striped table-hover table-fw-widget">
+                                            <thead>
+                                            <tr>
+                                                <th>Registrador por</th>
+                                                <th>Data da Consulta</th>
+                                                <th>Confirmada</th>
+                                                <th>Paciente</th>
+                                                <th>Estado</th>
+                                                <th>Ações</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php foreach($consultas as $consulta) { ?>
+                                                <tr>
+                                                    <td><?php echo $consulta->nm_paciente ?></td>
+                                                    <td><?php echo date("d/m/Y", strtotime($consulta->dt_consulta)) . " " . $consulta->hr_inicio ?></td>
+                                                    <td>
+                                                        <?php
+                                                        if($consulta->ch_confirmacao == 1){
+                                                            echo date('d/m/Y H:i:s', strtotime($consulta->dt_confirmacao));
+                                                        } elseif($consulta->ch_confirmacao == 2){
+                                                            echo "Cancelado";
+                                                        } elseif($consulta->ch_confirmacao == 4){
+                                                            echo date('d/m/Y H:i:s', strtotime($consulta->dt_confirmacao));
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                    <td><?php echo $consulta->nm_paciente ?></td>
+                                                    <td>
+                                                        <?php
+                                                        if($consulta->ch_confirmacao == 1){
+                                                            echo "Confirmado";
+                                                        } elseif($consulta->ch_confirmacao == 2){
+                                                            echo "Cancelado";
+                                                        } elseif($consulta->ch_confirmacao == 3){
+                                                            echo "Nova Consulta";
+                                                        } elseif($consulta->ch_confirmacao == 4){
+                                                            echo "Consulta Remarcada";
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                    <td style="width: 14% !important;">
                                         <span style="cursor: pointer"
                                               data-toggle="tooltip"
                                               onclick="confirmConsult('<?php echo $consulta->id_consulta ?>','<?php echo $consulta->id_usuario; ?>')"
@@ -485,45 +614,227 @@
                                               aria-hidden="true">
                                             <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/cancelar.png" style="float: left !important;width: 15%;"></a>
                                         </span>
-                                        <span style="cursor: pointer"
-                                              data-toggle="tooltip"
-                                              data-placement="top"
-                                              onclick="histConsulta('<?php echo $consulta->id_paciente ?>');"
-                                              title="Historico de Consultas"
-                                              aria-hidden="true">
-                                            <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/relatorio.png" style="float: left !important;width: 15%;"></a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <?php } ?>
-                            </table>
-                        </div>
-                        <div id="callendar">
-                            <h4>Minha Agenda de Atendimento</h4>
-                            <p><a href="/agenda/novo">Novo Horário</a></p>
-                            <table class="table table-hover">
-                                <tr>
-                                    <th>#ID</th>
-                                    <th>HORARIO</th>
-                                    <th>Ações</th>
-                                </tr>
-                                <?php foreach($agenda as $age) { ?>
-                                <tr>
-                                    <td><?php echo $age->id_agenda;?></td>
-                                    <td><?php echo $age->horario;?></td>
-                                    <td style="width: 14% !important;">
-                                        <a href="/agenda/editar/<?=$age->id_agenda;?>"  title="Editar">
-                                            <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/editar.png" style="float: left !important;width: 15%;">
-                                        </a>
+                                                        <!--<a href="#historico" data-toggle="tab">-->
+                                            <span style="cursor: pointer"
+                                                  data-toggle="tooltip"
+                                                  data-placement="top"
+                                                  onclick="histConsulta('<?php echo $consulta->id_paciente ?>');"
+                                                  title="Historico de Consultas"
+                                                  aria-hidden="true">
+                                                <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/relatorio.png" style="float: left !important;width: 15%;"></a>
+                                            </span>
+                                        <!--</a>-->
+                                                    </td>
+                                                </tr>
+                                            <? } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
 
-                                        <a href="/agenda/remover/<?=$age->id_agenda?>"  title="Excluir">
-                                            <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/cancelar.png" style="float: left !important;width: 15%;">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <?php } ?>
-                            </table>
                         </div>
+                        <!-- fim reserva de consulta-->
+                        <!-- historico consulta / esse historico esta sendo feito em /template_consulta/paciente-->
+                        <div id="historico" class="tab-pane cont">
+                            <div class="col-sm-12">
+                                <div class="panel panel-default panel-table">
+                                    <div class="panel-heading"><h2 style="margin-bottom: 0px; font-size: 32px; padding-top: 10px;">Histórico de Consulta</h2>
+                                        <div class="tools"><span class="icon mdi mdi-download"></span><span class="icon mdi mdi-more-vert"></span></div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table id="table1" class="table table-striped table-hover table-fw-widget">
+                                            <thead>
+                                            <tr>
+                                                <th>Descrição</th>
+                                                <th>Data da Consulta</th>
+                                                <th>Data de Confirmação</th>
+                                                <th>Médico Responsavel</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php foreach($consultas as $consulta) { ?>
+                                                <tr>
+                                                    <td><?php echo $consulta->nm_consulta; ?></td>
+                                                    <td><?php echo $consulta->dt_consulta; ?> <?php echo $consulta->hr_inicio; ?></td>
+                                                    <td><?php echo $consulta->dt_confirmacao; ?></td>
+                                                    <td><?php echo @$consulta->nm_paciente; ?></td>
+                                                    <!--<td><a href="<?php echo site_url('/consulta/editar/'.$consulta->id_consulta)?>?visita=true">Visualizar</a> </td>-->
+                                                </tr>
+                                            <?php } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fim historico consuta -->
+
+                        <!-- relatorios-->
+                        <div id="relatorio" class="tab-pane cont">
+                            <div class="row">
+                                <a href="/relatorio/pacientes">
+                                    <div class="col-md-1 iconReport">
+                                        <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/paciente.png" style="float: left !important;width: 95%;">Pacientes</a>
+                            </div>
+                            </a>
+                            <a href="/relatorio/consultas_confirmadas">
+                                <div class="col-md-1 iconReport">
+                                    <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/confirmar.png" style="float: left !important;width: 75%;">Consultas Confirmadas</a>
+                            </div>
+                            </a>
+                            <a href="/relatorio/consultas_canceladas">
+                                <div class="col-md-1 iconReport">
+                                    <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/cancelar.png" style="float: left !important;width: 75%;">Consultas Canceladas</a>
+                                </div>
+                            </a>
+                            <a href="/relatorio/financeiro">
+                                <div class="col-md-1 iconReport">
+                                    <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/financeiro.png" style="float: left !important;width: 95%;">Financeiro</a>
+                            </div>
+                            </a>
+                        </div>
+                        </div>
+                        <!-- fim relatorios-->
+
+                        <!-- avaliacoes-->
+                        <div id="avaliacoes" class="tab-pane cont">
+                            <div class="col-sm-12">
+                                <div class="panel panel-default panel-table">
+                                    <div class="panel-heading">
+                                        <h2 style="margin-bottom: 0px; font-size: 32px; padding-top: 10px;">
+                                            Avaliações realizadas pelos Pacientes
+                                        </h2>
+                                        <div class="tools">
+                                            <span class="icon mdi mdi-download"></span>
+                                            <span class="icon mdi mdi-more-vert"></span>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table id="table1" class="table table-striped table-hover table-fw-widget">
+                                            <thead>
+                                                <tr>
+                                                    <th>Data</th>
+                                                    <th>Paciente</th>
+                                                    <th>Nota</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php foreach($notas as $nota){ ?>
+                                                <tr>
+                                                    <td><?php echo date('d/m/Y H:i:s', strtotime($nota->data_cadastro));?></td>
+                                                    <td><?php echo $nota->nm_paciente;?></td>
+                                                    <td>
+                                                        <?php
+                                                        if ($nota->nota == 5){
+                                                            echo '<div class="fivestar"></div>';
+                                                        } elseif ($nota->nota == 1){
+                                                            echo '<div class="ondestar"></div>';
+                                                        } elseif ($nota->nota == 2){
+                                                            echo '<div class="twostar"></div>';
+                                                        } elseif ($nota->nota == 3){
+                                                            echo '<div class="threestar"></div>';
+                                                        } elseif ($nota->nota == 4){
+                                                            echo '<div class="fourstar"></div>';
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                </tr>
+                                            <? } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fim avaliacoes-->
+
+                        <!-- agenda-->
+                        <div id="agenda" class="tab-pane cont">
+                            <div class="col-sm-12">
+                                <div class="panel panel-default panel-table">
+                                    <div class="panel-heading">
+                                        <h2 style="margin-bottom: 0px; font-size: 32px; padding-top: 10px;">
+                                            Minha Agenda de Atendimento
+                                        </h2>
+                                        <div class="tools">
+                                            <span class="icon mdi mdi-download"></span>
+                                            <span class="icon mdi mdi-more-vert"></span>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <a class="btn btn-primary" href="/agenda/novo" >Novo Horário</a>
+                                        <table id="table1" class="table table-striped table-hover table-fw-widget">
+                                            <thead>
+                                            <tr>
+                                                <th>#ID</th>
+                                                <th>HORARIO</th>
+                                                <th>Ações</th>
+                                            </tr>
+                                            <tbody>
+                                            <?php foreach($agenda as $age) { ?>
+                                                <tr>
+                                                    <td><?php echo $age->id_agenda;?></td>
+                                                    <td><?php echo $age->horario;?></td>
+                                                    <td style="width: 14% !important;">
+                                                        <a href="/agenda/editar/<?=$age->id_agenda;?>"  title="Editar">
+                                                            <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/editar.png" style="float: left !important;width: 15%;">
+                                                        </a>
+
+                                                        <a href="/agenda/remover/<?=$age->id_agenda?>"  title="Excluir">
+                                                            <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/cancelar.png" style="float: left !important;width: 15%;">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            <? } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fim agenda-->
+
+                        <!-- mensalidade-->
+                        <div id="mensalidade" class="tab-pane cont">
+                            <div class="col-sm-12">
+                                <div class="panel panel-default panel-table">
+                                    <div class="panel-heading">
+                                        <h2 style="margin-bottom: 0px; font-size: 32px; padding-top: 10px;">
+                                            Mensalidades
+                                        </h2>
+                                        <div class="tools">
+                                            <span class="icon mdi mdi-download"></span>
+                                            <span class="icon mdi mdi-more-vert"></span>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <ul class="list-group">
+                                            <?php
+                                            $atual = date('Y-m');
+                                            $data = date('Y-m', strtotime("+0 month", strtotime($atual)));
+                                            if(count($pagamentos) == 0) { ?>
+                                                <li class="list-group-item">
+                                                    <span class="label label-info-red">PAGAR</span>
+                                                    <a href='/pagamento/medico/<?= $this->session->usuario->id_usuario; ?>'>
+                                                        Proxima Mensalidade: 10/<?= date('m/Y', strtotime($data)); ?> [
+                                                        Pagar ] </a>
+                                                </li>
+                                                <?
+                                            }
+                                            foreach($pagamentos2 as $pag){
+                                                ?>
+                                                <li class="list-group-item">
+                                                    <span class="label label-info">PAGO</span>
+                                                    <?= date('d/m/Y', strtotime($pag->dt_pagamento)); ?> - Valor de: R$ <?= $pag->vl_pagamento; ?>
+                                                </li>
+                                            <? } ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fim mensalidade-->
                     </div>
 
                 </div>
@@ -532,6 +843,7 @@
         </div>
     </div>
 </section>
+
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -556,37 +868,48 @@
     </div>
 </div>
 
-<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModal2Label">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+<!-- add especialidade -->
+    <!-- Nifty Modal-->
+    <div id="" class="modal-container modal-effect-6" style="perspective: none;padding-top: 56px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-content" style="padding-top: 0px;">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModal2Label">Adicionar Novas Especialidade</h4>
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="close modal-close"><span class="mdi mdi-close"></span></button>
             </div>
-            <form method="post" action="/medico/nova_especialidade" enctype="multipart/form-data">
-                <input type="hidden" name="id_usuario" value="<?php echo $medico[0]->id_usuario; ?>">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="recipient-name" class="control-label">Nova Especialidade:</label>
-                        <select name="id_especializacao" class="email" required>
-                            <option value="">Selecione sua Especialização</option>
-                            <?php
-                            foreach($especializacoes as $esp){
-                                ?>
-                                <option value="<?php echo $esp->id_especializacao; ?>"><?php echo $esp->nm_especializacao; ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
+            <div class="modal-body2" >
+                <div class="text-center" >
+                    <div class="text-primary" style="height: 20px;">
+                        <span class="modal-main-icon mdi mdi-check"></span></div>
+                    <h3>Adicionar Nova Especialidade</h3>
+                    <form method="post" action="/medico/nova_especialidade" enctype="multipart/form-data">
+                        <input type="hidden" name="id_usuario" value="<?php echo $medico[0]->id_usuario; ?>">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">Nova Especialidade:</label>
+                                <select name="id_especializacao" class="email" required>
+                                    <option value="">Selecione sua Especialização</option>
+                                    <?php
+                                    foreach($especializacoes as $esp){
+                                        ?>
+                                        <option value="<?php echo $esp->id_especializacao; ?>"><?php echo $esp->nm_especializacao; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input style="float: none !important;" type="button" name="cancel" value="CANCELAR" onClick="history.back()" class="submit-btn" />&nbsp;&nbsp;
+                            <button type="submit" class="btn btn-primary">Adicionar</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Salvar</button>
-                </div>
-            </form>
+            </div>
+            <div class="modal-footer"></div>
         </div>
     </div>
-</div>
+    <!-- Nifty Modal-->
+<!-- fim add especialidade -->
 
+
+<!-- calendario-->
 <link href='<?php echo base_url('assets')?>/js/fullcalendar/fullcalendar.css' rel='stylesheet' />
 <link href='<?php echo base_url('assets')?>/js/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
 <script src='<?php echo base_url('assets')?>/js/fullcalendar/lib/moment.min.js'></script>
@@ -606,11 +929,11 @@
             eventLimit: true, // allow "more" link when too many events
             events: [
                 <?php foreach($agendaConsultas as $agenda){
-                    $data_inicio = explode(' ', $agenda->data_inicio);
-                    $data_inicio = $data_inicio[0] . "T" . $data_inicio[1];
+                $data_inicio = explode(' ', $agenda->data_inicio);
+                $data_inicio = $data_inicio[0] . "T" . $data_inicio[1];
 
-                    $data_final = explode(' ', $agenda->data_final);
-                    $data_final = $data_final[0] . "T" . $data_final[1];
+                $data_final = explode(' ', $agenda->data_final);
+                $data_final = $data_final[0] . "T" . $data_final[1];
                 ?>
                 {
                     id: <?php echo $agenda->id; ?>,
@@ -652,15 +975,11 @@
             },
         });
     }
-
-
-
 </script>
 <script>
     function GetQueryString(a)
     {
         a = a || window.location.search.substr(1).split('&').concat(window.location.hash.substr(1).split("&"));
-
         if (typeof a === "string")
             a = a.split("#").join("&").split("&");
 
@@ -683,121 +1002,6 @@
         }
         // retorna o objeto criado
         return b;
-    }
-
-    // uso
-    var qs = GetQueryString();
-    console.log(qs);
-    if (qs.profile == 'i'){
-        $('#begin').show();
-        $('#profile').hide();
-        $('#home').hide();
-        $('#messages').hide();
-        $('#settings').hide();
-        $('#reports').hide();
-        $('#acaliation').hide();
-        $('#callendar').hide();
-        $('#mensalidade').hide();
-    } else if (qs.profile == 'p'){
-        $('#profile').show();
-        $('#begin').hide();
-        $('#home').hide();
-        $('#messages').hide();
-        $('#settings').hide();
-        $('#reports').hide();
-        $('#acaliation').hide();
-        $('#callendar').hide();
-        $('#mensalidade').hide();
-    }else if (qs.profile == 'h'){
-        $('#profile').hide();
-        $('#begin').hide();
-        $('#home').show();
-        $('#messages').hide();
-        $('#settings').hide();
-        $('#reports').hide();
-        $('#acaliation').hide();
-        $('#callendar').hide();
-        $('#mensalidade').hide();
-    } else if (qs.profile == 'm'){
-        $('#profile').hide();
-        $('#begin').hide();
-        $('#home').hide();
-        $('#messages').show();
-        $('#settings').hide();
-        $('#reports').hide();
-        $('#acaliation').hide();
-        $('#callendar').hide();
-        $('#mensalidade').hide();
-    } else if (qs.profile == 's'){
-        $('#profile').hide();
-        $('#begin').hide();
-        $('#home').hide();
-        $('#messages').hide();
-        $('#settings').show();
-        $('#reports').hide();
-        $('#acaliation').hide();
-        $('#callendar').hide();
-        $('#mensalidade').hide();
-    } else if (qs.profile == 'r'){
-        $('#profile').hide();
-        $('#begin').hide();
-        $('#home').hide();
-        $('#messages').hide();
-        $('#settings').hide();
-        $('#reports').show();
-        $('#acaliation').hide();
-        $('#callendar').hide();
-        $('#mensalidade').hide();
-    } else if (qs.profile == 'a'){
-        $('#profile').hide();
-        $('#begin').hide();
-        $('#home').hide();
-        $('#messages').hide();
-        $('#settings').hide();
-        $('#reports').hide();
-        $('#acaliation').show();
-        $('#callendar').hide();
-        $('#mensalidade').hide();
-    } else if (qs.profile == 'c'){
-        $('#profile').hide();
-        $('#begin').hide();
-        $('#home').hide();
-        $('#messages').hide();
-        $('#settings').hide();
-        $('#reports').hide();
-        $('#acaliation').hide();
-        $('#callendar').show();
-        $('#mensalidade').hide();
-    } else if (qs.profile == 'i'){
-        $('#profile').hide();
-        $('#begin').show();
-        $('#home').hide();
-        $('#messages').hide();
-        $('#settings').hide();
-        $('#reports').hide();
-        $('#acaliation').hide();
-        $('#callendar').hide();
-        $('#mensalidade').hide();
-    } else if (qs.profile == 'f'){
-        $('#profile').hide();
-        $('#begin').hide();
-        $('#home').hide();
-        $('#messages').hide();
-        $('#settings').hide();
-        $('#reports').hide();
-        $('#acaliation').hide();
-        $('#callendar').hide();
-        $('#mensalidade').show();
-    } else {
-        $('#profile').hide();
-        $('#begin').show();
-        $('#home').hide();
-        $('#messages').hide();
-        $('#settings').hide();
-        $('#reports').hide();
-        $('#acaliation').hide();
-        $('#callendar').hide();
-        $('#mensalidade').hide();
     }
 
     function confirmConsult(id, id_paciente){
@@ -835,5 +1039,60 @@
             }
         });
     }
+</script>
 
+</script>
+<script src="../../../sites/beagle/dist/html/assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //initialize the javascript
+        App.init();
+    });
+</script>
+<script type="text/javascript">
+    $.fn.niftyModal('setDefaults',{
+        overlaySelector: '.modal-overlay',
+        closeSelector: '.modal-close',
+        classAddAfterOpen: 'modal-show',
+    });
+
+    $(document).ready(function(){
+        //initialize the javascript
+        App.init();
+    });
+</script>
+
+<script src="../../../sites/beagle/dist/html/assets/js/main.js" type="text/javascript"></script>
+
+<!-- datatables-->
+
+<script src="../../../sites/beagle/dist/html/assets/lib/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/datatables/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/datatables/plugins/buttons/js/dataTables.buttons.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/datatables/plugins/buttons/js/buttons.html5.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/js/app-tables-datatables.js" type="text/javascript"></script>
+
+<!-- graficos -->
+<script src="../../../sites/beagle/dist/html/assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+<!-- fim graficos -->
+
+<script src="../../../sites/beagle/dist/html/assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/jqvmap/jquery.vmap.min.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/lib/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
+<script src="../../../sites/beagle/dist/html/assets/js/app-dashboard.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //initialize the javascript
+        App.init();
+        App.dataTables();
+        App.dashboard();
+
+    });
 </script>

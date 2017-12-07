@@ -77,11 +77,13 @@ $route['medico/atualiza_foto'] = "MedicoController/update_image";
 $route['medico/endereco-editar/(\d+)'] = "usuario/update_addressM/$1";
 $route['medico/atualizar_endereco/(\d+)'] = "usuario/update_addresses/$1";
 $route['medico/atualiza_dados/(\d+)'] = "usuario/updated_doctor/$1";
+$route['medico/atualiza_especialidade/(\d+)'] = "MedicoController/updated_specialty/$1";
 $route['medico/atualiza/(\d+)'] = "usuario/update_doctor/$1";
 $route['medico/nova_especialidade'] = "MedicoController/new_specialty";
 $route['medico/removeSpecialty'] = "MedicoController/removeSpecialty";
 $route['medico/mudar_senha/(\d+)'] = "usuario/update_password/$1";
 $route['medico/atualiza_senha/(\d+)'] = "usuario/update_pass2/$1";
+$route['medico/atualiza_foto/(\d+)'] = "usuario/update_foto/$1";
 
 /* router Consultas */
 $route['consulta/nova'] = "ConsultaController/index";
@@ -96,6 +98,7 @@ $route['consulta/mudar_dia_consulta'] = "ConsultaController/updateDayConsult";
 $route['consulta/editar/(\d+)'] = "ConsultaController/editar/$1";
 $route['consulta/atualiza_dia'] = "ConsultaController/updateDay";
 $route['consulta/paciente/(\d+)'] = "ConsultaController/consulta_paciente/$1";
+$route['consulta/paciente/historico/(\d+)'] = "ConsultaController/historico_consulta_paciente/$1";
 $route['consulta/cancelar/(:any)/(:any)'] = "ConsultaController/cancelar_consulta/$1/$2";
 
 /* router Agenda */
