@@ -242,6 +242,7 @@ class Usuario extends CI_Controller
 
     public function registroMedico()
     {
+        //echo"<br>registro medico: <pre>";print_r($_POST);echo"</pre>";exit;
         $data['especializacoes'] = $this->db->get('especializacao')->result();
         $this->load->view('layout_principal/top');
         $this->load->view("template_medico/medico_registro.php", $data);

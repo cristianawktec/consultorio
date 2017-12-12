@@ -42,7 +42,7 @@ class Usuario_Model extends CI_Model{
      * @return array|bool
      */
     public function login($nm_login, $ps_login)
-    {
+    {   //echo"<br>estou aqui";exit;
         $today = date('Y-m');
         $this->db->where('nm_login', $nm_login);
         $this->db->where('ps_login', $ps_login);
@@ -59,6 +59,7 @@ class Usuario_Model extends CI_Model{
                         $res = $this->session->usuario;
                         return $data[0]->id_usuario;
                     } else {
+                        //se o plano for free
                         if($data[0]->id_plano == 1){
                             $dados = array('usuario' => $data[0], 'logado' => TRUE);
                             $this->session->set_userdata($dados);
@@ -117,6 +118,8 @@ class Usuario_Model extends CI_Model{
         $this->db->where('id_usuario', $id_usuario);
         $this->db->where('statusTransacao', 1);
         $this->db->like('dt_pagamento', $today);
+        //$res = $this->db->get('pagamentos')->result();
+        //echo "<br>valida mensalidade: <pre>";print_r($res);echo "</pre>";exit;
         return $this->db->get('pagamentos')->result();
     }
 

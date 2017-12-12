@@ -30,7 +30,7 @@ class Login extends CI_Controller
         $nm_login = $this->input->post('email');
         $ps_login = md5($this->input->post('ps_login'));
         $txt = $this->usuario->login($nm_login, $ps_login);
-
+        echo"<br>autenticando com txt:<pre> ";print_r($txt);echo"</pre>";exit;
         if (!empty($txt)){
             //echo"<pre>";print_r($txt);echo"</pre>";die;
             if ($txt['id_perfil'] == 1) {
