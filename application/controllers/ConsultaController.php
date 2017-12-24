@@ -473,8 +473,8 @@ class ConsultaController extends CI_Controller
         $medico = $dado->nm_login;
 
         $subject = 'Limite de Consultas excedido neste mês!';
-        $messagem = 'Olá '. $medico.', você atingiu seu Limite de Consultas! ';
-        $message = utf8_encode($messagem);
+        $message = 'Ol&aacute; '. $medico.', voc&ecirc; atingiu seu Limite de Consultas! ';
+        //$message = utf8_encode($messagem);
 
         $this->load->library("my_phpmailer");
         $mail = new PHPMailer();
@@ -485,7 +485,7 @@ class ConsultaController extends CI_Controller
         $mail->Port = 587; //Estabelecemos a porta utilizada pelo servidor do gMail.
         $mail->Username = "enviar@clickconsultorio.com"; //Usuário do gMail
         $mail->Password = "awktec2016";//"awk123"; //Senha do gMail
-        $mail->SetFrom('contato@clickconsultorio.com', 'Webmaster Awk'); //Quem está enviando o e-mail.
+        $mail->SetFrom('contato@clickconsultorio.com', 'Webmaster ClickConsultorio'); //Quem está enviando o e-mail.
         $mail->AddReplyTo("cristianms.awk@gmail.com","ClickConsultorio"); //Para que a resposta será enviada.
         $mail->Subject = utf8_decode($subject); //Assunto do e-mail.
         $mail->Body = $this->htmlEmailLimiteConsulta($message);
@@ -539,11 +539,11 @@ class ConsultaController extends CI_Controller
 				<table>
 					<tr>
 						<td>
-							<h3>Olá,</h3>
+							<h3>Ol&aacute;,</h3>
 							<p>'.$message.'</p>
 							<!-- Callout Panel -->
 							<p class="callout">
-							    Para acessar sua área <a href="http://clickconsultorio.com/login">Clique aqui! &raquo;</a>
+							    Para acessar sua &aacute;rea <a href="http://clickconsultorio.com/login">Clique aqui! &raquo;</a>
 							</p><!-- /Callout Panel -->
 							<!-- social & contact -->
 							<table class="social" width="100%">
