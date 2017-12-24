@@ -499,7 +499,7 @@ class ConsultaController extends CI_Controller
         } else {
             $data["message"] = "Mensagem enviada com sucesso!";
         }
-
+        return redirect('/login');
     }
 
     public function htmlEmailLimiteConsulta($message)
