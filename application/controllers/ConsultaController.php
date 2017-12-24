@@ -84,6 +84,7 @@ class ConsultaController extends CI_Controller
             $id = $this->session->usuario->id_usuario;
             $data['paciente'] = $this->usuario->getUsuarioById($id);
             $data['endereços'] = $this->endereco->getEnderecoUsuarioById($id);
+            $data['consultas'] = $this->usuario->getNumeroConsultas($doctor);
         }
         $this->load->view('layout_principal/top');
         $this->load->view('template_consulta/marcar_consulta', $data);
@@ -360,6 +361,148 @@ class ConsultaController extends CI_Controller
     }
 
     public function htmlEmail($message)
+    {
+        $html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<!-- If you delete this meta tag, Half Life 3 will never be released. -->
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Click Consultório</title>
+	<link rel="stylesheet" type="text/css" href="'.base_url('assets').'/css/email.css" />
+	</head>
+	<body bgcolor="#FFFFFF">
+	<!-- HEADER -->
+	<table class="head-wrap">
+		<tr>
+			<td></td>
+			<td class="header container" >
+					<div class="content">
+					<table>
+						<tr>
+							<td><img src="http://clickconsultorio.com/assets/img/logo_trans.png" style="width: 110px; height: 60px;"/></td>
+						</tr>
+					</table>
+					</div>
+			</td>
+			<td></td>
+		</tr>
+	</table><!-- /HEADER -->
+	<!-- BODY -->
+	<table class="body-wrap">
+		<tr>
+			<td></td>
+			<td class="container" bgcolor="#FFFFFF">
+				<div class="content">
+				<table>
+					<tr>
+						<td>
+							<h3>Olá,</h3>
+							<p>'.$message.'</p>
+							<!-- Callout Panel -->
+							<p class="callout">
+							    Para acessar sua área <a href="http://clickconsultorio.com/login">Clique aqui! &raquo;</a>
+							</p><!-- /Callout Panel -->
+							<!-- social & contact -->
+							<table class="social" width="100%">
+								<tr>
+									<td>
+										<!-- column 1 -->
+										<table align="left" class="column">
+											<tr>
+												<td>
+													<h5 class="">Siga-nos:</h5>
+													<p class=""><a href="https://www.facebook.com/ClickConsult%C3%B3rio-457104751143587/?fref=ts" class="fa fa-facebook">Facebook</a> <a href="https://clickconsultorio.blogspot.com" class="fa fa-rss-square fa-5x">Blogger</a> <a href="skype://clickconsultorio?chat" class="fa fa-skype">Skype</a></p>
+												</td>
+											</tr>
+										</table><!-- /column 1 -->
+										<!-- column 2 -->
+										<table align="left" class="column">
+											<tr>
+												<td>
+													<h5 class="">Entre em contato:</h5>
+	                Email: <strong><a href="emailto:contato@clickconsultorio.com">contato@clickconsultorio.com</a></strong></p>
+												</td>
+											</tr>
+										</table><!-- /column 2 -->
+										<span class="clear"></span>
+									</td>
+								</tr>
+							</table><!-- /social & contact -->
+						</td>
+					</tr>
+				</table>
+				</div><!-- /content -->
+			</td>
+			<td></td>
+		</tr>
+	</table><!-- /BODY -->
+	<!-- FOOTER -->
+	<table class="footer-wrap">
+		<tr>
+			<td></td>
+			<td class="container">
+					<!-- content -->
+					<div class="content">
+					<table>
+					<tr>
+						<td align="center">
+							<p>
+								<a href="#">Terms</a> |
+								<a href="#">Privacy</a> |
+								<a href="#"><unsubscribe>Unsubscribe</unsubscribe></a>
+							</p>
+						</td>
+					</tr>
+				</table>
+					</div><!-- /content -->
+			</td>
+			<td></td>
+		</tr>
+	</table><!-- /FOOTER -->
+	</body>
+	</html>';
+        return $html;
+    }
+
+    public function limitarConsulta($id)
+    {   //echo"<br>id: ".$id;exit;
+        $dados = $this->usuario->getMedicoById($id);
+        $dado = $dados['0'];
+        $email = $dado->email;//email do medico
+        $medico = $dado->nm_login;
+
+        $subject = 'Limite de Consultas excedido neste mês!';
+        $message = 'Olá '. $medico.', você atingiu seu Limite de Consultas! ';
+        //$message = utf8_encode($messagem);
+
+        $this->load->library("my_phpmailer");
+        $mail = new PHPMailer();
+        $mail->IsSMTP(); //Definimos que usaremos o protocolo SMTP para envio.
+        $mail->SMTPAuth = true; //Habilitamos a autenticação do SMTP. (true ou false)
+        //$mail->SMTPSecure = "ssl"; //Estabelecemos qual protocolo de segurança será usado.
+        $mail->Host = "smtp.clickconsultorio.com";//"smtp.awktec.com"; //Podemos usar o servidor do gMail para enviar.
+        $mail->Port = 587; //Estabelecemos a porta utilizada pelo servidor do gMail.
+        $mail->Username = "enviar@clickconsultorio.com"; //Usuário do gMail
+        $mail->Password = "awktec2016";//"awk123"; //Senha do gMail
+        $mail->SetFrom('contato@clickconsultorio.com', 'Webmaster Awk'); //Quem está enviando o e-mail.
+        $mail->AddReplyTo("cristianms.awk@gmail.com","ClickConsultorio"); //Para que a resposta será enviada.
+        $mail->Subject = utf8_decode($subject); //Assunto do e-mail.
+        $mail->Body = $this->htmlEmailLimiteConsulta($message);
+        $mail->AltBody = $message;
+        $destino = $email;
+        $mail->AddAddress($destino, "Paciente ClickConsultório");
+
+        if(!$mail->Send()) {
+            $data["message"] = "ocorreu um erro durante o envio: " . $mail->ErrorInfo;
+            echo $mail->ErrorInfo;die;
+        } else {
+            $data["message"] = "Mensagem enviada com sucesso!";
+        }
+
+    }
+
+    public function htmlEmailLimiteConsulta($message)
     {
         $html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 	<html xmlns="http://www.w3.org/1999/xhtml">

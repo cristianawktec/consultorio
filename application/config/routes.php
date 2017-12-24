@@ -89,6 +89,7 @@ $route['medico/atualiza_foto/(\d+)'] = "usuario/update_foto/$1";
 $route['consulta/nova'] = "ConsultaController/index";
 $route['consulta/pesquisa'] = "ConsultaController/pesquisa";
 $route['consulta/marcar'] = "ConsultaController/marcar";
+$route['consulta/limite/(\d+)'] = "ConsultaController/limitarConsulta/$1";
 $route['consulta/agendar'] = "ConsultaController/agendarConsulta";
 $route['consulta/agendar/success'] = "ConsultaController/agendarConsultaSuccess";
 $route['consulta/confirmar'] = "ConsultaController/confirmarConsulta";
@@ -110,7 +111,7 @@ $route['agenda/remover/(\d+)'] = "AgendaController/remove/$1";
 
 /* router pagamento */
 $route['pagamento'] = "PagamentoController/pagamento2";
-$route['pagamento/medico/(\d+)'] = "PagamentoController/renovarPagamento/$1";
+$route['pagamento/medico/(:any)/(:any)'] = "PagamentoController/renovarPagamento/$1/$2";
 $route['pagamento-valida'] = "PagamentoController/retorno_pagseguro";
 $route['notifica'] = "PagamentoController/notifica";
 

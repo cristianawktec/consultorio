@@ -52,27 +52,36 @@ class Usuario_Model extends CI_Model{
 
         if (count($data)===1){
             if ($data[0]->id_perfil == 2) {
-                    if ($this->validaMensalidade($data[0]->id_usuario, $today)) {
+                //echo"<br>id: ".$data[0]->id_usuario;
+                $x = $this->validaMensalidade($data[0]->id_usuario, $today);
+                $plano = $this->getPlanoId($data[0]->id_usuario);
+                //echo"<br>plano:".$plano[0]->id_plano;exit;
+                //echo"<br>plano: <pre>";print_r($plano);echo"</pre>";exit;
+                //echo "<br>valida mensalidade:<pre> ";print_r($x);echo"</pre>";exit;
+                    if ($this->validaMensalidade($data[0]->id_usuario, $today)) {//echo"<br>um";exit;
                         $dados = array('usuario' => $data[0], 'logado' => TRUE);
                         $this->session->set_userdata($dados);
                         $this->session->usuario;
                         $res = $this->session->usuario;
                         return $data[0]->id_usuario;
-                    } else {
+                    } else {//echo"<br>dois";//exit;
                         //se o plano for free
-                        if($data[0]->id_plano == 1){
+                        if($data[0]->id_plano == 1){//echo"<br>tres";exit;
                             $dados = array('usuario' => $data[0], 'logado' => TRUE);
                             $this->session->set_userdata($dados);
                             return $result =  array('id_perfil' => $data[0]->id_perfil, 'saldoDevedor' => false);
-                        }else{
+                        }else{//echo"<br>quatro data atual: ".$dt_atual;//exit;
                             if($dt_atual < 20) {
+                                //echo"<br>cinco";//exit;
                                 $dados = array('usuario' => $data[0], 'logado' => TRUE);
                                 $this->session->set_userdata($dados);
                                 $this->session->usuario;
                                 $res = $this->session->usuario;
                                 return $data[0]->id_usuario;
-                            } else {
-                                return $result = array('id_usuario' => $data[0]->id_usuario, 'id_perfil' => $data[0]->id_perfil, 'saldoDevedor' => true);
+                            } else {//echo"<br>seis";//exit;
+                                //entra aqui para cobrar o boloeto, e somente depois do dia 20
+                                //echo "<br>result: <pre>";print_r($result);echo"</pre>";exit;
+                                return $result = array('id_usuario' => $data[0]->id_usuario, 'id_perfil' => $data[0]->id_perfil, 'saldoDevedor' => true, 'id_plano' =>$plano[0]->id_plano);
                             }
                         }
                 }
@@ -99,6 +108,15 @@ class Usuario_Model extends CI_Model{
 
     }
 
+    public function getMedicoById($id)
+    {   //echo"<br>id: ".$id;
+        $this->db->select('*');
+        $this->db->from('usuarios as u');
+        $this->db->where('u.id_usuario', $id);
+        return $this->db->get()->result();
+
+    }
+
     public function update_password($id, $ps_login)
     {
         $dados['ps_login'] = md5($ps_login);
@@ -115,14 +133,47 @@ class Usuario_Model extends CI_Model{
 
     public function validaMensalidade($id_usuario, $today)
     {
+        //echo"<br>today: ".$today;
+        $this->db->select('*');
+        $this->db->from('pagamentos');
         $this->db->where('id_usuario', $id_usuario);
-        $this->db->where('statusTransacao', 1);
         $this->db->like('dt_pagamento', $today);
-        //$res = $this->db->get('pagamentos')->result();
-        //echo "<br>valida mensalidade: <pre>";print_r($res);echo "</pre>";exit;
-        return $this->db->get('pagamentos')->result();
+        $this->db->where('statusTransacao', 1);
+        //$result = $this->db->get()->result(); echo"<br>result:<pre> ";print_r($result);echo"</pre>";exit;
+        return $this->db->get()->result();
     }
 
+    public function getPlanoId($id)
+    {
+        $this->db->select('*');
+        $this->db->from('usuarios as u');
+        $this->db->join('planos as p', 'p.id_plano = u.id_plano');
+        $this->db->where('u.id_usuario', $id);
+        return $this->db->get()->result();
+    }
 
+    public function getNumeroPacientes($id)
+    {
+        $this->db->select('count(*) as num_paciente');
+        $this->db->from('medicos_pacientes ');
+        $this->db->where('id_medico', $id);
+        //$x = $this->db->get()->result();echo"<br>numero pacientes: ".$x;exit;
+        return $this->db->get()->result();
+    }
+
+    public function getNumeroConsultas($id)
+    {   //echo"<br>id: ".$id;
+        $start_date = date('Y-m');
+        $start_date = $start_date.'-01';
+        $end_date = date('Y-m');
+        $end_date = $end_date.'-30';
+
+        $this->db->select('count(*) as consultas');
+        $this->db->from('consultas');
+        $this->db->where('id_medico', $id);
+        $this->db->where('dt_consulta BETWEEN "'.$start_date. '" AND "'.$end_date. '"');
+        //$x = $this->db->get()->result();echo"<br>numero consultas: ";echo"<pre>";print_r($x);echo"</pre>";exit;
+        return $this->db->get()->result();
+    }
 
 }

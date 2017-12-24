@@ -34,6 +34,45 @@
 
 <!-- about section -->
 <section class="about " id="about">
+    <?php
+        //echo"<pre>";print_r($GLOBALS);echo"</pre>";
+        $num_consultas = $consultas['0'];
+        $consultas = $num_consultas->consultas;
+
+        if ($consultas == '3'){ ?>
+        <div class="container">
+		<div class="row">
+			<div class="team-heading text-center" style="margin-top: 200px">
+                <font size="30" color="#42b3e5" >Este Médico excedeu o Limite de Consultas neste Mês!</font>
+			</div>
+			<!--Modal Alerts-->
+			<div class="be-content">
+				<div class="main-content container-fluid">
+					<div class="row">
+						<!--Nifty Modals Effects-->
+						<div class="col-sm-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-left: 150px;">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<h4>Avise este Médico para agendar uma nova consulta!</h4>
+									<div class="xs-mt-30 xs-mb-20 text-center">
+										<a href="/consulta/limite/<?php echo $agenda[0]->id_medico; ?>" class="btn btn-space btn-success md-trigger" role="button" aria-pressed="true">Avisar!</a>
+									</div>
+
+									<div class="modal-overlay"></div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+    <?php
+        }else{
+    ?>
     <div class="container">
         <div class="row" style="padding-bottom: 140px;padding-top: 116px;">
 
@@ -159,7 +198,9 @@
 
         </div>
         </div>
-
+    <?php
+        }
+    ?>
 </section>
 
 <script>

@@ -95,11 +95,19 @@ class PagamentoController extends CI_Controller
         }
     }
 
-    public function renovarPagamento($id_medico)
+    public function renovarPagamento($id_medico, $id_plano)
     {
-        $reference = rand(999, 9999);
-        if ($this->pagamento->add($id_medico, $reference)) {
-            return redirect('https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristian@awktec.com&valor=3490&nome=Cristian Marques Santos&descricao=cadastro&id_transacao='.$reference);
+        if($id_plano == '2') {
+            $reference = rand(999, 9999);
+            if ($this->pagamento->add($id_medico, $reference)) {
+                return redirect('https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristian@awktec.com&valor=3490&nome=Cristian Marques Santos&descricao=cadastro&id_transacao=' . $reference);
+            }
+        }
+        if($id_plano == '3') {
+            $reference = rand(999, 9999);
+            if ($this->pagamento->add($id_medico, $reference)) {
+                return redirect('https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristian@awktec.com&valor=4900&nome=Cristian Marques Santos&descricao=cadastro&id_transacao=' . $reference);
+            }
         }
     }
 
