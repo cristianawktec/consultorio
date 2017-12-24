@@ -473,8 +473,8 @@ class ConsultaController extends CI_Controller
         $medico = $dado->nm_login;
 
         $subject = 'Limite de Consultas excedido neste mês!';
-        $message = 'Olá '. $medico.', você atingiu seu Limite de Consultas! ';
-        //$message = utf8_encode($messagem);
+        $messagem = 'Olá '. $medico.', você atingiu seu Limite de Consultas! ';
+        $message = utf8_encode($messagem);
 
         $this->load->library("my_phpmailer");
         $mail = new PHPMailer();
