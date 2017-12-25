@@ -44,7 +44,7 @@ class Welcome extends CI_Controller {
 		$mail->Host = "smtp.clickconsultorio.com";//"smtp.awktec.com"; //Podemos usar o servidor do gMail para enviar.
 		$mail->Port = 587; //Estabelecemos a porta utilizada pelo servidor do gMail.
 		$mail->Username = "enviar@clickconsultorio.com"; //Usuário do gMail
-		$mail->Password = "awktec2016";//"awk123"; //Senha do gMail
+		$mail->Password = "clickloca17";//"awk123"; //Senha do gMail
 		$nome = $this->input->post('nome'); //Quem está enviando o e-mail.
 		$mail->SetFrom('contato@clickconsultorio.com',utf8_decode($nome));
 		$mail->AddReplyTo($this->input->post('email')); //Para que a resposta será enviada.

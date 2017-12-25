@@ -248,7 +248,7 @@ class Crm_Paciente_Model extends CI_Model{
         $mail->Host = "smtp.clickconsultorio.com";//"smtp.awktec.com"; //Podemos usar o servidor do gMail para enviar.
         $mail->Port = 587; //Estabelecemos a porta utilizada pelo servidor do gMail.
         $mail->Username = "enviar@clickconsultorio.com"; //Usuário do gMail
-        $mail->Password = "awktec2016";//"awk123"; //Senha do gMail
+        $mail->Password = "clickloca17";//"awk123"; //Senha do gMail
         $mail->SetFrom('contato@clickconsultorio.com', 'Webmaster Awk'); //Quem está enviando o e-mail.
         $mail->AddReplyTo("contato@clickconsultorio.com","ClickConsultorio"); //Para que a resposta será enviada.
         $mail->addBCC("contato@clickconsultorio.com","Cadastro de Usuarios");//Copia Oculta de registro de paciente no sistema

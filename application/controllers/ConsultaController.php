@@ -169,7 +169,7 @@ class ConsultaController extends CI_Controller
         $mail->Host = "smtp.clickconsultorio.com";//"smtp.awktec.com"; //Podemos usar o servidor do gMail para enviar.
         $mail->Port = 587; //Estabelecemos a porta utilizada pelo servidor do gMail.
         $mail->Username = "enviar@clickconsultorio.com"; //Usuário do gMail
-        $mail->Password = "awktec2016";//"awk123"; //Senha do gMail
+        $mail->Password = "clickloca17";//"awktec2016"; //Senha do gMail
         $mail->SetFrom('contato@clickconsultorio.com', 'Webmaster Awk'); //Quem está enviando o e-mail.
         $mail->AddReplyTo("cristianms.awk@gmail.com","ClickConsultorio"); //Para que a resposta será enviada.
         $mail->Subject = utf8_decode($subject); //Assunto do e-mail.
@@ -199,7 +199,7 @@ class ConsultaController extends CI_Controller
         $mail->Host = "smtp.clickconsultorio.com";//"smtp.awktec.com"; //Podemos usar o servidor do gMail para enviar.
         $mail->Port = 587; //Estabelecemos a porta utilizada pelo servidor do gMail.
         $mail->Username = "enviar@clickconsultorio.com"; //Usuário do gMail
-        $mail->Password = "awktec2016";//"awk123"; //Senha do gMail
+        $mail->Password = "clickloca17";//"awk123"; //Senha do gMail
         $mail->SetFrom('contato@clickconsultorio.com', 'Webmaster Awk'); //Quem está enviando o e-mail.
         $mail->AddReplyTo("cristianms.awk@gmail.com","ClickConsultorio"); //Para que a resposta será enviada.
         $mail->Subject = utf8_decode($subject); //Assunto do e-mail.
@@ -246,7 +246,7 @@ class ConsultaController extends CI_Controller
         $email_paciente         = $usuario['paciente'][0]->email;
         $nome_paciente          = $usuario['paciente'][0]->nm_paciente;
         $subject                = 'Mudança de Data de Consulta - ClickConsultório';
-        $message                = 'Olá '. $nome_paciente.', a consulta para qual você marcou esta sendo mudada a data para o dia: '.$this->input->post('dt_consulta');
+        $message                = 'Bom dia '. $nome_paciente.', a consulta para qual você marcou esta sendo mudada a data para o dia: '.$this->input->post('dt_consulta');
 
         if ($this->consulta->updateDateConsult($id, $data)) {
             $this->sendMailConfirmatio($message,$subject,$email_paciente);
@@ -273,7 +273,7 @@ class ConsultaController extends CI_Controller
         $email_paciente         = $usuario['paciente'][0]->email;
         $nome_paciente          = $usuario['paciente'][0]->nm_paciente;
         $subject                = 'Mudança de Data de Consulta - ClickConsultório';
-        $message                = 'Olá '. $nome_paciente.', sua consulta foi remarca para: '.$this->input->post('data');
+        $message                = 'Bom dia '. $nome_paciente.', sua consulta foi remarca para: '.$this->input->post('data');
         $this->sendMailConfirmatio($message,$subject,$email_paciente);
 
         if ($this->agendaConsulta->updateDay($id, $data)) {
@@ -484,7 +484,7 @@ class ConsultaController extends CI_Controller
         $mail->Host = "smtp.clickconsultorio.com";//"smtp.awktec.com"; //Podemos usar o servidor do gMail para enviar.
         $mail->Port = 587; //Estabelecemos a porta utilizada pelo servidor do gMail.
         $mail->Username = "enviar@clickconsultorio.com"; //Usuário do gMail
-        $mail->Password = "awktec2016";//"awk123"; //Senha do gMail
+        $mail->Password = "clickloca17";//"clickloca17"; //Senha do gMail
         $mail->SetFrom('contato@clickconsultorio.com', 'Webmaster ClickConsultorio'); //Quem está enviando o e-mail.
         $mail->AddReplyTo("contato@clickconsultorio.com","Limite Consultas Excedido"); //Para que a resposta será enviada.
         $mail->Subject = utf8_decode($subject); //Assunto do e-mail.

@@ -74,7 +74,7 @@ class Seguranca
 
 # Função responsável por conexão de Banco de Dados
 function conexao() {
-    $dbcon = mysql_connect("179.188.16.99","clickconsultor","awktec2016") // host, usuário bd, senha bd
+    $dbcon = mysql_connect("179.188.16.99","clickconsultor","clickloca17") // host, usuário bd, senha bd
     or die("Não foi possível conectar ao servidor msql: ".mysql_error()); // erro retornado no caso de erro de conexão
 
     mysql_select_db("clickconsultor", $dbcon) // banco de dados

@@ -31,7 +31,7 @@ $mail->SMTPAuth = true; //Habilitamos a autenticação do SMTP. (true ou false)
 $mail->Host = "smtp.clickconsultorio.com";//"smtp.awktec.com"; //Podemos usar o servidor do gMail para enviar.
 $mail->Port = 587; //Estabelecemos a porta utilizada pelo servidor do gMail.
 $mail->Username = "enviar@clickconsultorio.com"; //Usuário do gMail
-$mail->Password = "awktec2016";//"awk123"; //Senha do gMail
+$mail->Password = "clickloca17";//"awk123"; //Senha do gMail
 $mail->SetFrom('contato@clickconsultorio.com', 'Webmaster Awk'); //Quem está enviando o e-mail.
 $mail->AddReplyTo("cristianms.awk@gmail.com","ClickConsultorio"); //Para que a resposta será enviada.
 $mail->Subject = utf8_decode($subject); //Assunto do e-mail.
