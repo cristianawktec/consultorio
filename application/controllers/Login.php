@@ -58,7 +58,7 @@ class Login extends CI_Controller
                     $this->session->set_flashdata('msg2', $msg);
                     return redirect('/login');
                 }elseif($consultas == '3'){
-                    $msg = "Você Atingiu o Limite Máximo de Consultas Agendadas, <a href='/medico/perfil'>clique aqui</a> para Mudar de Plano! ";
+                    $msg = "<font color='red'> Você Atingiu o Limite Máximo de Consultas Agendadas, <a href='/medico/perfil'><font color='red'><B>CLIQUE AQUI!</B></font></a> para Mudar de Plano!</font> ";
                     $this->session->set_flashdata('msg2', $msg);
                     return redirect('/login');
                 }
