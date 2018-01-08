@@ -31,13 +31,14 @@ class Consulta_Model extends  CI_Model
     }
 
     public function getAllConsultaByDoctorId($id)
-    {
+    {   //echo"<br>id: ".$id."<br>";
         $this->db->from('consultas as c');
         $this->db->join('pacientes as p', 'p.id_usuario = c.id_paciente');
         $this->db->join('usuarios as u', 'u.id_usuario = p.id_usuario');
         $this->db->join('enderecos as e', 'e.id_endereco = u.id_endereco');
         $this->db->where('id_medico', $id);
         $this->db->order_by("dt_consulta", "desc");
+        //$r = $this->db->get()->result(); echo"<pre>";print_r($r);echo"</pre>";
         return $this->db->get()->result();
     }
 
@@ -49,6 +50,50 @@ class Consulta_Model extends  CI_Model
         $this->db->join('enderecos as e', 'e.id_endereco = u.id_endereco');
         return $this->db->get()->result();
     }
+
+    public function getAllConsultaId($id)
+    {
+        $this->db->select('*');
+        $this->db->from('consultas');
+        $this->db->where('id_medico', '61');
+        //$query = $this->db->get('consultas');echo"<br>sql: ".$query;exit;
+        //$r = $this->db->get()->result(); echo"<pre>";print_r($r);echo"</pre>";
+        return $this->db->get()->result();
+    }
+
+    public function getAllConsultasCanceladas($id)
+    {
+        $this->db->select('dt_consulta');
+        $this->db->from('consultas');
+        $this->db->where('id_medico', '61');
+        $this->db->where('ch_confirmacao', '2');
+        //$query = $this->db->get('consultas');echo"<br>sql: ".$query;
+        //$r = $this->db->get()->result(); echo"<pre>";print_r($r);echo"</pre>";
+        return $this->db->get()->result();
+    }
+
+    public function getAllConsultasConfirmadas($id)
+    {
+        $this->db->select('dt_consulta');
+        $this->db->from('consultas');
+        $this->db->where('id_medico', '61');
+        $this->db->where('ch_confirmacao', '1');
+        //$query = $this->db->get('consultas');echo"<br>sql: ".$query;
+        //$r = $this->db->get()->result(); echo"<pre>";print_r($r);echo"</pre>";
+        return $this->db->get()->result();
+    }
+
+    public function getAllConsultasReagendadas($id)
+    {
+        $this->db->select('dt_consulta');
+        $this->db->from('consultas');
+        $this->db->where('id_medico', '61');
+        $this->db->where('ch_confirmacao', '4');
+        //$query = $this->db->get('consultas');echo"<br>sql: ".$query;
+        //$r = $this->db->get()->result(); echo"<pre>";print_r($r);echo"</pre>";
+        return $this->db->get()->result();
+    }
+
 
     public function confirmConsult($id_consulta, $data)
     {

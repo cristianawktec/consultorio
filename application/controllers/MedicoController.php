@@ -36,13 +36,18 @@ class MedicoController extends CI_Controller
         $dados['agenda'] = $this->agenda->getAllAgenda($id);
         $dados['agendaConsultas'] = $this->agendaConsulta->getAllAgendaConsulta($id);
         $dados['agendaDia'] = $this->agendaConsulta->getAllAgendaConsultaHoje($id);
-        $dados['consultas'] = $this->consulta->getAllConsultaByDoctorId($id);
+        $dados['todasConsultas'] = $this->consulta->getAllConsultaId($id);
+        $dados['ConsultasCanceladas'] = $this->consulta->getAllConsultasCanceladas($id);
+        $dados['ConsultasConfirmadas'] = $this->consulta->getAllConsultasConfirmadas($id);
+        $dados['ConsultasReagendadas'] = $this->consulta->getAllConsultasReagendadas($id);
         $dados['especializacoes'] = $this->db->get('especializacao')->result();
         $dados['notas'] = $this->medico->getNotas($id);
         $dados['noticias'] = $this->noticia->getAllNoticia2();
         $dados['pagamentos'] = $this->pagamento->getAllPagamentoByIdMedico($id);
         $dados['pagamentos2'] = $this->pagamento->getAllPagamentoByIdMedico2($id);
-
+        $dados['plano'] = $this->usuario->getPlanoId($id);
+        $dados['numeroPacientes'] = $this->usuario->getNumeroPacientes($id);
+        //echo"<br>dados: <pre>";print_r($dados);echo"</pre>";exit;
         $this->load->view('layout_principal/top');
         $this->load->view("template_medico/meus_dados", $dados);
         $this->load->view('layout_principal/footer');
@@ -114,5 +119,21 @@ class MedicoController extends CI_Controller
         return true;
     }
 
+    public function update_plano($id)
+    {
+        $dados['plano'] = $this->usuario->getPlanoId($id);
+        //echo"<pre>";print_r($dados['plano']);echo"</pre>";exit;
+        $this->load->view('layout_principal/top');
+        $this->load->view("template_medico/update_plano.php", $dados);
+        $this->load->view('layout_principal/footer');
+    }
+
+    public function mudar_plano($id)
+    {   //echo"<pre>";print_r($_POST);echo"</pre>";exit;
+        $dadosMedicoPlano['id_usuario'] = $this->input->post('id_usuario');
+        $dadosMedicoPlano['id_plano'] = $this->input->post('id_plano');
+        $this->db->where('id_usuario', $id)->update('usuarios',$dadosMedicoPlano);
+        return redirect('/medico/perfil');
+    }
 
 }

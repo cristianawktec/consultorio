@@ -93,6 +93,7 @@ class Medico_Model extends CI_Model
         $this->db->select('*');
         $this->db->from('usuarios as u');
         $this->db->join('medicos as m', 'm.id_usuario = u.id_usuario');
+        //$result = $this->db->get()->result();echo"<br><pre>medicos: ";print_r($result);echo"</pre>";
         return $this->db->get()->result();
     }
 

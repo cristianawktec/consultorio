@@ -57,8 +57,9 @@ class PagamentoController extends CI_Controller
     }
 
     public function pagamento2(){
-        $refenrence = $this->input->get('reference');
+        $refenrence = $this->input->get('reference');//precisa validar o plano
         $url = 'https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristian@awktec.com&valor=3490&nome=Cristian Marques Santos&descricao=cadastro&id_transacao='.$refenrence;
+        //$url = 'https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristianms.awk@gmail.com&valor=490&nome=Cristian Marques Santos&descricao=cadastro&id_transacao='.$refenrence;
 
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
@@ -96,17 +97,20 @@ class PagamentoController extends CI_Controller
     }
 
     public function renovarPagamento($id_medico, $id_plano)
-    {
+    {   //echo"<br><pre>renova: ";print_r($GLOBALS);echo"</pre>";exit;
         if($id_plano == '2') {
             $reference = rand(999, 9999);
             if ($this->pagamento->add($id_medico, $reference)) {
-                return redirect('https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristian@awktec.com&valor=3490&nome=Cristian Marques Santos&descricao=cadastro&id_transacao=' . $reference);
+                //echo"<br>reference: ".$reference;exit;
+                return redirect('https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristian@awktec.com&valor=590&nome=ClickConsultorio&descricao=cadastro&id_transacao=' . $reference);
+                //return redirect('https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristianms.awk@gmail.com&valor=3490&nome=Cristian Marques Santos&descricao=cadastro&id_transacao=' . $reference);
             }
         }
         if($id_plano == '3') {
             $reference = rand(999, 9999);
             if ($this->pagamento->add($id_medico, $reference)) {
-                return redirect('https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristian@awktec.com&valor=4900&nome=Cristian Marques Santos&descricao=cadastro&id_transacao=' . $reference);
+                return redirect('https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristian@awktec.com&valor=690&nome=ClickConsultorio&descricao=cadastro&id_transacao=' . $reference);
+                //return redirect('https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristianms.awk@gmail.com&valor=4990&nome=Cristian Marques Santos&descricao=cadastro&id_transacao=' . $reference);
             }
         }
     }
@@ -116,6 +120,9 @@ class PagamentoController extends CI_Controller
     {
         $email = 'financeiro@awktec.com';
         $token = '78A4F05C993D447DA509F7E44FA8C323';
+        //$email = 'cristianms.awk@gmail.com';
+        //$token = 'ABADABBD962E4A40816B361AB6D17F1B';
+
         $reference = rand(999, 9999);
         $url = 'https://ws.pagseguro.uol.com.br/v2/checkout/?email=' . $email . '&token=' . $token;
         $xml = '<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
@@ -284,6 +291,8 @@ class PagamentoController extends CI_Controller
     {
         $email = 'financeiro@awktec.com';
         $token = '78A4F05C993D447DA509F7E44FA8C323';
+        //$email = 'cristianms.awk@gmail.com';
+        //$token = 'ABADABBD962E4A40816B361AB6D17F1B';
 
         $url = 'https://ws.pagseguro.uol.com.br/v2/transactions?email=' . $email . '&token=' . $token . '&reference=7728';
 
@@ -311,6 +320,8 @@ var_dump($transaction);die;
     {
         $email = 'financeiro@awktec.com';
         $token = '78A4F05C993D447DA509F7E44FA8C323';
+        //$email = 'cristianms.awk@gmail.com';
+        //$token = 'ABADABBD962E4A40816B361AB6D17F1B';
 
         $url = 'https://ws.pagseguro.uol.com.br/v2/transactions?email=' . $email . '&token=' . $token . '&reference='. $reference;
 

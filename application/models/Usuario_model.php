@@ -149,6 +149,8 @@ class Usuario_Model extends CI_Model{
         $this->db->from('usuarios as u');
         $this->db->join('planos as p', 'p.id_plano = u.id_plano');
         $this->db->where('u.id_usuario', $id);
+        //$x = $this->db->get()->result();
+        //echo"<br><pre>fdsa: ";print_r($x);echo"</pre>";exit;
         return $this->db->get()->result();
     }
 
@@ -157,7 +159,7 @@ class Usuario_Model extends CI_Model{
         $this->db->select('count(*) as num_paciente');
         $this->db->from('medicos_pacientes ');
         $this->db->where('id_medico', $id);
-        //$x = $this->db->get()->result();echo"<br>numero pacientes: ".$x;exit;
+        //$x = $this->db->get()->result();echo"<br>numero pacientes: <pre>";print_r($x);echo"</pre>";exit;
         return $this->db->get()->result();
     }
 

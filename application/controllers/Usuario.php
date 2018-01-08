@@ -350,9 +350,10 @@ class Usuario extends CI_Controller
 
             $this->sendMailConfirmatio($email, $name, $this->input->post('nm_login'), $this->input->post('ps_login'));
             $reference = rand(999, 9999);
-            if ($this->pagamento->add($usuario[0]->id_usuario, $reference)) {
+            if ($this->pagamento->add($usuario[0]->id_usuario, $reference)) {//validar o plano
                 //definicao do valor do boleto
                 return redirect('https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristian@awktec.com&valor=3490&nome=Cristian Marques Santos&descricao=cadastro&id_transacao='.$reference);
+                //return redirect('https://www.moip.com.br/PagamentoMoIP.do?id_carteira=cristianms.awk@gmail.com&valor=490&nome=Cristian Marques Santos&descricao=cadastro&id_transacao='.$reference);
             }
             //$this->checkout($dadosMedico);
         } else {

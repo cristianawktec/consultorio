@@ -17,10 +17,11 @@ class Pagamento_Model extends CI_Model
     }
 
     public function add($id_medico,$reference)
-    {
+    {   //echo"<br><pre>pagamento: ";print_r($GLOBALS);echo"</pre>";exit;
         $dados['id_usuario'] = $id_medico;
         $dados['reference_transection'] = $reference;
         $dados['dt_pagamento'] = date('Y-m-d H:i:s', time());
+        //$pag = $this->db->insert('pagamentos',$dados); echo"<br><pre>pagamento: ";print_r($dados);echo"</pre>";exit;
         return $this->db->insert('pagamentos',$dados);
     }
 
@@ -71,6 +72,8 @@ class Pagamento_Model extends CI_Model
     {
         $email = 'financeiro@awktec.com';
         $token = '78A4F05C993D447DA509F7E44FA8C323';
+        //$email = 'cristianms.awk@gmail.com';
+        //$token = 'ABADABBD962E4A40816B361AB6D17F1B';
 
         $url = 'https://ws.pagseguro.uol.com.br/v2/transactions?email=' . $email . '&token=' . $token . '&reference='. $reference;
 

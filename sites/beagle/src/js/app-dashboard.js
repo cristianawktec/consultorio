@@ -148,25 +148,25 @@ var App = (function () {
         [9, 30]
       ];
 
-      var plot_statistics = $.plot("#main-chart", 
+      var plot_statistics = $.plot("#main-chart",
         [
         {
-          data: data, 
+          data: data,
           canvasRender: true
         },
         {
-          data: data2, 
+          data: data2,
           canvasRender: true
         },
         {
-          data: data3, 
+          data: data3,
           canvasRender: true
         }
         ], {
         series: {
           lines: {
             show: true,
-            lineWidth: 0, 
+            lineWidth: 0,
             fill: true,
             fillColor: { colors: [{ opacity: 1 }, { opacity: 1 }] }
           },

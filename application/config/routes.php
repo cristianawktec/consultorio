@@ -84,6 +84,8 @@ $route['medico/removeSpecialty'] = "MedicoController/removeSpecialty";
 $route['medico/mudar_senha/(\d+)'] = "usuario/update_password/$1";
 $route['medico/atualiza_senha/(\d+)'] = "usuario/update_pass2/$1";
 $route['medico/atualiza_foto/(\d+)'] = "usuario/update_foto/$1";
+$route['medico/plano-editar/(\d+)'] = "MedicoController/update_plano/$1";
+$route['medico/mudar_plano/(\d+)'] = "MedicoController/mudar_plano/$1";
 
 /* router Consultas */
 $route['consulta/nova'] = "ConsultaController/index";

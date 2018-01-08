@@ -26,25 +26,25 @@
             </div>
             <div class="block-content collapse in">
                 <div class="span3">
-                    <div class="chart" data-percent="<?php echo count($medicos); ?>"><?php echo count($medicos); ?>%</div>
+                    <div class="chart" data-values="[['june',28,38,75,50,38,40,37],['jully',50,22,42,34,37,45,41]]" ><?php echo count($medicos); ?></div>
                     <div class="chart-bottom-heading"><span class="label label-info">Medicos Cadastrados</span>
 
                     </div>
                 </div>
                 <div class="span3">
-                    <div class="chart" data-percent="<?php echo count($especialidades); ?>"><?php echo count($especialidades); ?>%</div>
+                    <div class="chart" data-values="[['june',28,38,75,50,38,40,37],['jully',50,22,42,34,37,45,41]]"><?php echo count($especialidades); ?></div>
                     <div class="chart-bottom-heading"><span class="label label-info">Especialidades Medicas</span>
 
                     </div>
                 </div>
                 <div class="span3">
-                    <div class="chart" data-percent="<?php echo count($pacientes); ?>"><?php echo count($pacientes); ?>%</div>
+                    <div class="chart" data-values="[['june',28,38,75,50,38,40,37],['jully',50,22,42,34,37,45,41]]"><?php echo count($pacientes); ?></div>
                     <div class="chart-bottom-heading"><span class="label label-info">Pacientes Cadastrados</span>
 
                     </div>
                 </div>
                 <div class="span3">
-                    <div class="chart" data-percent="<?php echo count($consultas); ?>"><?php echo count($consultas); ?>%</div>
+                    <div class="chart" data-values="[['june',28,38,75,50,38,40,37],['jully',50,22,42,34,37,45,41]]"><?php echo count($consultas); ?></div>
                     <div class="chart-bottom-heading"><span class="label label-info">Consultas</span>
 
                     </div>
