@@ -287,20 +287,12 @@
                                                             </tr>
                                                             </thead>
                                                             <tbody class="no-border-x">
+                                                            <?php foreach ($consultas as $consulta) { ?>
                                                             <tr>
-                                                                <td>Sony Xperia M4</td>
-                                                                <td>Aug 23, 2016</td>
-                                                                <td class="text-success">Completed</td>
-                                                                <td class="actions"><a href="#" class="icon"><i
-                                                                            class="mdi mdi-plus-circle-o"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Apple iPhone 6</td>
-                                                                <td>Aug 20, 2016</td>
-                                                                <td class="text-success">Completed</td>
-                                                                <td class="actions"><a href="#" class="icon"><i
-                                                                            class="mdi mdi-plus-circle-o"></i></a></td>
-                                                            </tr>
+                                                                <td><?php echo $consulta->nm_paciente ?></td>
+                                                                <td><?php echo date("d/m/Y", strtotime($consulta->dt_consulta)) . " " . $consulta->hr_inicio ?></td>
+                                                                <td><?php echo $consulta->nm_consulta ?></td>
+                                                            <?php } ?>
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -320,46 +312,17 @@
                                                             <tr>
                                                                 <th style="width:37%;">Paciente</th>
                                                                 <th>Cadastrado</th>
+                                                                <th>Contato</th>
                                                                 <th class="actions"></th>
                                                             </tr>
                                                             </thead>
                                                             <tbody>
+                                                            <?php foreach ($pacientes as $paciente) { ?>
                                                             <tr>
-                                                                <td class="user-avatar"><img
-                                                                        src="assets/img/avatar6.png" alt="Avatar">Penelope
-                                                                    Thornton
-                                                                </td>
-                                                                <td>Aug 16, 2016</td>
-                                                                <td class="actions"><a href="#" class="icon"><i
-                                                                            class="mdi mdi-github-alt"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="user-avatar"><img
-                                                                        src="assets/img/avatar4.png" alt="Avatar">Benji
-                                                                    Harper
-                                                                </td>
-                                                                <td>Jul 15, 2016</td>
-                                                                <td class="actions"><a href="#" class="icon"><i
-                                                                            class="mdi mdi-github-alt"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="user-avatar"><img
-                                                                        src="assets/img/avatar5.png" alt="Avatar">Justine
-                                                                    Myranda
-                                                                </td>
-                                                                <td>Jul 28, 2016</td>
-                                                                <td class="actions"><a href="#" class="icon"><i
-                                                                            class="mdi mdi-github-alt"></i></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="user-avatar"><img
-                                                                        src="assets/img/avatar3.png" alt="Avatar">Sherwood
-                                                                    Clifford
-                                                                </td>
-                                                                <td>Jun 30, 2016</td>
-                                                                <td class="actions"><a href="#" class="icon"><i
-                                                                            class="mdi mdi-github-alt"></i></a></td>
-                                                            </tr>
+                                                                <td><?php echo $paciente->nm_paciente ?></td>
+                                                                <td><?php echo $paciente->data_cadastro ?></td>
+                                                                <td><?php echo $paciente->nr_celular ?></td>
+                                                            <?php } ?>
                                                             </tbody>
                                                         </table>
                                                     </div>

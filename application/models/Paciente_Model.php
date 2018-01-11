@@ -47,6 +47,16 @@ class Paciente_Model extends CI_Model
 
     }
 
+    public function getAllPacienteMedicoById($id)
+    {
+        $this->db->select('*');
+        $this->db->from('medicos_pacientes as m');
+        $this->db->join('pacientes as p', 'p.id_usuario = m.id_paciente');
+        $this->db->join('usuarios as u', 'u.id_usuario = p.id_usuario');
+        $this->db->where('m.id_medico', $id);
+        //$r = $this->db->get()->result(); echo"<pre>";print_r($r);echo"</pre>";
+        return $this->db->get()->result();
 
+    }
 
 }
