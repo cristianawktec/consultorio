@@ -27,6 +27,7 @@ class AgendaConsulta_Model extends  CI_Model
         $date = date('Y-m-d');
         $this->db->where('id_medico', $id_medico);
         $this->db->like('data_inicio', $date);
+        //$r = $this->db->get('agenda_consulta')->result(); echo"<pre>";print_r($r);echo"</pre>";
         return $this->db->get('agenda_consulta')->result();
     }
 

@@ -125,20 +125,20 @@
                                                             <tr>
                                                                 <th style="width:40%;">Paciente</th>
                                                                 <th style="width:20%;">Data</th>
-                                                                <th style="width:20%;">Estado</th>
                                                                 <th style="width:5%;" class="actions"></th>
                                                             </tr>
                                                             </thead>
                                                             <tbody class="no-border-x">
                                                             <tr>
-                                                                <?php
-                                                                if (count($agendaDia) > 0) {
-                                                                    foreach ($agendaDia as $agenda) {
-                                                                        echo date('d/m/Y H:i:s', strtotime($agenda->data_inicio)) . " : " . $agenda->descricao . "<br />";
+                                                                <?php if (count($agendaDia) > 0) {
+                                                                foreach ($agendaDia as $agenda) { ?>
+                                                                <tr>
+                                                                    <td><?php echo $agenda->descricao ?></td>
+                                                                    <td><?php echo date('d/m/Y H:i:s', strtotime($agenda->data_inicio)) ?></td>
+                                                                <?php }
+                                                                    } else {
+                                                                        echo "Não há atendimentos agendados para hoje.";
                                                                     }
-                                                                } else {
-                                                                    echo "Não há atendimentos agendados para hoje.";
-                                                                }
                                                                 ?>
                                                             </tr>
                                                             </tbody>
