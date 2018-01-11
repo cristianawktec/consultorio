@@ -22,19 +22,14 @@ define('WP_ALLOW_REPAIR', true);
 /** O nome do banco de dados do WordPress */
 define('DB_NAME', 'admin_');
 
-
 /** Usuário do banco de dados MySQL */
-define('DB_USER', 'consultorio1');
-
+define('DB_USER', 'admin_');
 
 /** Senha do banco de dados MySQL */
 define('DB_PASSWORD', 'hgfRT33bvc3G');
 
-
 /** nome do host do MySQL */
-//define('DB_HOST', 'robb0321.publiccloud.com.br');
 define('DB_HOST', 'admin_.mysql.dbaas.com.br');
-
 
 /** Conjunto de caracteres do banco de dados a ser usado na criação das tabelas. */
 define('DB_CHARSET', 'utf8');
@@ -51,21 +46,21 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'TSH-;]tm)yxrHVCT[I*<Ee?ZMgL(R^eUUMxv*QQYR&DG1jKx3~nV:!?>=yXuW =m');
+define('AUTH_KEY', 'TSH-;]tm)yxrHVCT[I*<Ee?ZMgL(R^eUUMxv*QQYR&DG1jKx3~nV:!?>=yXuW =m');
 
-define('SECURE_AUTH_KEY',  'zsmaRzGqlGkzX1K,;@O{dr#(&[y2|dh~3xF@Z9w=)bKT;DDcZvd9 Ei!Q7sf]EOD');
+define('SECURE_AUTH_KEY', 'zsmaRzGqlGkzX1K,;@O{dr#(&[y2|dh~3xF@Z9w=)bKT;DDcZvd9 Ei!Q7sf]EOD');
 
-define('LOGGED_IN_KEY',    '8pRF1^Usl>LU@FEQYD[$/-bYRcB=(3KofiW&+1]bCSlDT}8P(,E&Ri`J|f|3.YPv');
+define('LOGGED_IN_KEY', '8pRF1^Usl>LU@FEQYD[$/-bYRcB=(3KofiW&+1]bCSlDT}8P(,E&Ri`J|f|3.YPv');
 
-define('NONCE_KEY',        '-@Bs3%FfmM} %bDHM&1~N.^6L7%k?(-$+so@zn2D8<@bAoqa/d0*|07[E{zRo`+L');
+define('NONCE_KEY', '-@Bs3%FfmM} %bDHM&1~N.^6L7%k?(-$+so@zn2D8<@bAoqa/d0*|07[E{zRo`+L');
 
-define('AUTH_SALT',        'Q|x_S!!&LE5mc,&{k`4wkHf7}/s|a1}d[)a8s:o+jx()%hhpWeE6Ck|!&sTa^xiR');
+define('AUTH_SALT', 'Q|x_S!!&LE5mc,&{k`4wkHf7}/s|a1}d[)a8s:o+jx()%hhpWeE6Ck|!&sTa^xiR');
 
 define('SECURE_AUTH_SALT', '4Gcg13b6h7)Gt|yjweZ0X1LaIjX yduNh*tI(Ju0wE$[9USiR&j(G0:Z[<NP|{zH');
 
-define('LOGGED_IN_SALT',   'PJHQGqfWakeVj||E 7G`yN+|*fo?tqkCE}%VfCiY2Nen.1*&>C7Y@{ku[Cs+Z;Lk');
+define('LOGGED_IN_SALT', 'PJHQGqfWakeVj||E 7G`yN+|*fo?tqkCE}%VfCiY2Nen.1*&>C7Y@{ku[Cs+Z;Lk');
 
-define('NONCE_SALT',       'bVWW<MZT|8g,>LxbRb(?Lzww[aPZ@/Wg|A6B2ZWk;6e}}4sz|gLC62l,?6H6=@{/');
+define('NONCE_SALT', 'bVWW<MZT|8g,>LxbRb(?Lzww[aPZ@/Wg|A6B2ZWk;6e}}4sz|gLC62l,?6H6=@{/');
 
 
 /**#@-*/
