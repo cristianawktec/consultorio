@@ -36,6 +36,7 @@ class MedicoController extends CI_Controller
         $dados['agenda'] = $this->agenda->getAllAgenda($id);
         $dados['agendaConsultas'] = $this->agendaConsulta->getAllAgendaConsulta($id);
         $dados['agendaDia'] = $this->agendaConsulta->getAllAgendaConsultaHoje($id);
+        $dados['consultas'] = $this->consulta->getAllConsultaByDoctorId($id);
         $dados['todasConsultas'] = $this->consulta->getAllConsultaId($id);
         $dados['ConsultasCanceladas'] = $this->consulta->getAllConsultasCanceladas($id);
         $dados['ConsultasConfirmadas'] = $this->consulta->getAllConsultasConfirmadas($id);
