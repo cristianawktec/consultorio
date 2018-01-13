@@ -332,6 +332,7 @@
 </section><!-- end of map section -->
 
 <!-- contact section starts here -->
+
 <section class="contact">
 	<div class="container">
 		<div class="row">
@@ -355,14 +356,18 @@
 
 				<div class="col-md-6 col-md-offset-1 contact-form">
 					<h3>Deixe-nos uma mensagem</h3>
-
+					
 					<form class="form" action="/contato_site" method="post">
 						<input class="name" name="nome" type="text" placeholder="Nome">
 						<input class="email" name="email" type="email" placeholder="Email">
 						<!--<input class="phone" name="telefone" type="text" placeholder="Telefone">-->
 						<textarea class="message" name="message" id="message" cols="30" rows="10" placeholder="Menssagem"></textarea>
+						<div class="g-recaptcha" data-sitekey="6Lc6iEAUAAAAAKvmCgnDyZcmOk5wmq3Nvcbc7cp5"></div>
 						<input class="submit-btn" type="submit" value="ENVIAR">
+
 					</form>
+					<!--js-->
+					<script src='https://www.google.com/recaptcha/api.js'></script>
 				</div>
 
 			</div>
