@@ -367,7 +367,7 @@
 					// resposta vazia
 					$response = null;
 					// verifique a chave secreta
-					$reCaptcha = new ReCaptcha($secret);
+					//$reCaptcha = new ReCaptcha($secret);
 
 					// se submetido, verifique a resposta
 					if ($_POST["g-recaptcha-response"]) {
