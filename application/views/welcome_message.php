@@ -370,13 +370,14 @@
 					//$reCaptcha = new ReCaptcha($secret);
 
 					// se submetido, verifique a resposta
+					/*
 					if ($_POST["g-recaptcha-response"]) {
 						$response = $reCaptcha->verifyResponse(
 							$_SERVER["REMOTE_ADDR"],
 							$_POST["g-recaptcha-response"]
 						);
 					}
-
+					*/
 					if ($response != null && $response->success) {
 						echo "Olá, " . $_POST["name"] . " (" . $_POST["email"] . "), obrigado por enviar seu formulário!";
 					} else {
