@@ -366,10 +366,10 @@
 						<div class="g-recaptcha" data-sitekey="6Lc6iEAUAAAAAKvmCgnDyZcmOk5wmq3Nvcbc7cp5"></div>
 						<?php
 						// se submetido, verifique a resposta
-						if ($_POST["g-recaptcha-response"]) {
+						if ($_POST["g-recaptcha"]) {
 						$response = $reCaptcha->verifyResponse(
 						$_SERVER["REMOTE_ADDR"],
-						$_POST["g-recaptcha-response"]
+						$_POST["g-recaptcha"]
 						); ?>
 							<input class="submit-btn" type="submit" value="ENVIAR">
 
