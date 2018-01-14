@@ -363,7 +363,7 @@
 						<input class="email" name="email" type="email" placeholder="Email">
 						<!--<input class="phone" name="telefone" type="text" placeholder="Telefone">-->
 						<textarea class="message" name="message" id="message" cols="30" rows="10" placeholder="Menssagem"></textarea>
-						<div class="g-recaptcha" data-sitekey="6Lc6iEAUAAAAAKvmCgnDyZcmOk5wmq3Nvcbc7cp5"></div>
+						<div name ="g-recaptcha" id="g-recaptcha" class="g-recaptcha" data-sitekey="6Lc6iEAUAAAAAKvmCgnDyZcmOk5wmq3Nvcbc7cp5"></div>
 						<?php
 						// se submetido, verifique a resposta
 						if ($_POST["g-recaptcha"]) {
