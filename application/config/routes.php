@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$route['default_controller'] = 'LancamentoControler';//inicia na pagina de lancamento
 $route['default_controller'] = 'welcome';//inicia no site
 $route['contato_site'] = 'welcome/contato';
-$route['contato'] = 'test/recaptcha';
+//$route['contato'] = 'test/recaptcha';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['planos'] = 'welcome/planos';
