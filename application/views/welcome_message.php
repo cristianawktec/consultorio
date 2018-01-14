@@ -361,11 +361,18 @@
 						<input class="email" name="email" type="email" placeholder="Email">
 						<!--<input class="phone" name="telefone" type="text" placeholder="Telefone">-->
 						<textarea class="message" name="message" id="message" cols="30" rows="10" placeholder="Menssagem"></textarea>
-						
-						<div id="submit_button">
-							<input class="submit-btn" type="submit" value="ENVIAR">
-						</div>
 
+						<div class="be-checkbox" style="text-align: left;">
+							<input id="check1" name="check1" type="checkbox">
+							<label for="check1">Eu nao sou um robo!</label>
+						</div>
+							<input class="submit-btn" type="submit" value="ENVIAR">
+						<span class="error">
+                                <?php
+
+									echo $this->session->flashdata('msg');
+								?>
+                            </span>
 					</form>
 
 				</div>

@@ -34,6 +34,7 @@ class Welcome extends CI_Controller {
 
 	public function contato()
 	{
+		//echo"<pre>";print_r($_POST);echo"</pre>";exit;
 		$subject = 'Mensagem encaminhada pelo Contato do Site';
 		//echo"<pre>";print_r($GLOBALS);echo"</pre>";die;
 		$this->load->library("my_phpmailer");
@@ -65,7 +66,11 @@ class Welcome extends CI_Controller {
 
 
 		//$mail->SMTPSecure = "tls"; //Estabelecemos qual protocolo de segurança será usado.
-
+		$this->session->set_flashdata('msg', '');
+		if(!isset($_POST['check1'])){
+			$this->session->set_flashdata('msg', 'Error! - Todos os campos devem ser preenchidos!');
+			header("Location: javascript:history.back(1)");
+		}
 
 		if(!$mail->Send()) {
 			$data["message"] = "ocorreu um erro durante o envio: " . $mail->ErrorInfo;
