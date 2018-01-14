@@ -69,7 +69,8 @@ class Welcome extends CI_Controller {
 		$this->session->set_flashdata('msg', '');
 		if(!isset($_POST['check1'])){
 			$this->session->set_flashdata('msg', 'Error! - Todos os campos devem ser preenchidos!');
-			header("Location: javascript:history.back(1)");
+			//header("Location: javascript:history.back(1)");
+			return redirect('/#contact');
 		}
 
 		if(!$mail->Send()) {
