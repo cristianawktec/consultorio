@@ -363,8 +363,8 @@
 						<input class="email" name="email" type="email" placeholder="Email">
 						<!--<input class="phone" name="telefone" type="text" placeholder="Telefone">-->
 						<textarea class="message" name="message" id="message" cols="30" rows="10" placeholder="Menssagem"></textarea>
-
-						<?php echo $this->recaptcha->render(); ?>
+						<div name ="g-recaptcha" id="g-recaptcha" class="g-recaptcha" data-sitekey="6Lc6iEAUAAAAAKvmCgnDyZcmOk5wmq3Nvcbc7cp5"></div>
+						
 						<div id="submit_button">
 							<input class="submit-btn" type="submit" value="ENVIAR">
 						</div>
