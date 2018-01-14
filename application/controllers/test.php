@@ -23,4 +23,15 @@ class test extends CI_Controller
         );
         $this->load->view('recaptcha', $data);
     }
+
+    function validate_captcha() {
+        $captcha = $this->input->post('g-recaptcha-response');
+        $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=your secret key here &response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']);
+        if ($response . 'success' == false) {
+            return FALSE;
+        } else {
+            return TRUE;
+        }
+    }
+
 }

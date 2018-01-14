@@ -3,8 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 // To use reCAPTCHA, you need to sign up for an API key pair for your site.
 // link: http://www.google.com/recaptcha/admin
-$config['recaptcha_site_key'] = '';
-$config['recaptcha_secret_key'] = '';
+$config['recaptcha_site_key'] = '6Lc6iEAUAAAAAKvmCgnDyZcmOk5wmq3Nvcbc7cp5';
+$config['recaptcha_secret_key'] = '6Lc6iEAUAAAAABYT4gQNUYwGqLwNuSjqZTMhYwZZ';
 
 // reCAPTCHA supported 40+ languages listed here:
 // https://developers.google.com/recaptcha/docs/language

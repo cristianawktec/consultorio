@@ -332,7 +332,8 @@
 </section><!-- end of map section -->
 
 <!-- contact section starts here -->
-
+<!--js-->
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <section class="contact">
 	<div class="container">
 		<div class="row">
@@ -353,7 +354,6 @@
 					</div>
 				</div>
 
-
 				<div class="col-md-6 col-md-offset-1 contact-form">
 					<h3>Deixe-nos uma mensagem</h3>
 					<script src="../../../libraries/recaptchalib.php" type="text/javascript"></script>
@@ -363,21 +363,14 @@
 						<input class="email" name="email" type="email" placeholder="Email">
 						<!--<input class="phone" name="telefone" type="text" placeholder="Telefone">-->
 						<textarea class="message" name="message" id="message" cols="30" rows="10" placeholder="Menssagem"></textarea>
-						<div name ="g-recaptcha" id="g-recaptcha" class="g-recaptcha" data-sitekey="6Lc6iEAUAAAAAKvmCgnDyZcmOk5wmq3Nvcbc7cp5"></div>
-						<?php
-						// se submetido, verifique a resposta
-						if ($_POST["g-recaptcha"]) {
-						$response = $reCaptcha->verifyResponse(
-						$_SERVER["REMOTE_ADDR"],
-						$_POST["g-recaptcha"]
-						); ?>
-							<input class="submit-btn" type="submit" value="ENVIAR">
 
-						<?php } ?>
+						<?php echo $this->recaptcha->render(); ?>
+						<div id="submit_button">
+							<input class="submit-btn" type="submit" value="ENVIAR">
+						</div>
 
 					</form>
-					<!--js-->
-					<script src='https://www.google.com/recaptcha/api.js'></script>
+
 				</div>
 
 			</div>
