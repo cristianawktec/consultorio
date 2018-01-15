@@ -148,9 +148,11 @@ notícias, dicas de saúde, horas da vida, clickconsultorio" />
         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
     })();
 </script>
-
-
 <!-- End Piwik Code -->
+
+<!-- RD Station -->
+<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/2fc9f641-d8af-488d-b56d-33315c4ea00f-loader.js" ></script>
+<!-- end RD Station -->
 
 <!-- GoogleAnalytics -->
 <script>

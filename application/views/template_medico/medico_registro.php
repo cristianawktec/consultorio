@@ -43,6 +43,11 @@ $plano_id= $this->uri->segment(4, 0);
     var google_remarketing_only = false;
     /* ]]> */
 </script>
+
+<!-- RD Station -->
+<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/2fc9f641-d8af-488d-b56d-33315c4ea00f-loader.js" ></script>
+<!-- end RD Station -->
+
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

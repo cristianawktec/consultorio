@@ -364,7 +364,7 @@
 
 						<div class="be-checkbox" style="text-align: left;">
 							<input id="check1" name="check1" type="checkbox">
-							<label for="check1">Eu nao sou um robo!</label>
+							<label for="check1" style="font-size: x-large; color: #d9edf7">Eu não sou um robo!</label>
 						</div>
 							<input class="submit-btn" type="submit" value="ENVIAR">
 						<span class="error">
