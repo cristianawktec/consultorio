@@ -150,7 +150,7 @@
 					</div>
 
 					<h3 style="padding-bottom: 0px;">PACIENTES</h3>
-						<ul style="width: 260px;padding-right: 25px;text-align: left;" >
+						<ul style="font-size: 20px; width: 260px;padding-right: 25px;text-align: left;" >
 							<li>*Permite marcar consultas online</li>
 							<li>*Gestão de suas consultas em tempo real</li>
 							<li>*Encontre o seu médico mais perto de você</li>
@@ -170,7 +170,7 @@
 						</div>
 					</div>
 					<h3 style="padding-bottom: 0px;">MÉDICOS</h3>
-					<ul style="width: 260px;padding-right: 25px;text-align: left;" >
+					<ul style="font-size: 20px; width: 260px;padding-right: 25px;text-align: left;" >
 						<li>*Disponibilize de forma simples e rápida o seu calendário</li>
 						<li>*Gestão de suas consultas em tempo real</li>
 						<li>*Relatórios</li>
@@ -187,10 +187,10 @@
 				<div class="single-service">
 					<div class="single-service-img">
 						<div class="service-img">
-                            <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/em-breve.png" style="margin-left: -50px;" alt="">
+                            <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/Reserva_consulta.PNG" style="margin-left: -50px;" alt="">
 						</div>
 					</div><h3 style="padding-bottom: 0px;">GESTÃO</h3>
-					<ul style="width: 260px;padding-right: 25px;text-align: left;" >
+					<ul style="font-size: 20px;width: 260px;padding-right: 25px;text-align: left;" >
 						<li>*Permite uma gestão Global</li>
 						<li>*Os processos automatizados evitam erros humanos</li>
 						<li>*Melhora o tempo de resposta nos agendamentos</li>

@@ -28,7 +28,7 @@ $server =  $_SERVER['SERVER_NAME'];
 				<div class="error-number">404</div>
 				<div class="error-description">A página que você está procurando pode ter sido removida.</div>
 				<div class="error-goback-text">Gostaria de ir para Home?</div>
-				<div class="error-goback-button"><a href="http://<?=$server;?>/crm/dashboard" class="btn btn-xl btn-primary">Vamos para home</a></div>
+				<div class="error-goback-button"><a href="http://<?=$server;?>/" class="btn btn-xl btn-primary">Vamos para home</a></div>
 				<div class="footer">&copy; 2016 Awk Consultoria</div>
 			</div>
 		</div>

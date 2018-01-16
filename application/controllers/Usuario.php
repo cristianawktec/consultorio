@@ -361,6 +361,23 @@ class Usuario extends CI_Controller
         }
     }
 
+    public function recuperar_senha()
+    {
+        $this->load->view('layout_principal/top');
+        $this->load->view("layout_principal/recuperar_senha.php");
+        $this->load->view('layout_principal/footer');
+    }
+
+    public function update_senha()
+    {   //echo"update_senha<pre>";print_r($_POST);echo"</pre>";exit;
+        $ps_login = $this->input->post('ps_login');
+        $email = $this->input->post('email');
+        if ($this->usuario->update_recupera_password($email, $ps_login)) {
+            return redirect('/login');
+        } else {
+            return "error";
+        }
+    }
 
     public function update_pass($id)
     {

@@ -36,6 +36,9 @@
                         <span class="alert">
                                 <?php echo $this->session->flashdata('msg2'); ?>
                         </span>
+                        <p style="text-align: right; font-size: large">
+                            <a href="usuario/recuperar_senha" style="color: #ffffff; ">Esqueceu sua senha?</a>
+                        </p>
                     </div>
 
                 </div>

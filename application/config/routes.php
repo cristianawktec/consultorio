@@ -65,6 +65,8 @@ $route['paciente/mudar_senha/(\d+)'] = "usuario/update_password/$1";
 $route['paciente/endereco-editar/(\d+)'] = "usuario/update_address/$1";
 $route['paciente/atualizar_endereco/(\d+)'] = "usuario/update_addresses/$1";
 $route['paciente/avalia_medico'] = "PacienteController/note_doctor";
+$route['usuario/recuperar_senha'] = 'usuario/recuperar_senha';
+$route['usuario/mudar_senha'] = "usuario/update_senha";
 
 //$route['/login/auth'] = "controller/Login.php";
 

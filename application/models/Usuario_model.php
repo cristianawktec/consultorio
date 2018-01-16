@@ -124,6 +124,13 @@ class Usuario_Model extends CI_Model{
         return $this->db->where('id_usuario', $id)->update('usuarios',$dados);
     }
 
+    public function update_recupera_password($email, $ps_login)
+    {   //echo"aqui";exit;
+        $dados['ps_login'] = md5($ps_login);
+        $dados['ps_login_hash'] = $dados['ps_login'];
+        return $this->db->where('email', $email)->update('usuarios',$dados);
+    }
+
     public function pesquisa($nome, $cpf)
     {
         //$this->db->like('nr_cpf', $cpf);
