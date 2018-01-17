@@ -18,8 +18,10 @@
 
                         <form class="form" method="post" action="/paciente/mudar_senha/<?=$id;?>">
                             <input class="text" type="password" name="ps_login" placeholder="Nova Senha">
-                            <input class="text" type="password" placeholder="Confirmar Nova Senha">
-
+                            <input class="text" type="password" name="ps_confirmar" placeholder="Confirmar Nova Senha">
+                            <span class="error">
+                                <?php echo $this->session->flashdata('msg'); ?>
+                            </span>
                             <input class="submit-btn" type="button" value="Voltar" onClick="history.go(-1)"> &nbsp; <input class="submit-btn" type="submit" value="ENVIAR">
                         </form>
                     </div>

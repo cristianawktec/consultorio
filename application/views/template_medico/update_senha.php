@@ -18,8 +18,10 @@
 
                         <form class="form" method="post" action="/medico/mudar_senha/<?=$id;?>">
                             <input class="text" type="password" name="ps_login" placeholder="Nova Senha">
-                            <input class="text" type="password" placeholder="Confirmar Nova Senha">
-
+                            <input class="text" type="password" name="ps_confirmar" placeholder="Confirmar Nova Senha">
+                            <span class="error">
+                                <?php echo $this->session->flashdata('msg'); ?>
+                            </span>
                             <input style="float: none !important;" type="button" name="cancel" value="CANCELAR" onClick="history.back()" class="submit-btn" />&nbsp;&nbsp;
                             <input class="submit-btn" type="submit" value="ENVIAR">
                         </form>

@@ -371,7 +371,15 @@ class Usuario extends CI_Controller
     public function update_senha()
     {   //echo"update_senha<pre>";print_r($_POST);echo"</pre>";exit;
         $ps_login = $this->input->post('ps_login');
+        $ps_confirma = $this->input->post('ps_confirma');
         $email = $this->input->post('email');
+
+        if (strcmp($ps_login, $ps_confirma) !== 0) {
+            $msg = "As senhas estao diferentes! ";
+            $this->session->set_flashdata('msg', $msg);
+            return redirect('/usuario/recuperar_senha');
+        }
+
         if ($this->usuario->update_recupera_password($email, $ps_login)) {
             return redirect('/login');
         } else {
@@ -380,26 +388,52 @@ class Usuario extends CI_Controller
     }
 
     public function update_pass($id)
-    {
+    {//paciente
         $data['id'] = $id;
         $this->load->view('layout_principal/top');
         $this->load->view("template_paciente/update_senha.php", $data);
         $this->load->view('layout_principal/footer');
     }
 
+    public function update_password($id)
+    {   //echo"<pre>";print_r($_POST);echo"</pre>";exit;
+        $ps_login = $this->input->post('ps_login');
+        $ps_confirma = $this->input->post('ps_confirmar');
+
+        if (strcmp($ps_login, $ps_confirma) !== 0) {
+            $msg = "As senhas estao diferentes! ";
+            $this->session->set_flashdata('msg', $msg);
+            return redirect('/paciente/atualiza_senha/'.$id);
+        }
+
+        if ($this->usuario->update_password($id, $ps_login)) {
+            return redirect('/paciente/perfil');
+        } else {
+            return "error";
+        }
+    }
+
     public function update_pass2($id)
-    {
+    {//medico
         $data['id'] = $id;
         $this->load->view('layout_principal/top');
         $this->load->view("template_medico/update_senha.php", $data);
         $this->load->view('layout_principal/footer');
     }
 
-    public function update_password($id)
-    {
+    public function update_password2($id)
+    {   //medico //echo"<pre>";print_r($_POST);echo"</pre>";exit;
         $ps_login = $this->input->post('ps_login');
+        $ps_confirma = $this->input->post('ps_confirmar');
+
+        if (strcmp($ps_login, $ps_confirma) !== 0) {
+            $msg = "As senhas estao diferentes! ";
+            $this->session->set_flashdata('msg', $msg);
+            return redirect('/medico/atualiza_senha/'.$id);
+        }
+
         if ($this->usuario->update_password($id, $ps_login)) {
-            return redirect('/paciente/perfil');
+            return redirect('/medico/perfil');
         } else {
             return "error";
         }
