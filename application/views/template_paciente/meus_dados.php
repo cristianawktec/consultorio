@@ -97,11 +97,20 @@
                                                             <? } ?>
                                                             <span style="cursor: pointer" data-toggle="tooltip"
                                                                   data-placement="top"
+                                                                  onclick="novaConsult('<?php echo '1' ?>','<?=$consulta->id_medico;?>')"
+                                                                  title="Marcar Nova Consulta"
+                                                                  aria-hidden="true">
+                                                                  <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/agenda.png" style="float: left !important;width: 15%;">
+                                                             </span>
+
+                                                            <span style="cursor: pointer" data-toggle="tooltip"
+                                                                  data-placement="top"
                                                                   onclick="cancelConsult('<?php echo $consulta->id_consulta ?>','<?=$consulta->id_paciente;?>')"
                                                                   title="Cancelar Consulta"
                                                                   aria-hidden="true">
-                                                                        <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/cancelar.png" style="float: left !important;width: 15%;">
-                                                                    </span>
+                                                                  <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/cancelar.png" style="float: left !important;width: 15%;">
+                                                             </span>
+
                                                         </td>
                                                     </tr>
                                                 <?php } ?>
@@ -372,6 +381,12 @@
     function cancelConsult(id, id_paciente){
         window.location.href = "<?php echo site_url('/consulta/cancelar') ?>/"+id+"/"+id_paciente;
     }
+
+    function novaConsult(id, id_medico){
+        window.location.href = "<?php echo base_url(); ?>consulta/marcar?agenda="+id+"&doctor="+id_medico;
+        //window.location.href = "<?php echo site_url('/consulta/marcar') ?>/"+id+"/"+id_paciente;
+    }
+
     function confirmConsult(id, id_paciente){
         $.ajax({
             'url' : "<?php echo site_url('/consulta/confirmar')?>",

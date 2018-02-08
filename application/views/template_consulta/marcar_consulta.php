@@ -83,9 +83,9 @@
                         <?
                             $hoje = date('d/m/Y');
                         ?>
-                        <input type="hidden" name="horario" value="<?php echo $agenda[0]->horario; ?>">
+                        <input type="hidden" name="horario" value="<?php echo @$agenda[0]->horario; ?>">
                         Dia <input type="date" id="dt" onchange="mydate1();" hidden/>
-                        <input type="text" id="data" name="data"  onclick="mydate();" title="Escolha uma data" <?php if($this->session->usuario){ ?> required="required" <?php } ?>> as <?php echo $agenda[0]->horario; ?> horas
+                        <input type="text" id="data" name="data"  onclick="mydate();" title="Escolha uma data" <?php if(@$this->session->usuario){ ?> required="required" <?php } ?>> as <?php echo @$agenda[0]->horario; ?> horas
                     </div>
                     <div style="padding-top: 3%;">
                         <div class="col-md-4 col-sm-4">
