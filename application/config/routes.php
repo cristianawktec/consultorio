@@ -68,7 +68,8 @@ $route['paciente/avalia_medico'] = "PacienteController/note_doctor";
 $route['usuario/recuperar_senha'] = 'usuario/recuperar_senha';
 $route['usuario/mudar_senha'] = "usuario/update_senha";
 
-//$route['/login/auth'] = "controller/Login.php";
+//para logar no sistema em: /views/template_login/form_login.php:28
+//$route['/login/auth'] = "controller/Login.php":25;
 
 /* router medicos */
 $route['medico/registro'] = "usuario/registroMedico";
@@ -223,3 +224,7 @@ $route['crm/prospecto/remover/(\d+)'] = "ProspectoCrmController/deletar/$1";
 $route['crm/prospecto/baixar'] = "ProspectoCrmController/baixar";
 $route['crm/prospecto/exportar'] = "ProspectoCrmController/exportar";
 $route['crm/prospecto/cidades'] = "ProspectoCrmController/busca_cidades_estado";
+
+
+/* router Suporte Painel */
+$route['suporte/dashboard'] = "DashboardSuporte/index";

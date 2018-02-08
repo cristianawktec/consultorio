@@ -48,12 +48,13 @@ class Usuario_Model extends CI_Model{
         $this->db->where('ps_login', $ps_login);
         $data = $this->db->get('usuarios')->result();
         $dt_atual = date('d');
-        //echo"<pre>";print_r($data);echo"</pre>";exit;
+        //echo"<pre>";print_r($data);echo"</pre>";//exit;
 
         if (count($data)===1){
             if ($data[0]->id_perfil == 2) {
                 //echo"<br>id: ".$data[0]->id_usuario;
                 $x = $this->validaMensalidade($data[0]->id_usuario, $today);
+                //echo"<br>valida mensalidade:<pre> ";print_r($x);echo"</pre>";
                 $plano = $this->getPlanoId($data[0]->id_usuario);
                 //echo"<br>plano:".$plano[0]->id_plano;exit;
                 //echo"<br>plano: <pre>";print_r($plano);echo"</pre>";exit;
@@ -77,15 +78,16 @@ class Usuario_Model extends CI_Model{
                                 $this->session->set_userdata($dados);
                                 $this->session->usuario;
                                 $res = $this->session->usuario;
+                                //echo "<br>retorna:<pre>";print_r($data[0]); echo"</pre> ";exit;
                                 return $data[0]->id_usuario;
+                                //return $data[0];
                             } else {//echo"<br>seis";//exit;
                                 //entra aqui para cobrar o boloeto, e somente depois do dia 20
-                                //echo "<br>result: <pre>";print_r($result);echo"</pre>";exit;
                                 return $result = array('id_usuario' => $data[0]->id_usuario, 'id_perfil' => $data[0]->id_perfil, 'saldoDevedor' => true, 'id_plano' =>$plano[0]->id_plano);
                             }
                         }
                 }
-            } else {
+            } else {//echo "else";exit;
                 $dados = array('usuario' => $data[0], 'logado' => TRUE);
                 $this->session->set_userdata($dados);
                 return $result =  array('id_perfil' => $data[0]->id_perfil, 'saldoDevedor' => false);
@@ -141,6 +143,7 @@ class Usuario_Model extends CI_Model{
     public function validaMensalidade($id_usuario, $today)
     {
         //echo"<br>today: ".$today;
+        //echo"<br>usuario: ".$id_usuario;
         $this->db->select('*');
         $this->db->from('pagamentos');
         $this->db->where('id_usuario', $id_usuario);

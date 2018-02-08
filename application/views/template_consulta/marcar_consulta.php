@@ -39,7 +39,7 @@
         $num_consultas = $consultas['0'];
         $consultas = $num_consultas->consultas;
 
-        if ($consultas == '3'){ ?>
+        if ($consultas > '15'){ ?>
         <div class="container">
 		<div class="row">
 			<div class="team-heading text-center" style="margin-top: 200px">

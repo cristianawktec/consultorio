@@ -261,7 +261,7 @@ class Usuario extends CI_Controller
      * @return string|void
      */
     public function registroMedicoAdd()
-    {
+    {//echo"<pre><br>adincionando: ";print_r($_POST);echo"</pre>";die;
         //se entrou pela promoção do template entra aqui e faz o cadastro em prospectos
         if ($this->input->post('template')!="") {
 
@@ -315,6 +315,7 @@ class Usuario extends CI_Controller
         $dadosUsuario['ps_login_hash'] = $dadosUsuario['ps_login'];
         $dadosUsuario['id_endereco'] = $endereco[0]->id_endereco;
         $dadosUsuario['id_perfil'] = $this->input->post('id_perfil');
+        $dadosUsuario['id_plano'] = $this->input->post('id_plano');
         $dadosUsuario['email'] = $this->input->post('email');
         $dadosUsuario['data_cadastro'] = date('d/m/Y H:i:s', time());
 
@@ -342,6 +343,7 @@ class Usuario extends CI_Controller
 
         $name = $dadosMedico['nm_medico'];
         $email = $dadosUsuario['email'];
+        //echo"<pre>inserir medico: ";print_r($dadosMedico);echo"</pre>";die;
         if ($this->medico->adicionar($dadosMedico)) {
             $medico = $this->medico->getLastMedico();
             $dadosMedicoEspecializacao['id_medico'] = $medico[0]->id_usuario;
@@ -369,7 +371,7 @@ class Usuario extends CI_Controller
     }
 
     public function update_senha()
-    {   //echo"update_senha<pre>";print_r($_POST);echo"</pre>";exit;
+    {
         $ps_login = $this->input->post('ps_login');
         $ps_confirma = $this->input->post('ps_confirma');
         $email = $this->input->post('email');
@@ -396,7 +398,7 @@ class Usuario extends CI_Controller
     }
 
     public function update_password($id)
-    {   //echo"<pre>";print_r($_POST);echo"</pre>";exit;
+    {   //paciente
         $ps_login = $this->input->post('ps_login');
         $ps_confirma = $this->input->post('ps_confirmar');
 
@@ -422,7 +424,7 @@ class Usuario extends CI_Controller
     }
 
     public function update_password2($id)
-    {   //medico //echo"<pre>";print_r($_POST);echo"</pre>";exit;
+    {   //medico
         $ps_login = $this->input->post('ps_login');
         $ps_confirma = $this->input->post('ps_confirmar');
 
