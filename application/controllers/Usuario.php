@@ -333,6 +333,8 @@ class Usuario extends CI_Controller
         //$dadosMedico['nr_cpf'] = $this->input->post('nr_cpf');
         //$dadosMedico['nr_rg'] = $this->input->post('nr_rg');
 
+        $dadosMedico['vr_consulta1'] = $this->input->post('vr_consulta1');
+        $dadosMedico['vr_consulta2'] = $this->input->post('vr_consulta2');
         $dadosMedico['nm_conselho'] = $this->input->post('nm_conselho');
         $dadosMedico['nr_conselho'] = $this->input->post('nr_conselho');
         $dadosMedico['nr_cnes'] = $this->input->post('nr_cnes');

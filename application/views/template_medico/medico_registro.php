@@ -197,6 +197,19 @@ $plano_id= $this->uri->segment(4, 0);
                                 <br/>
 
                                 <hr/>
+
+                            <div class="col-md-12">
+                                <h3 style="float: left;border-bottom: hidden">Valor da Consulta</h3>
+                                <br/><br/><br/><br/>
+                                <div class="input-group xs-mb-15"><span class="input-group-addon">R$</span>
+                                    <input class="form-control" type="text" name="vr_consulta1" id="vr_consulta1" placeholder="Informe o Valor da Primeira Consulta" style="width: 45%" >
+                                </div>
+                                <div class="input-group xs-mb-15"><span class="input-group-addon">R$</span>
+                                    <input class="form-control" type="text" name="vr_consulta2" id="vr_consulta2" placeholder="Informe o Valor das Próximas Consultas" style="width: 45%">
+                                </div>
+                                <hr/>
+                            </div>
+
                             <h3 style="float: left;">Endereço</h3>
                             <input class="text" type="text" name="nr_cep" id="cep" placeholder="Informe seu Cep" required>
                             <input class="text" type="text" name="nm_endereco" id="nm_endereco" placeholder="Rua">

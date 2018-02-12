@@ -98,7 +98,7 @@
                                                             <span style="cursor: pointer" data-toggle="tooltip"
                                                                   data-placement="top"
                                                                   onclick="novaConsult('<?php echo '1' ?>','<?=$consulta->id_medico;?>')"
-                                                                  title="Marcar Nova Consulta"
+                                                                  title="Marcar Nova Consulta com este Médico"
                                                                   aria-hidden="true">
                                                                   <img class="bone img-responsive" src="<?php echo base_url('assets'); ?>/img/icon/agenda.png" style="float: left !important;width: 15%;">
                                                              </span>

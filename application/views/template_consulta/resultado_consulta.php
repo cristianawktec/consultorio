@@ -77,7 +77,7 @@
                 <div class="row"><b><? if($contMedico==0) { echo "0";} else { echo count($contMedico); } ?></b> - Encontrado(s)</div>
                 <hr />
                 <div class="row">
-                    <?php $cont = 1; foreach($medicos as $medico){ ?>
+                    <?php $cont = 1; foreach($medicos as $medico){ //echo"<br><pre>";print_r($medico);echo"</pre>"; ?>
 
                     <div class=""><?= $cont; ?> - <?php echo $medico->nm_medico; ?></div>
                         <div class=""><a  href="<?echo $medico->pagina_web; ?>" target="_blank" ><?php echo $medico->pagina_web; ?></a></div>
@@ -108,6 +108,10 @@
 
                             ?>
                         </div>
+                    <div class="">
+                        Valor da Primeira Consulta: R$<?php echo $medico->vr_consulta1; ?><br>
+                        Valor das demais consultas: R$<?php echo $medico->vr_consulta2; ?>
+                    </div>
                     <div class=""><?php echo $medico->nm_endereco; ?>
                         <?php echo $medico->nr_endereco; ?>,
                         <?php echo $medico->nm_bairro; ?>,

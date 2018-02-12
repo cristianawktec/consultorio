@@ -36,8 +36,8 @@
 <section class="about " id="about">
     <?php
         //echo"<pre>";print_r($GLOBALS);echo"</pre>";
-        $num_consultas = $consultas['0'];
-        $consultas = $num_consultas->consultas;
+        @$num_consultas = $consultas['0'];
+        @$consultas = $num_consultas->consultas;
 
         if ($consultas > '15'){ ?>
         <div class="container">
@@ -110,6 +110,11 @@
                             <div>
                                 <input type="hidden" name="id_medico" value="<?php echo $medico[0]->id_usuario; ?>">
                                 <strong><?php echo $medico[0]->nm_medico; ?></strong><br />
+                                <div class="">
+                                    <b>Valor da Primeira Consulta: R$<?php echo $medico[0]->vr_consulta1; ?><br>
+                                    Valor das demais consultas: R$<?php echo $medico[0]->vr_consulta2; ?></b>
+                                </div>
+                                <br />
                                 <strong>Site: </strong>
                                 <? if ($medico[0]->pagina_web == ""){
                                     echo"Site não informado!";
