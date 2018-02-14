@@ -25,6 +25,7 @@ class MedicoController extends CI_Controller
         $this->load->model('Noticia_Model', 'noticia');
         $this->load->model('Pagamento_Model', 'pagamento');
         $this->load->model('Paciente_Model','paciente');
+        $this->load->model('Charts_model','charts');
     }
 
     public function perfil()
@@ -50,7 +51,13 @@ class MedicoController extends CI_Controller
         $dados['plano'] = $this->usuario->getPlanoId($id);
         $dados['numeroPacientes'] = $this->usuario->getNumeroPacientes($id);
         $dados['pacientes'] = $this->paciente->getAllPacienteMedicoById($id);
-        //echo"<br>dados: <pre>";print_r($dados);echo"</pre>";exit;
+
+        //grafico
+        $dados['confirmadas'] = $this->charts->confirmadas($id);
+        $dados['canceladas'] = $this->charts->canceladas($id);
+        $dados['reagendadas'] = $this->charts->reagendadas($id);
+
+        //echo"<br>dados: <pre>";print_r($dados['canceladas']);echo"</pre>";exit;
         $this->load->view('layout_principal/top');
         $this->load->view("template_medico/meus_dados", $dados);
         $this->load->view('layout_principal/footer');

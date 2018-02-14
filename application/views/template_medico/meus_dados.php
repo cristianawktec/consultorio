@@ -241,21 +241,89 @@
                                                         </div>
                                                         <div class="widget-counter-group widget-counter-group-right">
                                                             <div class="counter counter-big">
-                                                                <div class="value">85%</div>
+                                                                <div class="value"><?php echo $confirmadas; ?></div>
                                                                 <div class="desc">Consultas Confirmadas</div>
                                                             </div>
                                                             <div class="counter counter-big">
-                                                                <div class="value">45%</div>
+                                                                <div class="value"><?php echo $canceladas; ?></div>
                                                                 <div class="desc">Canceladas</div>
                                                             </div>
                                                             <div class="counter counter-big">
-                                                                <div class="value">45%</div>
+                                                                <div class="value"><?php echo $reagendadas; ?></div>
                                                                 <div class="desc">Reagendadas</div>
                                                             </div>
                                                         </div>
-                                                        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
 
-                                                        </div>
+                                                        <!-- GRAFICOS -->
+                                                        <script src="../../../assets/Highcharts/code/highcharts.js"></script>
+                                                        <script src="../../../assets/Highcharts/code/highcharts-3d.js"></script>
+                                                        <script src="../../../assets/Highcharts/code/modules/exporting.js"></script>
+
+                                                        <div id="container" class="span3" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+                                                        <script type="text/javascript">
+                                                            // Radialize the colors
+                                                            Highcharts.setOptions({
+                                                                colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
+                                                                    return {
+                                                                        radialGradient: {
+                                                                            cx: 0.5,
+                                                                            cy: 0.3,
+                                                                            r: 0.7
+                                                                        },
+                                                                        stops: [
+                                                                            [0, color],
+                                                                            [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+                                                                        ]
+                                                                    };
+                                                                })
+                                                            });
+
+                                                            // Build the chart
+                                                            Highcharts.chart('container', {
+                                                                chart: {
+                                                                    plotBackgroundColor: null,
+                                                                    plotBorderWidth: null,
+                                                                    plotShadow: false,
+                                                                    type: 'pie'
+                                                                },
+                                                                title: {
+                                                                    text: 'Movimentação de Consultas'
+                                                                },
+                                                                tooltip: {
+                                                                    pointFormat: '{point.y}: <b>{point.percentage:.1f}%</b>'
+                                                                },
+                                                                plotOptions: {
+                                                                    pie: {
+                                                                        allowPointSelect: false,
+                                                                        cursor: 'pointer',
+                                                                        dataLabels: {
+                                                                            enabled: true,
+                                                                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                                                            style: {
+                                                                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                                                            },
+                                                                            connectorColor: 'silver'
+                                                                        }
+                                                                    }
+                                                                },
+                                                                series: [{
+                                                                    name: 'Brands',
+                                                                    data: [
+                                                                        { name: 'Confirmadas', y: <?php echo $confirmadas; ?> },
+                                                                        {
+                                                                            name: 'Canceladas',
+                                                                            y: <?php echo $canceladas; ?>,
+                                                                            sliced: true,
+                                                                            selected: true
+                                                                        },
+                                                                        { name: 'Reagendadas', y: <?php echo $reagendadas; ?> }
+                                                                    ]
+                                                                }]
+                                                            });
+                                                        </script>
+                                                        <!-- FIM GRAFICOS -->
+
                                                     </div>
                                                     <div class="be-spinner">
                                                         <svg width="40px" height="40px" viewBox="0 0 22 22"
@@ -1149,78 +1217,6 @@
 <script src="../../../sites/beagle/dist/html/assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-<script src="../../../assets/Highcharts/code/highcharts.js"></script>
-<script src="../../../assets/Highcharts/code/modules/exporting.js"></script>
-
-<script type="text/javascript">
-
-    //HightCharts
-    Highcharts.chart('container', {
-        chart: {
-            type: 'area'
-        },
-        title: {
-            text: 'Movimentacao de Consultas'
-        },
-        subtitle: {
-            text: 'Source: <a href="http://www.clickconsultorio.com">' +
-            'www.clickconsultorio.com</a>'
-        },
-        xAxis: {
-            categories: [22
-            ]
-        },
-        yAxis: {
-            title: {
-                text: 'Número de registros'
-            },
-            labels: {
-                formatter: function () {
-                    return this.value;
-                }
-            }
-        },
-        tooltip: {
-            pointFormat: 'Consulta(s) {series.name} <b>{point.y:,.0f}</b><br/>no dia {point.x}'
-        },
-        plotOptions: {
-            area: {
-                pointStart: 01,
-                marker: {
-                    enabled: false,
-                    symbol: 'circle',
-                    radius: 2,
-                    states: {
-                        hover: {
-                            enabled: true
-                        }
-                    }
-                }
-            }
-        },
-        series: [{
-            name: 'Confirmada(s)',
-            data: [18,20
-            ]
-        }, {
-            name: 'Cancelada(s)',
-            data: [
-                <?php
-                $query = $this->db->query("SELECT dt_consulta FROM consultas WHERE id_medico = '61' AND ch_confirmacao = '2' ORDER BY dt_consulta ASC");
-                foreach ($query->result() as $row){
-                $mes = substr($row->dt_consulta, 5, 2);
-                $dia = substr($row->dt_consulta, 8, 2);
-                if ($mes == '04'){ ?> '<?php echo $dia ?>',
-                <?php } } ?>
-            ]
-        }]
-    });
-    //Fim HighCharts
-
-</script>
-
-<!-- fim graficos -->
 
 <script src="../../../sites/beagle/dist/html/assets/lib/countup/countUp.min.js" type="text/javascript"></script>
 <script src="../../../sites/beagle/dist/html/assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>

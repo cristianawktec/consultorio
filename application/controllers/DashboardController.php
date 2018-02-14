@@ -23,6 +23,7 @@ class DashboardController extends CI_Controller
         $this->load->model('Consulta_Model','consulta');
         $this->load->model('AgendaConsulta_Model','agendaConsulta');
         $this->load->model('Especialidade_Model','especialidade');
+        $this->load->model('Charts_model','charts');
     }
 
     public function index()
@@ -31,6 +32,10 @@ class DashboardController extends CI_Controller
         $dados['medicos'] = $this->medico->getAllMedico();
         $dados['pacientes'] = $this->paciente->getAllPaciente();
         $dados['consultas'] = $this->consulta->getAllConsulta();
+
+        $dados['plano1'] = $this->charts->plano1();
+        $dados['plano2'] = $this->charts->plano2();
+        $dados['plano3'] = $this->charts->plano3();
 
         $this->load->view('layout_principal_admin/top');
         $this->load->view('template_dashboard_admin/index', $dados);

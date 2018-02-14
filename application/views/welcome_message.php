@@ -10,7 +10,7 @@
 					<div class="item active">
 						<img src="<?php echo base_url('assets'); ?>/img/slide-three.jpg" alt="">
 						<div class="carousel-caption">
-							<!--<h2>ClickConsultorio</h2>-->
+							<h2 style="color: cornflowerblue; font-size: 50px;">Sistema de Agendamento de Consultas</h2>
 							<p style=" margin-top: 10px; margin-bottom: 50px; height: 30px;">Encontre sua consulta mais rápido!</p>
 							<a class="pesquisar" href="/consulta/nova">Consulte!</a>
 						</div>
@@ -18,7 +18,7 @@
 					<div class="item">
 						<img src="<?php echo base_url('assets'); ?>/img/slide-four.jpg" alt="">
 						<div class="carousel-caption">
-                            <!--<h2>ClickConsultorio</h2>-->
+							<h2 style="color: cornflowerblue; font-size: 50px;">Sistema de Agendamento de Consultas</h2>
 							<p style=" margin-top: 10px; margin-bottom: 50px; height: 30px;">Encontre sua consulta mais rápido!</p>
 							<a class="pesquisar" href="/consulta/nova">Consulte!</a>
 						</div>
@@ -50,10 +50,10 @@
 			<h4>Projetado para facilitar o seu dia-a-dia. Com o ClickConsultório você terá<br>
 			acesso total a sua agenda à partir de qualquer lugar e dispositivo, com acesso a internet e sem instalação.
 				<br>
-			O ClickConsultório é um software para agendamento de consultas, ideal para profissionais da saúde.<br>
+			O ClickConsultório é um <font color="black"><b>software para agendamento de consultas</b></font> , ideal para profissionais da saúde.<br>
 			Seja qual for sua especialidade médica, o ClickConsultório é sua melhor escolha.
 
-			<h4>Software médico para agendamento de consultas.</h4>
+			<h4><font color="black"><b>Software médico para agendamento de consultas.</b></font></h4>
 
 			<div class="col-md-3 col-sm-6">
 				<div class="single-about-detail clearfix">
