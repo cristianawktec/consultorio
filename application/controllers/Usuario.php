@@ -18,6 +18,7 @@ class Usuario extends CI_Controller
         $this->load->model('Paciente_Model', 'paciente');
         $this->load->model('Medico_Model', 'medico');
         $this->load->model('Pagamento_Model', 'pagamento');
+        $this->load->model('Especialidade_Model', 'especialidade');
         $this->load->library('email');
         $this->load->library('pagseguro');
     }
@@ -243,7 +244,8 @@ class Usuario extends CI_Controller
     public function registroMedico()
     {
         //echo"<br>registro medico: <pre>";print_r($_POST);echo"</pre>";exit;
-        $data['especializacoes'] = $this->db->get('especializacao')->result();
+        //$data['especializacoes'] = $this->db->get('especializacao')->result();
+        $data['especializacoes'] = $this->especialidade->getAllEspecialidade();
         $this->load->view('layout_principal/top');
         $this->load->view("template_medico/medico_registro.php", $data);
         $this->load->view('layout_principal/footer');
