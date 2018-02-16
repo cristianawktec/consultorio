@@ -138,7 +138,7 @@
                                     <li><div class="icon" style="font-size: 20px; color: #128404;"><span class="mdi mdi-check"></span></div></li>
                                     <li><div class="icon" style="font-size: 20px; color: #128404;"><span class="mdi mdi-check"></span></div></li>
                                     <li><div class="icon" style="font-size: 20px; color: #128404;"><span class="mdi mdi-check"></span></div></li>
-                                    <li style="font-size: 20px;color: #060606;">25</li>
+                                    <li style="font-size: 20px;color: #060606;">10</li>
                                     <li style="font-size: 20px;color: #060606;">15</li>
                                     <li><div class="icon" style="font-size: 20px; color: #128404;"><span class="mdi mdi-check"></span></div></li>
                                     <li><div class="icon" style="font-size: 20px; color: #840713;"><span class="mdi mdi-minus"></span></div></li>

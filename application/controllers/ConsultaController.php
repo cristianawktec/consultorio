@@ -85,7 +85,9 @@ class ConsultaController extends CI_Controller
             $data['paciente'] = $this->usuario->getUsuarioById($id);
             $data['endereços'] = $this->endereco->getEnderecoUsuarioById($id);
             $data['consultas'] = $this->usuario->getNumeroConsultas($doctor);
+            $data['numPacientes'] = $this->usuario->getNumeroPacientes($doctor);
         }
+        //echo"contrloler: <pre>";print_r($data);echo"</pre>";exit;
         $this->load->view('layout_principal/top');
         $this->load->view('template_consulta/marcar_consulta', $data);
         $this->load->view('layout_principal/footer');

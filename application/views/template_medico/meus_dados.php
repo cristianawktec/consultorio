@@ -63,8 +63,52 @@
         background-color: #CE575C;
     }
 </style>
+
+<?php
+
+//echo"<pre>view";print_r($agenda);echo"</pre>";exit;
+//echo"agenda ".$agenda->0;exit;
+//echo"agenda ".$agenda[0]->horario;exit;
+
+    if (@$agenda[0]->horario == "") {
+        ?>
+        <div class="container">
+            <div class="row">
+                <div class="team-heading text-center" style="margin-top: 200px">
+                    <font size="30" color="#42b3e5">Você precisa preencher os horários de sua Agenda!</font>
+                </div>
+                <!--Modal Alerts-->
+                <div class="be-content">
+                    <div class="main-content container-fluid">
+                        <div class="row">
+                            <!--Nifty Modals Effects-->
+                            <div class="col-sm-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                 aria-hidden="true" style="margin-left: 150px;">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <h4>Acesse sua Agenda e preencha seus horários de Atendimento!</h4>
+                                        <div class="xs-mt-30 xs-mb-20 text-center">
+                                            <a href="/agenda/novo" class="btn btn-space btn-success md-trigger" role="button" aria-pressed="true">Preencher!</a>
+                                        </div>
+
+                                        <div class="modal-overlay"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <?php
+    } else { ?>
+
 <!-- about section -->
 <section class="about " id="about">
+
     <div class="container">
         <div class="row" style="padding-bottom: 140px;padding-top: 116px;">
 
@@ -975,6 +1019,7 @@
     </div>
     </div>
 </section>
+<?php } ?>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">

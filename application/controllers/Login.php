@@ -66,7 +66,7 @@ class Login extends CI_Controller
                 $num_consultas = $consultas['0'];
                 $consultas = $num_consultas->consultas;
 
-                if ($pacientes > '25'){
+                if ($pacientes > '10'){
                     $msg = "<font color='red' size='3'><B>Você Atingiu o Limite Máximo de Pacientes, <a href='/medico/perfil'><font color='red' size='3'><B>CLIQUE AQUI!</B></font></a> para Mudar de Plano!</B></font> ";
                     $this->session->set_flashdata('msg2', $msg);
                     return redirect('/login');

@@ -55,7 +55,7 @@ class Consulta_Model extends  CI_Model
     {
         $this->db->select('*');
         $this->db->from('consultas');
-        $this->db->where('id_medico', '61');
+        $this->db->where('id_medico', $id);
         //$query = $this->db->get('consultas');echo"<br>sql: ".$query;exit;
         //$r = $this->db->get()->result(); echo"<pre>";print_r($r);echo"</pre>";
         return $this->db->get()->result();
@@ -65,7 +65,7 @@ class Consulta_Model extends  CI_Model
     {
         $this->db->select('dt_consulta');
         $this->db->from('consultas');
-        $this->db->where('id_medico', '61');
+        $this->db->where('id_medico', $id);
         $this->db->where('ch_confirmacao', '2');
         //$query = $this->db->get('consultas');echo"<br>sql: ".$query;
         //$r = $this->db->get()->result(); echo"<pre>";print_r($r);echo"</pre>";
@@ -76,7 +76,7 @@ class Consulta_Model extends  CI_Model
     {
         $this->db->select('dt_consulta');
         $this->db->from('consultas');
-        $this->db->where('id_medico', '61');
+        $this->db->where('id_medico', $id);
         $this->db->where('ch_confirmacao', '1');
         //$query = $this->db->get('consultas');echo"<br>sql: ".$query;
         //$r = $this->db->get()->result(); echo"<pre>";print_r($r);echo"</pre>";
@@ -87,7 +87,7 @@ class Consulta_Model extends  CI_Model
     {
         $this->db->select('dt_consulta');
         $this->db->from('consultas');
-        $this->db->where('id_medico', '61');
+        $this->db->where('id_medico', $id);
         $this->db->where('ch_confirmacao', '4');
         //$query = $this->db->get('consultas');echo"<br>sql: ".$query;
         //$r = $this->db->get()->result(); echo"<pre>";print_r($r);echo"</pre>";

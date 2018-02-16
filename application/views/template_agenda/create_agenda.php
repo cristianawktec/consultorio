@@ -1,6 +1,6 @@
 <style>
     .contact-caption {
-        margin-top: 0px !important;
+        margin-top: 80px !important;
     }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
@@ -33,8 +33,8 @@
                             <input class="submit-btn" type="submit" value="ENVIAR">
                         </form>
                     </div>
-
                 </div>
+                <h4>Preencha seus Horários disponíveis para Atendimento!</h4>
             </div>
             <div class="col-md-2 col-sm-6"></div>
 

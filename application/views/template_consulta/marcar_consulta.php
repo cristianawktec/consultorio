@@ -35,15 +35,22 @@
 <!-- about section -->
 <section class="about " id="about">
     <?php
-        //echo"<pre>";print_r($GLOBALS);echo"</pre>";
+        $limite = "";
+        //echo"<pre>view";print_r($GLOBALS);echo"</pre>";exit;
+        @$num_pacientes = $numPacientes['0'];
+        @$npacientes = $num_pacientes->num_paciente;
+
         @$num_consultas = $consultas['0'];
         @$consultas = $num_consultas->consultas;
 
-        if ($consultas > '15'){ ?>
+        if (($consultas > '15')OR($npacientes > '10')){
+            if($consultas > '15'){$limite="Consultas";}
+            if($npacientes > '10'){$limite="Cadastros";}
+            ?>
         <div class="container">
 		<div class="row">
 			<div class="team-heading text-center" style="margin-top: 200px">
-                <font size="30" color="#42b3e5" >Este Médico excedeu o Limite de Consultas neste Mês!</font>
+                <font size="30" color="#42b3e5" >Este Médico excedeu o Limite de <?php echo $limite; ?> neste Mês!</font>
 			</div>
 			<!--Modal Alerts-->
 			<div class="be-content">
@@ -55,7 +62,7 @@
 								<div class="panel-body">
 									<h4>Avise este Médico para agendar uma nova consulta!</h4>
 									<div class="xs-mt-30 xs-mb-20 text-center">
-										<a href="/consulta/limite/<?php echo $agenda[0]->id_medico; ?>" class="btn btn-space btn-success md-trigger" role="button" aria-pressed="true">Avisar!</a>
+										<a href="/medico/perfil/<?php echo $agenda[0]->id_medico; ?>" class="btn btn-space btn-success md-trigger" role="button" aria-pressed="true">Avisar!</a>
 									</div>
 
 									<div class="modal-overlay"></div>

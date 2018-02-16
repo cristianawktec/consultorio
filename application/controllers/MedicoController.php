@@ -57,7 +57,7 @@ class MedicoController extends CI_Controller
         $dados['canceladas'] = $this->charts->canceladas($id);
         $dados['reagendadas'] = $this->charts->reagendadas($id);
 
-        //echo"<br>dados: <pre>";print_r($dados['canceladas']);echo"</pre>";exit;
+        //echo"<br>dados: <pre>";print_r($dados['agenda']);echo"</pre>";exit;
         $this->load->view('layout_principal/top');
         $this->load->view("template_medico/meus_dados", $dados);
         $this->load->view('layout_principal/footer');
