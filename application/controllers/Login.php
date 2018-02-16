@@ -35,8 +35,13 @@ class Login extends CI_Controller
         $this->db->where('ps_login', $ps_login);
         $perfil = $this->db->get('usuarios')->result();
 
-        //echo"<pre>";print_r($txt);echo"</pre>";//exit;
+        //echo"<pre>txt: ";print_r($txt);echo"</pre>";exit;
         //echo"<br>post: <pre>";print_r($perfil);echo"</pre>";die;
+
+        if(empty($txt)){//echo"<br>aqui1";exit;
+            $this->session->set_flashdata('msg', 'Error! - Login ou Senha não conferem!');
+            return redirect('/login');
+        }
 
         if (empty($txt['saldoDevedor'])){
             @$txt['saldoDevedor'] = false;//saldo devedor ok!
@@ -79,7 +84,7 @@ class Login extends CI_Controller
                     return redirect('/medico/perfil');
                 }
             }
-            else {
+            else {//echo"<br>aqui2";exit;
                 //se é plano pago e esta em dia entra aqui
                 return redirect('/medico/perfil');
             }
