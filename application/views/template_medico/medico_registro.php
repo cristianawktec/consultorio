@@ -141,13 +141,13 @@ $plano_id= $this->uri->segment(4, 0);
                             <input class="text" type="number" name="nr_conselho" placeholder="Número do Conselho" required>
                             <input class="text" type="number" name="nr_cnes" placeholder="Número CNES" required>
                             <select name="id_especializacao" class="email" style="float: left;"  required>
-                                <option value="">Selecione sua Especialização</option>
-                                <?php
-                                foreach($especializacoes as $esp){
-                                ?>
-                                <option value="<?php echo $esp->id_especializacao; ?>"><?php echo $esp->nm_especializacao; ?></option>
-                                <?php } ?>
-                            </select>
+                                    <option value="">Selecione sua Especialização</option>
+                                    <?php
+                                    foreach($especializacoes as $esp){
+                                        ?>
+                                        <option value="<?php echo $esp->id_especializacao; ?>"><?php echo $esp->nm_especializacao; ?></option>
+                                    <?php } ?>
+                                </select>
                             <br />
                             <br />
                             <br />
@@ -166,12 +166,12 @@ $plano_id= $this->uri->segment(4, 0);
                                 <h3 style="float: left;border-bottom: 0;">Tipo de Assinatura</h3>
                                 <input class="text" type="hidden" name="" id="" placeholder="" >
                                 <br/><br/>
-                                <select name="id_plano" class="email" style="align-items: left;float: left;border-left-width: 0px;border-top-width: 0px;border-bottom-width: 0px;margin-left: -185px;margin-top: 30px;margin-right: 0px;padding-left: 0px;padding-right: 60px;">
+                                <select name="id_plano" class="email" style="align-items: left;float: left;border-left-width: 0px;border-top-width: 0px;border-bottom-width: 0px;margin-left: -185px;margin-top: 30px;margin-right: 0px;padding-left: 0px;padding-right: 60px;" required>
                                     <?php
                                     //echo"plano: ".$plano_id;
                                     $planos = $this->db->get('planos')->result();
                                         if($plano_id=='0'){ ?>
-                                            <option value="0">Escolha o seu Plano!</option>
+                                            <option value="">Escolha o seu Plano!</option>
                                             <option value="1">Free</option>
                                             <option value="2">Básico</option>
                                             <option value="3">Premium</option>
