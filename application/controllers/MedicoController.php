@@ -146,4 +146,37 @@ class MedicoController extends CI_Controller
         return redirect('/medico/perfil');
     }
 
+    public function mudar_valorConsutla1($id)
+    {   //echo"<pre>mudar: ".$id;exit;
+        $data['valor'] = $this->medico->getMedicoById($id);
+        //echo"<pre>controller: ";print_r($data);echo"</pre>";exit;
+        $this->load->view('layout_principal/top');
+        $this->load->view("template_medico/update_valor", $data);
+        $this->load->view('layout_principal/footer');
+    }
+
+    public function updated_valor1($id)
+    {   //echo"<pre>controler: ".$id;print_r($_POST);echo"</pre>";exit;
+        $dadosMedicoValor['id_usuario'] = $id;
+        $dadosMedicoValor['vr_consulta1'] = $this->input->post('vr_consulta1');
+        $this->db->where('id_usuario', $id)->update('medicos',$dadosMedicoValor);
+        return redirect('/medico/perfil');
+    }
+
+    public function mudar_valorConsutla2($id)
+    {   //echo"<pre>mudar: ".$id;exit;
+        $data['valor'] = $this->medico->getMedicoById($id);
+        //echo"<pre>controller: ";print_r($data);echo"</pre>";exit;
+        $this->load->view('layout_principal/top');
+        $this->load->view("template_medico/update_valor2", $data);
+        $this->load->view('layout_principal/footer');
+    }
+
+    public function updated_valor2($id)
+    {   //echo"<pre>controler: ".$id;print_r($_POST);echo"</pre>";exit;
+        $dadosMedicoValor['id_usuario'] = $id;
+        $dadosMedicoValor['vr_consulta2'] = $this->input->post('vr_consulta2');
+        $this->db->where('id_usuario', $id)->update('medicos',$dadosMedicoValor);
+        return redirect('/medico/perfil');
+    }
 }

@@ -90,6 +90,10 @@ $route['medico/atualiza_senha/(\d+)'] = "usuario/update_pass2/$1";
 $route['medico/atualiza_foto/(\d+)'] = "usuario/update_foto/$1";
 $route['medico/plano-editar/(\d+)'] = "MedicoController/update_plano/$1";
 $route['medico/mudar_plano/(\d+)'] = "MedicoController/mudar_plano/$1";
+$route['medico/valorConsutla1-editar/(\d+)'] = "MedicoController/mudar_valorConsutla1/$1";
+$route['medico/atualizar_valor1/(\d+)'] = "MedicoController/updated_valor1/$1";
+$route['medico/valorConsutla2-editar/(\d+)'] = "MedicoController/mudar_valorConsutla2/$1";
+$route['medico/atualizar_valor2/(\d+)'] = "MedicoController/updated_valor2/$1";
 
 /* router Consultas */
 $route['consulta/nova'] = "ConsultaController/index";

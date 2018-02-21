@@ -625,6 +625,7 @@
                                             </td>
                                         </tr>
                                     <?php } ?>
+
                                 </table>
                             </div>
                             <!-- fim endereco -->
@@ -666,6 +667,52 @@
                                     <?php } ?>
                                 </table>
                             </div>
+                            <br>
+                            <!-- valor da consulta-->
+                            <div class="col-md-12 col-sm-6 dados">
+                                <h2 style="margin-bottom: 0px; font-size: 32px; padding-top: 10px;">Valor da Consutla</h2>
+                                <table class="tableConsulta">
+                                    <tr>
+                                        <th>Consulta</th>
+                                        <th>Valor</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                    <?php foreach ($endereços as $endereco) { ?>
+                                        <tr>
+                                            <td>Primeira Consulta</td>
+                                            <td><?php echo $medico[0]->vr_consulta1; ?></td>
+                                            <td align="left" style="    width: 97px;">
+                                                <a title="Editar Valor da Primeira Consulta"
+                                                   href="/medico/valorConsutla1-editar/<?= $medico[0]->id_usuario; ?>">
+                                                    <img class="bone img-responsive"
+                                                         src="<?php echo base_url('assets'); ?>/img/icon/editar.png"
+                                                         style="float: left !important;width: 37%;"></a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                    <br>
+                                    <table class="tableConsulta">
+                                        <tr>
+                                            <th>Consulta</th>
+                                            <th>Valor</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                        <?php foreach ($endereços as $endereco) { ?>
+                                            <tr>
+                                                <td>Demais Consultas</td>
+                                                <td><?php echo $medico[0]->vr_consulta2; ?></td>
+                                                <td align="left" style="    width: 97px;">
+                                                    <a title="Editar Valor da Consulta"
+                                                       href="/medico/valorConsutla2-editar/<?= $medico[0]->id_usuario; ?>">
+                                                        <img class="bone img-responsive"
+                                                             src="<?php echo base_url('assets'); ?>/img/icon/editar.png"
+                                                             style="float: left !important;width: 37%;"></a>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                </table>
+                            </div>
+                            <!-- fim valor da consutla-->
                         </div>
                         <!-- fim dados consultorio-->
 
