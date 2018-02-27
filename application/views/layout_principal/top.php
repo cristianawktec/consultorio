@@ -309,7 +309,8 @@ header section -->
                                 <li><a class="menu" href="<?php echo base_url(); ?>#team">Como Funciona?</a></li>
                                 <li><a class="menu" href="<?php echo base_url(); ?>planos">Planos</a></li>
                                 <li><a class="menu" href="<?php echo base_url(); ?>#contact">Contato</a></li>
-                                <li><a class="menu" href="https://clickconsultorio.blogspot.com">Blog</a></li>
+                                <li><a class="menu" href="http://blog.clickconsultorio.com/">Blog</a></li>
+                                <!--<li><a class="menu" href="https://clickconsultorio.blogspot.com">Blog</a></li>-->
                                 <?php if($this->session->usuario && $this->session->usuario->id_perfil == 2){ ?>
                                     <li><a class="menu" href="<?php echo base_url(); ?>medico/perfil">Meu Perfil</a></li>
                                     <li><a class="menu" href="<?php echo base_url(); ?>login/logout">Sair</a></li>
