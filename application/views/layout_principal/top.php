@@ -305,8 +305,8 @@ header section -->
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a class="menu active" href="<?php echo base_url(); ?>#home" >Inicio</a></li>
                                 <li><a class="menu" href="<?php echo base_url(); ?>#about">Sobre Nós</a></li>
-                                <li><a class="menu" href="<?php echo base_url(); ?>#service">Vantagens</a></li>
-                                <li><a class="menu" href="<?php echo base_url(); ?>#team">Como Funciona?</a></li>
+                                <li><a class="menu" href="<?php echo base_url(); ?>#vantagens">Vantagens</a></li>
+                                <li><a class="menu" href="<?php echo base_url(); ?>#comofunciona">Como Funciona?</a></li>
                                 <li><a class="menu" href="<?php echo base_url(); ?>planos">Planos</a></li>
                                 <li><a class="menu" href="<?php echo base_url(); ?>#contact">Contato</a></li>
                                 <li><a class="menu" href="http://blog.clickconsultorio.com/">Blog</a></li>

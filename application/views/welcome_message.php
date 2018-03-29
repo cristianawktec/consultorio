@@ -44,17 +44,59 @@
 <!-- about section -->
 <section class="about text-center" id="about">
 	<div class="container">
+
+
 		<div class="row">
 			<h2>SOBRE NÓS</h2>
 			<h3>O seu consultório na nuvem!</h3>
-			<h4>Projetado para facilitar o seu dia-a-dia. Com o ClickConsultório você terá<br>
-			acesso total a sua agenda à partir de qualquer lugar e dispositivo, com acesso a internet e sem instalação.
-				<br>
-			O ClickConsultório é um <font color="black"><b>software para agendamento de consultas</b></font> , ideal para profissionais da saúde.<br>
-			Seja qual for sua especialidade médica, o ClickConsultório é sua melhor escolha.
 
-			<h4><font color="black"><b>Software médico para agendamento de consultas.</b></font></h4>
+			<div class="col-xs-6 col-md-6 col-lg-6" style="height: 459px;">
+				<div class="icon-container">
+					<div class="icon"><span class="mdi mdi-local-hospital"></span></div><span class="icon-class">Médicos</span>
+				</div>
+				<div class="panel-heading panel-heading-divider">
+					<div class="panel-body">
+						<ul style="font-size: 20px; width: 600px;padding-right: 25px;text-align: left;">
+							<li><h4>Projetado para facilitar o seu dia-a-dia. Com o ClickConsultório você terá<br>
+									Os melhores profissionais de forma online e centralizado em um único local.</li>
+							<br>
+							<li>Acesso total a sua agenda à partir de qualquer lugar e dispositivo, com acesso a internet e sem instalação.</li>
+							<br>
+							<li>O ClickConsultório é um <font color="black"><b>software para agendamento de consultas.</b></font></li>
+							<br>
+							<li>Ideal para profissionais da saúde.<br>
+								Seja qual for sua especialidade médica, o ClickConsultório é sua melhor escolha.</li>
+						</ul>
+					</div>
+				</div>
+				<h4><font color="black"><b>Software médico para agendamento de consultas.</b></font></h4>
 
+			</div>
+
+			<div class="col-xs-6 col-md-6 col-lg-6">
+				<div class="icon-container">
+					<div class="icon"><span class="mdi mdi-accounts"></span></div><span class="icon-class">Pacientes</span>
+				</div>
+				<div class="panel-heading panel-heading-divider">
+					<div class="panel-body">
+					<ul style="font-size: 20px; width: 600px;padding-right: 25px;text-align: left;">
+						<li><h4>Projetado para facilitar o seu dia-a-dia. Com o ClickConsultório você terá<br>
+						Os melhores profissionais de forma online e centralizado em um único local.</li>
+						<br>
+						<li>Marque sua consulta online sem extresse e com muita agilidade.</li>
+						<br>
+						<li>Acompanhe sua consutla em tempo real.</li>
+						<br>
+						<li>Marque, Cancele e reagende sua consulta a qualquer momento.</li>
+						<br>
+					</ul>
+					</div>
+				</div>
+					<h4><font color="black"><b>Software para agendamento de consultas.</b></font></h4>
+
+			</div>
+
+		<div class="container">
 			<div class="col-md-3 col-sm-6">
 				<div class="single-about-detail clearfix">
 					<div class="about-img">
@@ -125,13 +167,14 @@
 			</div>
 
 		</div>
+		</div>
 	</div>
 </section><!-- end of about section -->
 
 
 <!-- service section starts here -->
 
-<section class="service text-center" id="service">
+<section class="service text-center" id="vantagens">
 	<div class="container">
 		<div class="row">
 			<h2>Vantagens</h2>
@@ -218,7 +261,7 @@
 
 
 <!-- team section -->
-<section class="team" id="team">
+<section class="team" id="comofunciona">
 	<div class="container">
 		<div class="row">
 			<div class="team-heading text-center">
