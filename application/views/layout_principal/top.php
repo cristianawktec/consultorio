@@ -285,7 +285,6 @@ header section -->
                 <a href="<?php echo base_url(); ?>#home">
                     <img src="<?php echo base_url('assets'); ?>/img/logo.png" alt="" class="img-responsive logo" style="width: 50%; height: 35%"></a>
             </div>
-
             <div class="col-md-9" style="margin-left: -50; width: 850px; height: 140px;">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid nav-bar">

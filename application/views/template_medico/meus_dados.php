@@ -5,7 +5,7 @@
  * Date: 10/27/15
  * Time: 10:38 PM
  */
-//echo"<pre>";print_r($GLOBALS);echo"</pre>";
+//echo"<pre>";print_r($GLOBALS);echo"</pre>";exit;
 ?>
 
 

@@ -49,7 +49,6 @@
 		<div class="row">
 			<h2>SOBRE NÓS</h2>
 			<h3>O seu consultório na nuvem!</h3>
-
 			<div class="col-xs-6 col-md-6 col-lg-6" style="height: 459px;">
 				<div class="icon-container">
 					<div class="icon"><span class="mdi mdi-local-hospital"></span></div><span class="icon-class">Médicos</span>
