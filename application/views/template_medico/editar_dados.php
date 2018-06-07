@@ -86,7 +86,7 @@
     <div class="container">
         <div class="row" style="padding-bottom: 140px;padding-top: 116px;">
 
-            <h4>Informaçõe do Médicos</h4>
+            <h4>Informações do Médico</h4>
 
             <div class="col-md-2 col-sm-6"></div>
             <div class="col-md-8 col-sm-6">

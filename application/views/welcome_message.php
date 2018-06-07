@@ -40,133 +40,134 @@
 	</div>
 </section><!-- end of slider section -->
 
-
 <!-- about section -->
 <section class="about text-center" id="about">
 	<div class="container">
 
+        <div class="contact-caption clearfix">
 
-		<div class="row">
-			<h2>SOBRE NÓS</h2>
-			<h3>O seu consultório na nuvem!</h3>
-			<div class="col-xs-6 col-md-6 col-lg-6" style="height: 459px;">
-				<div class="icon-container">
-					<div class="icon"><span class="mdi mdi-local-hospital"></span></div><span class="icon-class">Médicos</span>
-				</div>
-				<div class="panel-heading panel-heading-divider">
-					<div class="panel-body">
-						<ul style="font-size: 20px; width: 600px;padding-right: 25px;text-align: left;">
-							<li><h4>Projetado para facilitar o seu dia-a-dia. Com o ClickConsultório você terá<br>
-									Os melhores profissionais de forma online e centralizado em um único local.</li>
-							<br>
-							<li>Acesso total a sua agenda à partir de qualquer lugar e dispositivo, com acesso a internet e sem instalação.</li>
-							<br>
-							<li>O ClickConsultório é um <font color="black"><b>software para agendamento de consultas.</b></font></li>
-							<br>
-							<li>Ideal para profissionais da saúde.<br>
-								Seja qual for sua especialidade médica, o ClickConsultório é sua melhor escolha.</li>
-						</ul>
-					</div>
-				</div>
-				<h4><font color="black"><b>Software médico para agendamento de consultas.</b></font></h4>
+            <div class="row">
+                <h2>SOBRE NÓS</h2>
+                <h3>O seu consultório na nuvem!</h3>
+                <div class="col-xs-6 col-md-6 col-lg-6" style="height: 459px;">
+                    <div class="icon-container">
+                        <div class="icon"><span class="mdi mdi-local-hospital"></span></div><span class="icon-class">Médicos</span>
+                    </div>
+                    <div class="panel-heading panel-heading-divider">
+                        <div class="panel-body">
+                            <ul style="font-size: 20px; width: 600px;padding-right: 25px;text-align: left;">
+                                <li><h4>Projetado para facilitar o seu dia-a-dia. Com o ClickConsultório você terá<br>
+                                        Os melhores profissionais de forma online e centralizado em um único local.</li>
+                                <br>
+                                <li>Acesso total a sua agenda à partir de qualquer lugar e dispositivo, com acesso a internet e sem instalação.</li>
+                                <br>
+                                <li>O ClickConsultório é um <font color="black"><b>software para agendamento de consultas.</b></font></li>
+                                <br>
+                                <li>Ideal para profissionais da saúde.<br>
+                                    Seja qual for sua especialidade médica, o ClickConsultório é sua melhor escolha.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4><font color="black"><b>Software médico para agendamento de consultas.</b></font></h4>
 
-			</div>
+                </div>
 
-			<div class="col-xs-6 col-md-6 col-lg-6">
-				<div class="icon-container">
-					<div class="icon"><span class="mdi mdi-accounts"></span></div><span class="icon-class">Pacientes</span>
-				</div>
-				<div class="panel-heading panel-heading-divider">
-					<div class="panel-body">
-					<ul style="font-size: 20px; width: 600px;padding-right: 25px;text-align: left;">
-						<li><h4>Projetado para facilitar o seu dia-a-dia. Com o ClickConsultório você terá<br>
-						Os melhores profissionais de forma online e centralizado em um único local.</li>
-						<br>
-						<li>Marque sua consulta online sem extresse e com muita agilidade.</li>
-						<br>
-						<li>Acompanhe sua consutla em tempo real.</li>
-						<br>
-						<li>Marque, Cancele e reagende sua consulta a qualquer momento.</li>
-						<br>
-					</ul>
-					</div>
-				</div>
-					<h4><font color="black"><b>Software para agendamento de consultas.</b></font></h4>
+                <div class="col-xs-6 col-md-6 col-lg-6">
+                    <div class="icon-container">
+                        <div class="icon"><span class="mdi mdi-accounts"></span></div><span class="icon-class">Pacientes</span>
+                    </div>
+                    <div class="panel-heading panel-heading-divider">
+                        <div class="panel-body">
+                        <ul style="font-size: 20px; width: 600px;padding-right: 25px;text-align: left;">
+                            <li><h4>Projetado para facilitar o seu dia-a-dia. Com o ClickConsultório você terá<br>
+                            Os melhores profissionais de forma online e centralizado em um único local.</li>
+                            <br>
+                            <li>Marque sua consulta online sem extresse e com muita agilidade.</li>
+                            <br>
+                            <li>Acompanhe sua consutla em tempo real.</li>
+                            <br>
+                            <li>Marque, Cancele e reagende sua consulta a qualquer momento.</li>
+                            <br>
+                        </ul>
+                        </div>
+                    </div>
+                        <h4><font color="black"><b>Software para agendamento de consultas.</b></font></h4>
 
-			</div>
+                </div>
 
-		<div class="container">
-			<div class="col-md-3 col-sm-6">
-				<div class="single-about-detail clearfix">
-					<div class="about-img">
-						<img class="img-responsive" src="<?php echo base_url('assets'); ?>/img/item2.jpg" alt="">
-					</div>
+            <div class="container">
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-about-detail clearfix">
+                        <div class="about-img">
+                            <img class="img-responsive" src="<?php echo base_url('assets'); ?>/img/item2.jpg" alt="">
+                        </div>
 
-					<div class="about-details">
-						<div class="pentagon-text">
-							<h1>H</h1>
-						</div>
+                        <div class="about-details">
+                            <div class="pentagon-text">
+                                <h1>H</h1>
+                            </div>
 
-						<h3>Histórico Médico</h3>
-						<p>Graças aos registros médicos totalmente personalizaveis, você pode gerenciar os históricos de forma cômoda e simples.</p>
-					</div>
-				</div>
-			</div>
+                            <h3>Histórico Médico</h3>
+                            <p>Graças aos registros médicos totalmente personalizaveis, você pode gerenciar os históricos de forma cômoda e simples.</p>
+                        </div>
+                    </div>
+                </div>
 
-				<div class="col-md-3 col-sm-6">
-					<div class="single-about-detail clearfix">
-						<div class="about-img">
-							<img class="img-responsive" src="<?php echo base_url('assets'); ?>/img/patient_content_vertrauen_kompetenz.jpg" alt="">
-						</div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-about-detail clearfix">
+                            <div class="about-img">
+                                <img class="img-responsive" src="<?php echo base_url('assets'); ?>/img/patient_content_vertrauen_kompetenz.jpg" alt="">
+                            </div>
 
-						<div class="about-details">
-							<div class="pentagon-text">
-								<h1>A</h1>
-							</div>
+                            <div class="about-details">
+                                <div class="pentagon-text">
+                                    <h1>A</h1>
+                                </div>
 
-							<h3>Agenda</h3>
-							<p>Você tem uma agenda ilimitada, podendo limitar o acesso dos pacientes e seus horários, visualizar agendamentos confirmados, cancelados e reagandados.</p>
-						</div>
-					</div>
-				</div>
+                                <h3>Agenda</h3>
+                                <p>Você tem uma agenda ilimitada, podendo limitar o acesso dos pacientes e seus horários, visualizar agendamentos confirmados, cancelados e reagandados.</p>
+                            </div>
+                        </div>
+                    </div>
 
-			<div class="col-md-3 col-sm-6">
-				<div class="single-about-detail">
-					<div class="about-img">
-						<img class="img-responsive" src="<?php echo base_url('assets'); ?>/img/patient_content_ihre_naehe.jpg" alt="">
-					</div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-about-detail">
+                        <div class="about-img">
+                            <img class="img-responsive" src="<?php echo base_url('assets'); ?>/img/patient_content_ihre_naehe.jpg" alt="">
+                        </div>
 
-					<div class="about-details">
-						<div class="pentagon-text">
-							<h1>N</h1>
-						</div>
+                        <div class="about-details">
+                            <div class="pentagon-text">
+                                <h1>N</h1>
+                            </div>
 
-						<h3>Notificações e alertas por e-mail</h3>
-						<p>Serviços de aviso por e-mail, como lembretes de confirmação de consulta, cancelametno e reagendamento.</p>
-					</div>
-				</div>
-			</div>
+                            <h3>Notificações e alertas por e-mail</h3>
+                            <p>Serviços de aviso por e-mail, como lembretes de confirmação de consulta, cancelametno e reagendamento.</p>
+                        </div>
+                    </div>
+                </div>
 
 
-			<div class="col-md-3 col-sm-6">
-				<div class="single-about-detail">
-					<div class="about-img">
-						<img class="img-responsive" src="<?php echo base_url('assets'); ?>/img/slide-four.jpg" alt="">
-					</div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-about-detail">
+                        <div class="about-img">
+                            <img class="img-responsive" src="<?php echo base_url('assets'); ?>/img/slide-four.jpg" alt="">
+                        </div>
 
-					<div class="about-details">
-						<div class="pentagon-text">
-							<h1>M</h1>
-						</div>
+                        <div class="about-details">
+                            <div class="pentagon-text">
+                                <h1>M</h1>
+                            </div>
 
-						<h3>Marketing</h3>
-						<p>Conheça bem seus pacientes e fideliza-los de uma forma rápida e econômica, o ClickConsultório tem todo um cuidado de trazer para sua agenda pacientes de forma mais eficaz.</p>
-					</div>
-				</div>
-			</div>
+                            <h3>Marketing</h3>
+                            <p>Conheça bem seus pacientes e fideliza-los de uma forma rápida e econômica, o ClickConsultório tem todo um cuidado de trazer para sua agenda pacientes de forma mais eficaz.</p>
+                        </div>
+                    </div>
+                </div>
 
-		</div>
-		</div>
+            </div>
+            </div>
+        </div>
 	</div>
 </section><!-- end of about section -->
 

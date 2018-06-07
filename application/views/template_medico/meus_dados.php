@@ -1084,6 +1084,7 @@
                         <input type="file" class="form-control" name="image" id="image">
                     </div>
                 </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn btn-primary">Salvar</button>
